@@ -12,6 +12,44 @@
       padding-bottom: 24px !important;
     }
 
+    body .md-footer.lakeshore-footer-compact .top-content {
+      height: auto !important;
+      min-height: 0 !important;
+      padding: 16px clamp(18px, 4vw, 54px) !important;
+      color: #4c4a43 !important;
+      background: #f2eee4 !important;
+      border-top: 1px solid rgba(177,154,85,.28);
+      border-bottom: 1px solid rgba(45,67,54,.13);
+    }
+
+    body .md-footer.lakeshore-footer-compact .top-inner,
+    body .md-footer.lakeshore-footer-compact .mls-declaimer-container-v2 {
+      height: auto !important;
+      min-height: 0 !important;
+      margin: 0 auto !important;
+      padding: 0 !important;
+    }
+
+    body .md-footer.lakeshore-footer-compact .mls-declaimer-container-v2 {
+      display: flex !important;
+      align-items: center !important;
+      gap: 20px;
+      font-size: 11px !important;
+      line-height: 1.55 !important;
+    }
+
+    body .md-footer.lakeshore-footer-compact .mls-declaimer-container-v2 img {
+      flex: 0 0 auto;
+      width: auto !important;
+      max-width: 72px !important;
+      max-height: 30px !important;
+      object-fit: contain;
+    }
+
+    body .md-footer.lakeshore-footer-compact .bottom-content {
+      margin-top: 0 !important;
+    }
+
     body .md-footer.lakeshore-footer-compact .lakeshore-social-row {
       margin-top: 24px !important;
       margin-bottom: 30px !important;
@@ -226,6 +264,19 @@
       body .md-footer.lakeshore-footer-compact .lakeshore-social-row {
         margin-top: 18px !important;
         margin-bottom: 24px !important;
+      }
+      body .md-footer.lakeshore-footer-compact .top-content {
+        padding: 14px 18px !important;
+      }
+      body .md-footer.lakeshore-footer-compact .mls-declaimer-container-v2 {
+        align-items: flex-start !important;
+        gap: 12px;
+        font-size: 10px !important;
+        line-height: 1.45 !important;
+      }
+      body .md-footer.lakeshore-footer-compact .mls-declaimer-container-v2 img {
+        max-width: 54px !important;
+        max-height: 24px !important;
       }
       body .md-footer.lakeshore-footer-compact .agent-wrap,
       body .md-footer.lakeshore-footer-compact .main-menu,
