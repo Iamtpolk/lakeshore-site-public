@@ -8,8 +8,8 @@
   style.id = "lakeshore-footer-styles";
   style.textContent = `
     body .md-footer.lakeshore-footer-compact {
-      padding-top: clamp(42px, 4.5vw, 68px) !important;
-      padding-bottom: 24px !important;
+      padding-top: 0 !important;
+      padding-bottom: 0 !important;
     }
 
     body .md-footer.lakeshore-footer-compact .top-content {
@@ -258,8 +258,8 @@
 
     @media (max-width: 767px) {
       body .md-footer.lakeshore-footer-compact {
-        padding-top: 34px !important;
-        padding-bottom: 20px !important;
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
       }
       body .md-footer.lakeshore-footer-compact .lakeshore-social-row {
         margin-top: 18px !important;
