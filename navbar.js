@@ -178,9 +178,14 @@
     nav.addEventListener('click', function (event) {
       var action = event.target.closest('[data-native]');
       if (action) {
-        var target = action.getAttribute('data-native') === 'register' ? register : signIn;
+        var isRegister = action.getAttribute('data-native') === 'register';
+        var target = isRegister ? register : signIn;
         closeAccount(); closeMenu(false);
-        if (target) target.click();
+        /* Use Lofty's supported public helpers. Native header nodes are replaced
+           during Vue hydration, so retained DOM references can become detached. */
+        if (window.Util && typeof window.Util[isRegister ? 'register' : 'login'] === 'function') {
+          window.Util[isRegister ? 'register' : 'login']({ allowClose: true });
+        } else if (target && document.documentElement.contains(target)) target.click();
       } else if (event.target.closest('.lst-mobile-link')) closeMenu(false);
     });
     document.addEventListener('click', function (event) {
