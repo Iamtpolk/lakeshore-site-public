@@ -57,9 +57,17 @@
 
       body .md-footer.lakeshore-footer-compact .lakeshore-social-row {
         grid-area: social;
-        width: auto !important;
+        display: flex !important;
+        flex-wrap: nowrap !important;
+        gap: 10px !important;
+        width: 100% !important;
         margin: 0 !important;
         justify-content: flex-start !important;
+      }
+
+      body .md-footer.lakeshore-footer-compact .lakeshore-social-row > a {
+        flex: 0 0 46px !important;
+        margin: 0 !important;
       }
 
       body .md-footer.lakeshore-footer-compact .agent-wrap {
