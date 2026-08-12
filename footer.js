@@ -26,6 +26,117 @@
       min-height: 0 !important;
     }
 
+    @media (min-width: 900px) {
+      body .md-footer.lakeshore-footer-compact .bottom-inner > .flex-box {
+        display: grid !important;
+        grid-template-columns: .9fr 1.1fr 1.25fr;
+        grid-template-areas:
+          "brand contact navigation"
+          "social contact navigation";
+        column-gap: clamp(38px, 4vw, 72px);
+        row-gap: 20px;
+        align-items: start;
+        height: auto !important;
+        min-height: 0 !important;
+        padding: 8px 0 34px !important;
+      }
+
+      body .md-footer.lakeshore-footer-compact .bottom-inner > .flex-box > .agent-logo {
+        display: contents !important;
+      }
+
+      body .md-footer.lakeshore-footer-compact .logo-wrap {
+        grid-area: brand;
+        height: auto !important;
+        min-height: 76px !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        display: flex !important;
+        align-items: flex-start !important;
+      }
+
+      body .md-footer.lakeshore-footer-compact .lakeshore-social-row {
+        grid-area: social;
+        width: auto !important;
+        margin: 0 !important;
+        justify-content: flex-start !important;
+      }
+
+      body .md-footer.lakeshore-footer-compact .agent-wrap {
+        grid-area: contact;
+        width: auto !important;
+        margin: 0 !important;
+        padding: 29px 0 0 clamp(26px, 3vw, 46px) !important;
+        border-left: 1px solid rgba(255,255,255,.13);
+      }
+
+      body .md-footer.lakeshore-footer-compact .agent-wrap::before,
+      body .md-footer.lakeshore-footer-compact .main-menu::before {
+        display: block;
+        margin-bottom: 18px;
+        color: #bba765;
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: .16em;
+        line-height: 1;
+      }
+
+      body .md-footer.lakeshore-footer-compact .agent-wrap::before { content: "CONTACT"; }
+      body .md-footer.lakeshore-footer-compact .main-menu::before { content: "EXPLORE"; }
+
+      body .md-footer.lakeshore-footer-compact .main-menu {
+        grid-area: navigation;
+        display: grid !important;
+        grid-template-columns: repeat(2, minmax(110px, 1fr)) !important;
+        gap: 14px 30px !important;
+        width: auto !important;
+        height: auto !important;
+        min-height: 0 !important;
+        margin: 0 !important;
+        padding: 29px 0 0 clamp(26px, 3vw, 46px) !important;
+        border-left: 1px solid rgba(255,255,255,.13);
+      }
+
+      body .md-footer.lakeshore-footer-compact .main-menu::before {
+        grid-column: 1 / -1;
+      }
+
+      body .md-footer.lakeshore-footer-compact .main-menu > li,
+      body .md-footer.lakeshore-footer-compact .main-menu .menu-item,
+      body .md-footer.lakeshore-footer-compact .main-menu .footer-menu {
+        width: auto !important;
+        height: auto !important;
+        min-height: 22px !important;
+        margin: 0 !important;
+      }
+
+      body .md-footer.lakeshore-footer-compact .detail-wrap {
+        height: auto !important;
+        min-height: 0 !important;
+        margin: 0 !important;
+        padding: 22px 0 !important;
+        border-top: 1px solid rgba(255,255,255,.12);
+        border-bottom: 1px solid rgba(255,255,255,.12);
+      }
+
+      body .md-footer.lakeshore-footer-compact .detail-wrap .custom-content {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 10px 28px;
+      }
+
+      body .md-footer.lakeshore-footer-compact .detail-wrap .custom-content p {
+        margin: 0 !important;
+      }
+
+      body .md-footer.lakeshore-footer-compact .copyright {
+        height: auto !important;
+        min-height: 0 !important;
+        padding: 22px 0 0 !important;
+      }
+    }
+
     body .md-footer a[href*="facebook.com"],
     body .md-footer a[href*="linkedin.com"],
     body .md-footer a[href*="zillow.com"],
@@ -107,6 +218,12 @@
       body .md-footer.lakeshore-footer-compact .lakeshore-social-row {
         margin-top: 18px !important;
         margin-bottom: 24px !important;
+      }
+      body .md-footer.lakeshore-footer-compact .agent-wrap,
+      body .md-footer.lakeshore-footer-compact .main-menu,
+      body .md-footer.lakeshore-footer-compact .detail-wrap {
+        height: auto !important;
+        min-height: 0 !important;
       }
       body .md-footer a[href*="facebook.com"],
       body .md-footer a[href*="linkedin.com"],
