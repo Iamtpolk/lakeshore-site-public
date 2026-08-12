@@ -7,6 +7,25 @@
   var style = document.createElement("style");
   style.id = "lakeshore-footer-styles";
   style.textContent = `
+    body .md-footer.lakeshore-footer-compact {
+      padding-top: clamp(42px, 4.5vw, 68px) !important;
+      padding-bottom: 24px !important;
+    }
+
+    body .md-footer.lakeshore-footer-compact .lakeshore-social-row {
+      margin-top: 24px !important;
+      margin-bottom: 30px !important;
+      padding-top: 0 !important;
+      padding-bottom: 0 !important;
+      min-height: 0 !important;
+    }
+
+    body .md-footer.lakeshore-footer-compact .lakeshore-social-section {
+      padding-top: 0 !important;
+      padding-bottom: 0 !important;
+      min-height: 0 !important;
+    }
+
     body .md-footer a[href*="facebook.com"],
     body .md-footer a[href*="linkedin.com"],
     body .md-footer a[href*="zillow.com"],
@@ -81,6 +100,14 @@
     }
 
     @media (max-width: 767px) {
+      body .md-footer.lakeshore-footer-compact {
+        padding-top: 34px !important;
+        padding-bottom: 20px !important;
+      }
+      body .md-footer.lakeshore-footer-compact .lakeshore-social-row {
+        margin-top: 18px !important;
+        margin-bottom: 24px !important;
+      }
       body .md-footer a[href*="facebook.com"],
       body .md-footer a[href*="linkedin.com"],
       body .md-footer a[href*="zillow.com"],
@@ -104,5 +131,30 @@
     }
   `;
   document.head.appendChild(style);
+
+  function enhanceFooter() {
+    var links = Array.prototype.slice.call(document.querySelectorAll(
+      '.md-footer a[href*="facebook.com"], .md-footer a[href*="linkedin.com"], .md-footer a[href*="zillow.com"], .md-footer a[href*="instagram.com"], .md-footer a[href*="youtube.com"], .md-footer a[href*="maps.app.goo.gl"]'
+    ));
+    if (!links.length) return;
+
+    var footer = links[0].closest('.md-footer');
+    if (!footer) return;
+    footer.classList.add('lakeshore-footer-compact');
+
+    var common = links[0].parentElement;
+    while (common && common !== footer && !links.every(function (link) { return common.contains(link); })) {
+      common = common.parentElement;
+    }
+    if (common && common !== footer) {
+      common.classList.add('lakeshore-social-row');
+      if (common.parentElement && common.parentElement !== footer) {
+        common.parentElement.classList.add('lakeshore-social-section');
+      }
+    }
+  }
+
+  enhanceFooter();
+  new MutationObserver(enhanceFooter).observe(document.documentElement, { childList: true, subtree: true });
 })();
 
