@@ -128,10 +128,14 @@
     .lst-team-bio { flex:1;margin:18px 0 22px;color:rgba(255,255,255,.68);font:400 13px/1.65 Inter,Arial,sans-serif; }
     .lst-team-actions { display:flex;align-items:center;justify-content:space-between;gap:12px;padding-top:17px;border-top:1px solid rgba(255,255,255,.11); }
     .lst-team-socials { display:flex;flex-wrap:wrap;gap:7px; }
-    .lst-team-social { display:inline-flex;width:34px;height:34px;align-items:center;justify-content:center;color:rgba(255,255,255,.78);border:1px solid rgba(255,255,255,.15);border-radius:10px;background:rgba(255,255,255,.07);transition:color .2s ease,background .2s ease,border-color .2s ease,transform .2s ease; }
+    .lst-team-social { display:inline-flex;width:34px;height:34px;align-items:center;justify-content:center;color:#fff;border:1px solid rgba(255,255,255,.16);border-radius:10px;background:rgba(255,255,255,.07);box-shadow:inset 0 1px 0 rgba(255,255,255,.12);transition:color .2s ease,background .2s ease,border-color .2s ease,box-shadow .2s ease,transform .2s ease; }
     .lst-team-social svg { width:16px;height:16px;fill:currentColor;stroke:currentColor;stroke-width:1.7; }
-    .lst-team-social:hover { transform:translateY(-2px);color:#fff;border-color:transparent; }
-    .lst-team-social--instagram:hover { background:#e4405f; }.lst-team-social--facebook:hover{background:#1877f2}.lst-team-social--linkedin:hover{background:#0a66c2}.lst-team-social--youtube:hover{background:#ff0033}.lst-team-social--threads:hover{background:#000;border-color:rgba(255,255,255,.28)}
+    .lst-team-social:hover { transform:translateY(-2px);color:#fff;border-color:rgba(255,255,255,.3);filter:brightness(1.08); }
+    .lst-team-social--instagram { background:linear-gradient(135deg,#833ab4 0%,#c13584 36%,#e1306c 58%,#f77737 78%,#fcaf45 100%);border-color:rgba(225,48,108,.6);box-shadow:0 7px 18px rgba(225,48,108,.2),inset 0 1px 0 rgba(255,255,255,.25); }
+    .lst-team-social--facebook { background:#1877f2;border-color:#3688f3;box-shadow:0 7px 18px rgba(24,119,242,.2),inset 0 1px 0 rgba(255,255,255,.22); }
+    .lst-team-social--linkedin { background:#0a66c2;border-color:#2a7bca;box-shadow:0 7px 18px rgba(10,102,194,.2),inset 0 1px 0 rgba(255,255,255,.22); }
+    .lst-team-social--youtube { background:#ff0033;border-color:#ff3159;box-shadow:0 7px 18px rgba(255,0,51,.2),inset 0 1px 0 rgba(255,255,255,.22); }
+    .lst-team-social--threads { background:#050505;border-color:rgba(255,255,255,.32);box-shadow:0 7px 18px rgba(0,0,0,.28),inset 0 1px 0 rgba(255,255,255,.18); }
     .lst-team-connect { display:inline-flex;min-height:38px;align-items:center;justify-content:center;gap:8px;padding:0 14px;white-space:nowrap;color:#211d12!important;border:1px solid #aa9149;border-radius:11px;background:linear-gradient(135deg,#cdbb86,#b19a55);box-shadow:0 8px 20px rgba(177,154,85,.16);font:700 11px/1 Inter,Arial,sans-serif;letter-spacing:.055em;text-decoration:none!important;text-transform:uppercase;transition:transform .2s ease,filter .2s ease; }
     .lst-team-connect:hover { transform:translateY(-2px);filter:brightness(1.07); }
     .lst-team-social:focus-visible,.lst-team-connect:focus-visible { outline:2px solid #d7c582;outline-offset:3px; }
