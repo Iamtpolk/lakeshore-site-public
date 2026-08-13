@@ -40,6 +40,18 @@
       name: "Michelle",
       detail: "Sulphur, Louisiana",
       source: "Realtor.com"
+    },
+    {
+      quote: "I'm so grateful for Madeleine and the support she gave me throughout my search for the perfect Airbnb property. She was attentive from day one, always made herself available, and truly understood what I needed for my business. Her professionalism and commitment made all the difference. I couldn't have asked for a better partner in this journey.",
+      name: "Alicia Noviskie",
+      detail: "Worked with Madeleine Davis",
+      source: "Facebook"
+    },
+    {
+      quote: "We couldn't be more grateful to Madeleine for helping us find our first home. As first-time homebuyers, we had tons of questions, but she was incredibly patient, knowledgeable, and always made sure we felt comfortable throughout the entire process.",
+      name: "Brodde Corley",
+      detail: "Worked with Madeleine Davis",
+      source: "Facebook"
     }
   ];
 
