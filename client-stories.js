@@ -52,6 +52,18 @@
       name: "Brodde Corley",
       detail: "Worked with Madeleine Davis",
       source: "Facebook"
+    },
+    {
+      quote: "The wife and I were moving across country on a very short timer, and Chelsea was there to help us every step of the way, even when we were 2000 miles away! Always available for questions that we had, on top of all the ins and outs of the process, and super friendly as well. Now we're in our new home, she still checks in on us and is making sure everything is going smoothly as we settle in.",
+      name: "Benjamin Looney",
+      detail: "Worked with Chelsea Porter",
+      source: "Facebook"
+    },
+    {
+      quote: "Chelsea was the best. Kept me updated with everything, very patient, answered every question I had. I highly recommend her.",
+      name: "Megan Miller",
+      detail: "Worked with Chelsea Porter",
+      source: "Facebook"
     }
   ];
 
