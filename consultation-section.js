@@ -36,7 +36,7 @@
   var iframeCss = `
     html,body{margin:0!important;min-height:0!important;background:transparent!important;color:#f8f7f2!important;overflow-x:hidden!important}
     #app{min-height:0!important;background:transparent!important}
-    #app>.md-header,#app>.md-footer{display:none!important}
+    #app>.md-header,#app>.md-footer,#lst-premium-nav,#chat-app,body>div[data-v-app]{display:none!important}
     #app>.md-form{min-height:0!important;margin:0!important;padding:0!important;background:transparent!important}
     .md-form-container{width:100%!important;max-width:none!important;margin:0!important;padding:0!important;background:transparent!important}
     .md-form h2{display:none!important}
@@ -77,7 +77,7 @@
       if (nativeHeading) nativeHeading.textContent = "Tell us about your move";
       var form = doc.querySelector(".md-form");
       if (form) {
-        var height = Math.max(620,Math.ceil(form.getBoundingClientRect().height + 8));
+        var height = Math.max(560,Math.ceil(form.getBoundingClientRect().height + 8));
         frame.style.height = height + "px";
       }
     } catch (error) {
