@@ -140,7 +140,7 @@
     var section = document.createElement("section");
     section.id = "lst-reviews-root";
     section.setAttribute("aria-labelledby", "lst-reviews-heading");
-    section.innerHTML = '<header class="lst-reviews-head"><p class="lst-reviews-kicker">Five-Star Client Reviews</p><h2 id="lst-reviews-heading">Trusted through every move.</h2><p class="lst-reviews-intro">Public reviews from buyers, sellers, and real estate professionals who have worked with Lakeshore Team founder Tyler Polk.</p></header><div class="lst-reviews-viewport"><div class="lst-reviews-track">' + visible + duplicate + '</div></div><div class="lst-reviews-foot"><p>Reviews sourced from Google, RateMyAgent, and Realtor.com.</p><a class="lst-reviews-cta" href="/contact">Start Your Move <span aria-hidden="true">&rarr;</span></a></div>';
+    section.innerHTML = '<header class="lst-reviews-head"><p class="lst-reviews-kicker">Five-Star Client Reviews</p><h2 id="lst-reviews-heading">Trusted through every move.</h2><p class="lst-reviews-intro">Public reviews from buyers, sellers, and real estate professionals who have worked with Lakeshore Team.</p></header><div class="lst-reviews-viewport"><div class="lst-reviews-track">' + visible + duplicate + '</div></div><div class="lst-reviews-foot"><p>Reviews sourced from Google, Facebook, RateMyAgent, and Realtor.com.</p><a class="lst-reviews-cta" href="/contact">Start Your Move <span aria-hidden="true">&rarr;</span></a></div>';
     footer.parentNode.insertBefore(section, footer);
   }
 
