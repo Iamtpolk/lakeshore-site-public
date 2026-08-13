@@ -27,8 +27,9 @@
     body.sell .md-sell-banner .address-input .left-box{background:rgba(255,255,255,.96)!important;border-radius:12px!important;overflow:hidden!important}
     body.sell .md-sell-banner .address-input .input{height:58px!important;color:#202322!important;font-size:16px!important;padding-inline:22px 48px!important}
     body.sell .md-sell-banner .address-input .right-box{margin-left:8px!important}
-    body.sell .md-sell-banner .address-input .submit-btn{height:58px!important;min-width:174px!important;border-radius:12px!important;background:linear-gradient(135deg,#c6a45f,#a8843e)!important;color:#19150d!important;display:flex!important;align-items:center!important;justify-content:center!important;font-weight:800!important;letter-spacing:.045em!important;text-transform:uppercase!important;box-shadow:none!important}
-    body.sell .md-sell-banner .address-input::after{content:"Complimentary  â€¢  No obligation  â€¢  Local guidance";position:absolute;left:50%;top:calc(100% + 14px);transform:translateX(-50%);width:100%;text-align:center;color:rgba(255,255,255,.8);font-size:12px;letter-spacing:.09em;text-transform:uppercase}
+    body.sell .md-sell-banner .address-input .submit-btn{height:58px!important;min-width:200px!important;border-radius:12px!important;background:linear-gradient(135deg,#c6a45f,#a8843e)!important;color:#19150d!important;display:flex!important;align-items:center!important;justify-content:center!important;font-weight:800!important;letter-spacing:.035em!important;text-transform:uppercase!important;box-shadow:none!important}
+    body.sell .md-sell-banner .address-input .submit-btn .submit{display:block!important;width:100%!important;color:#19150d!important;font-size:12px!important;line-height:1.15!important;white-space:nowrap!important;text-align:center!important}
+    body.sell .md-sell-banner .address-input::after{content:"Complimentary | No obligation | Local guidance";position:absolute;left:50%;top:calc(100% + 14px);transform:translateX(-50%);width:100%;text-align:center;color:rgba(255,255,255,.8);font-size:12px;letter-spacing:.09em;text-transform:uppercase}
     body.sell .md-sell-banner .sell-agent{width:min(100%,740px)!important;margin:62px auto 0!important;padding:18px 22px!important;border:1px solid rgba(255,255,255,.18)!important;border-radius:16px!important;background:rgba(24,15,14,.38)!important;backdrop-filter:blur(12px)!important;-webkit-backdrop-filter:blur(12px)!important}
     body.sell .md-sell-banner .agent-desc p{color:rgba(255,255,255,.82)!important;line-height:1.55!important}
     body.sell .md-sell-process{display:none!important}
@@ -76,7 +77,7 @@
     var button = hero.querySelector('.submit-btn .submit');
     var name = hero.querySelector('.sell-agent .name');
     if (title) title.textContent = "Your Home Deserves a Smarter Selling Strategy";
-    if (sub) sub.textContent = "Discover what your property could commandâ€”and the strategy that will help it stand apart in todayâ€™s market.";
+    if (sub) sub.textContent = "Discover what your property could command - and the strategy that will help it stand apart in today's market.";
     if (button) button.textContent = "Start My Valuation";
     if (name) name.textContent = "Lakeshore Team";
   }
