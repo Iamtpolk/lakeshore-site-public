@@ -64,6 +64,18 @@
       name: "Megan Miller",
       detail: "Worked with Chelsea Porter",
       source: "Facebook"
+    },
+    {
+      quote: "Tyler has been a pleasure to work with. His communication is on point. I highly recommend.",
+      name: "Ory Law Group",
+      detail: "Recommends Lakeshore Team",
+      source: "Facebook"
+    },
+    {
+      quote: "Absolutely recommend! If you looking to buy a house, y'all give my dude a chance to earn your business! He'll do everything he can for you! Super knowledgeable and insightful! Proud to call this man a friend and a mentor not just my realtor! Call him ASAP. He about to take off! Oh and he doesn't take days to reply to you.",
+      name: "Donovan Ellender",
+      detail: "Recommends Lakeshore Team",
+      source: "Facebook"
     }
   ];
 
