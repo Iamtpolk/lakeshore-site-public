@@ -9,8 +9,8 @@
     {
       name: "Tyler Polk",
       role: "Founder of Lakeshore Team, Brokered by eXp Realty",
-      license: "REALTORÂ® Â· License 995706344",
-      specialty: "Leadership Â· Strategy Â· South Louisiana",
+      license: "REALTOR - License 995706344",
+      specialty: "Leadership | Strategy | South Louisiana",
       bio: "Tyler Polk is the founder of Lakeshore Team, brokered by eXp Realty, serving agents and clients across South Louisiana, with a focus on growth, leadership, systems, and real relationships. He specializes in residential, commercial, investment, and distressed properties. He built his business through consistency, adaptability, and a genuine drive to help people get better, personally and professionally.",
       image: "tyler-polk.webp",
       position: "center bottom",
@@ -26,8 +26,8 @@
     {
       name: "Chelsea Porter",
       role: "Residential Specialist",
-      license: "REALTORÂ® Â· License 995718627",
-      specialty: "Organized Â· Detail-focused Â· Client-first",
+      license: "REALTOR - License 995718627",
+      specialty: "Organized | Detail-focused | Client-first",
       bio: "Chelsea is passionate about delivering a seamless, stress-free real estate experience. Known for her organization, attention to detail, and commitment to exceptional service, Chelsea is dedicated to helping every client feel confident from start to finish.",
       image: "chelsea-porter.webp",
       position: "center 38%",
@@ -40,9 +40,9 @@
     {
       name: "Madeleine Davis",
       role: "Residential Specialist / Marketing Genius",
-      license: "REALTORÂ® Â· License 995706355",
-      specialty: "Personalized guidance Â· Southwest Louisiana",
-      bio: "Madeleine guides buyers and sellers throughout Southwest Louisiana with a thoughtful and personalized approach. Friendly, responsive, and dedicated, she believes real estate is about more than transactionsâ€”itâ€™s about helping people navigate important life moments. She is committed to providing clear guidance and dependable support every step of the way.",
+      license: "REALTOR - License 995706355",
+      specialty: "Personalized guidance | Southwest Louisiana",
+      bio: "Madeleine guides buyers and sellers throughout Southwest Louisiana with a thoughtful and personalized approach. Friendly, responsive, and dedicated, she believes real estate is about more than transactions - it is about helping people navigate important life moments. She is committed to providing clear guidance and dependable support every step of the way.",
       image: "madeleine-davis.webp",
       position: "center 35%",
       connect: "https://hihello.com/p/593bf9e9-8a27-4b7d-8e6a-60473c6a7fbf",
@@ -54,8 +54,8 @@
     {
       name: "Carlie Trahan",
       role: "Residential Specialist",
-      license: "REALTORÂ® Â· License 995717085",
-      specialty: "Driven Â· Communicative Â· Acadiana",
+      license: "REALTOR - License 995717085",
+      specialty: "Driven | Communicative | Acadiana",
       bio: "As a Residential Real Estate Specialist with the Lakeshore Team, Carlie is passionate about helping clients buy and sell with confidence. Known for her drive, strong communication, and commitment to exceptional service, she is dedicated to making every real estate experience smooth, successful, and enjoyable.",
       image: "carlie-trahan.webp",
       position: "center 42%",
@@ -118,7 +118,7 @@
     .lst-team-card:hover .lst-team-glow { opacity:.5; }
     .lst-team-portrait { position:relative;z-index:1;aspect-ratio:4/5;overflow:hidden;background:linear-gradient(145deg,#d8d1c3,#9e9179); }
     .lst-team-portrait::after { content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 58%,rgba(14,17,15,.56) 100%);pointer-events:none; }
-    .lst-team-portrait img { width:100%;height:100%;display:block;object-fit:cover;transition:transform .5s ease; }
+    .lst-team-portrait img { width:100%!important;height:100%!important;display:block!important;visibility:visible!important;opacity:1!important;object-fit:cover!important;transition:transform .5s ease; }
     .lst-team-card:hover .lst-team-portrait img { transform:scale(1.025); }
     .lst-team-card-body { position:relative;z-index:1;display:flex;flex:1;flex-direction:column;padding:24px 22px 22px; }
     .lst-team-specialty { margin:0 0 12px;color:#c7b36f;font:700 10px/1.35 Inter,Arial,sans-serif;letter-spacing:.12em;text-transform:uppercase; }
