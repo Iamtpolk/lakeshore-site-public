@@ -6,8 +6,8 @@
   var IMAGE = "https://cdn.jsdelivr.net/gh/Iamtpolk/lakeshore-site-public@a99370882624406e1a0c41fb1f2f1620eb86474f/assets/hero/louisiana-luxury-home.webp";
   var css = `
     body.home .md-hero{--lst-hero-progress:0;position:relative;overflow:hidden;background:#10191f!important}
-    body.home .md-hero .banner,body.home .md-hero .banner.single{height:clamp(680px,56.28vw,900px)!important;min-height:680px!important;max-height:900px!important;overflow:hidden!important;background:#10191f!important}
-    body.home .md-hero .single-picture{background-color:#10191f!important;background-image:url("${IMAGE}")!important;background-position:center center!important;background-repeat:no-repeat!important;background-size:contain!important;will-change:transform;transform:scale(calc(1.012 + var(--lst-hero-progress) * .025)) translate3d(0,calc(var(--lst-hero-progress) * 8px),0);transform-origin:center center;transition:filter .3s ease;filter:saturate(.94) contrast(1.03)}
+    body.home .md-hero .banner,body.home .md-hero .banner.single{height:clamp(680px,48vw,820px)!important;min-height:680px!important;max-height:820px!important;overflow:hidden!important;background:#10191f!important}
+    body.home .md-hero .single-picture{background-color:#10191f!important;background-image:url("${IMAGE}")!important;background-position:center 58%!important;background-repeat:no-repeat!important;background-size:cover!important;will-change:transform;transform:scale(calc(1.012 + var(--lst-hero-progress) * .025)) translate3d(0,calc(var(--lst-hero-progress) * 8px),0);transform-origin:center 58%;transition:filter .3s ease;filter:saturate(.94) contrast(1.03)}
     body.home .md-hero .banner-mask{background:linear-gradient(90deg,rgba(13,18,20,.64),rgba(13,18,20,.38) 48%,rgba(13,18,20,.5))!important}
     body.home .md-hero .media-content-v2{will-change:transform,opacity;transform:translate3d(0,calc(var(--lst-hero-progress) * -30px),0);opacity:calc(1 - var(--lst-hero-progress) * .42)}
     body.home .md-hero .site-title{width:min(92%,1050px)!important;margin-inline:auto!important}
