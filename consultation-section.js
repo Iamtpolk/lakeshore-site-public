@@ -24,12 +24,12 @@
     .lst-consult-form-head{position:relative;z-index:2;margin-bottom:22px}
     .lst-consult-form-head h3{margin:0;color:#fff;font:500 clamp(27px,2.6vw,38px)/1.1 Georgia,serif;letter-spacing:-.02em}
     .lst-consult-form-head p{margin:9px 0 0;color:rgba(248,247,242,.68);font:400 13px/1.6 Inter,Arial,sans-serif}
-    .lst-consult-frame{position:relative;z-index:1;display:block;width:100%;height:720px;border:0;background:transparent;color-scheme:dark}
+    .lst-consult-frame{position:relative;z-index:1;display:block;width:100%;height:520px;border:0;background:transparent;color-scheme:dark;transition:height .2s ease}
     .lst-consult-fallback{margin:14px 0 0;text-align:center;color:rgba(248,247,242,.62);font:500 11px/1.5 Inter,Arial,sans-serif}
     .lst-consult-fallback a{color:#ead9a6!important;text-decoration:underline;text-underline-offset:3px}
     body.home .page-content>#lst-consult-root{order:11!important}body.home .page-content>.md-footer{order:12!important}
-    @media(max-width:980px){.lst-consult-wrap{grid-template-columns:1fr;max-width:760px}.lst-consult-copy{position:relative;top:auto;padding:0}.lst-consult-copy>p{max-width:62ch}.lst-consult-frame{height:760px}}
-    @media(max-width:620px){#lst-consult-root{padding:64px 16px}.lst-consult-copy h2{font-size:43px}.lst-consult-form-shell{padding:24px 16px;border-radius:22px}.lst-consult-frame{height:820px}.lst-consult-direct{display:grid;grid-template-columns:1fr 1fr}.lst-consult-direct a{width:100%}}
+    @media(max-width:980px){.lst-consult-wrap{grid-template-columns:1fr;max-width:760px}.lst-consult-copy{position:relative;top:auto;padding:0}.lst-consult-copy>p{max-width:62ch}}
+    @media(max-width:620px){#lst-consult-root{padding:64px 16px}.lst-consult-copy h2{font-size:43px}.lst-consult-form-shell{padding:24px 16px;border-radius:22px}.lst-consult-direct{display:grid;grid-template-columns:1fr 1fr}.lst-consult-direct a{width:100%}}
     @media(prefers-reduced-motion:reduce){#lst-consult-root *,#lst-consult-root *::before,#lst-consult-root *::after{transition:none!important}}
   `;
 
@@ -77,8 +77,15 @@
       if (nativeHeading) nativeHeading.textContent = "Tell us about your move";
       var form = doc.querySelector(".md-form");
       if (form) {
-        var height = Math.max(560,Math.ceil(form.getBoundingClientRect().height + 8));
+        var height = Math.max(360,Math.ceil(form.getBoundingClientRect().height + 2));
         frame.style.height = height + "px";
+        if (!frame.__lstResizeWatching) {
+          frame.__lstResizeWatching = true;
+          if ("ResizeObserver" in window) {
+            new ResizeObserver(function () { styleFrame(frame); }).observe(form);
+          }
+          new MutationObserver(function () { styleFrame(frame); }).observe(form,{childList:true,subtree:true,attributes:true});
+        }
       }
     } catch (error) {
       frame.style.height = "760px";
