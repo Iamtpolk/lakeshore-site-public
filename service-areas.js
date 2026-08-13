@@ -68,7 +68,7 @@
     var section = document.createElement("section");
     section.id = "lst-areas-root";
     section.setAttribute("aria-labelledby", "lst-areas-heading");
-    section.innerHTML = '<div class="lst-areas-wrap"><header class="lst-areas-head"><div><p class="lst-areas-kicker">Areas We Serve</p><h2 id="lst-areas-heading">Local guidance, wherever your next move leads.</h2></div><p class="lst-areas-intro">From Acadiana to Southwest Louisiana, our team brings market knowledge and dependable guidance to the communities we call home.</p></header><div class="lst-areas-panels">' + areas.map(panel).join("") + '</div><div class="lst-areas-foot"><p>Looking just outside these areas? Start a conversationâ€”we serve communities throughout South Louisiana.</p><a class="lst-areas-cta" href="/search">Search All Homes <span aria-hidden="true">&rarr;</span></a></div></div>';
+    section.innerHTML = '<div class="lst-areas-wrap"><header class="lst-areas-head"><div><p class="lst-areas-kicker">Areas We Serve</p><h2 id="lst-areas-heading">Local guidance, wherever your next move leads.</h2></div><p class="lst-areas-intro">From Acadiana to Southwest Louisiana, our team brings market knowledge and dependable guidance to the communities we call home.</p></header><div class="lst-areas-panels">' + areas.map(panel).join("") + '</div><div class="lst-areas-foot"><p>Looking just outside these areas? Start a conversation&mdash;we serve communities throughout South Louisiana.</p><a class="lst-areas-cta" href="/search">Search All Homes <span aria-hidden="true">&rarr;</span></a></div></div>';
     footer.parentNode.insertBefore(section, footer);
   }
 
