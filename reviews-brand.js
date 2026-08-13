@@ -1,6 +1,3 @@
-Exit code: 0
-Wall time: 3.8 seconds
-Output:
 (function () {
   "use strict";
 
@@ -158,4 +155,3 @@ Output:
   build();
   new MutationObserver(build).observe(document.documentElement, { childList:true,subtree:true });
 })();
-
