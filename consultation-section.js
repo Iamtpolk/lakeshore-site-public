@@ -79,13 +79,6 @@
       if (form) {
         var height = Math.max(360,Math.ceil(form.getBoundingClientRect().height + 2));
         frame.style.height = height + "px";
-        if (!frame.__lstResizeWatching) {
-          frame.__lstResizeWatching = true;
-          if ("ResizeObserver" in window) {
-            new ResizeObserver(function () { styleFrame(frame); }).observe(form);
-          }
-          new MutationObserver(function () { styleFrame(frame); }).observe(form,{childList:true,subtree:true,attributes:true});
-        }
       }
     } catch (error) {
       frame.style.height = "760px";
@@ -104,8 +97,12 @@
     var frame = section.querySelector(".lst-consult-frame");
     frame.addEventListener("load",function () {
       styleFrame(frame);
-      setTimeout(function(){styleFrame(frame);},600);
-      setTimeout(function(){styleFrame(frame);},1800);
+      var checks = 0;
+      var timer = setInterval(function () {
+        styleFrame(frame);
+        checks += 1;
+        if (checks >= 24) clearInterval(timer);
+      },250);
     });
   }
 
