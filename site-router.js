@@ -24,9 +24,9 @@
   document.documentElement.classList.add("lst-route-"+(path==="/"?"home":path.slice(1).replace(/[^a-z0-9]+/gi,"-")));
 
   if(path==="/"){
-    load(PIN+"cf3c3977808df59d3ae2d951737789b58130b4d6/homepage-bundle.js");
+    load(PIN+"20c99e81c3ce139a173585a25f974221a1deead6/homepage-bundle.js");
   }else{
-    Promise.all([load(CDN+"navbar.js?v=2"),load(CDN+"footer-v6.js")]);
+    Promise.all([load(CDN+"navbar.js?v=3"),load(CDN+"footer-v6.js")]);
     if(path==="/sell")load(pin("seller"));
     else if(path==="/cash-offer")load(pin("cash"));
     else if(path==="/contact")load(pin("contact"));
