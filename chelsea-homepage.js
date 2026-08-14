@@ -6,10 +6,36 @@
   if ((window.location.pathname.replace(/\/$/, "") || "/") !== "/") return;
   window.__chelseaHomepageLoaded = true;
 
+  var root = document.documentElement;
+  var gateReleased = false;
+  var gateTimedOut = false;
+  var gateStyle = document.createElement("style");
+  gateStyle.id = "cp-agent-loading-gate";
+  gateStyle.textContent =
+    "html.cp-agent-loading{background:#160b0a!important}" +
+    "html.cp-agent-loading body{opacity:0!important;visibility:hidden!important;pointer-events:none!important}" +
+    "html.cp-agent-ready body{opacity:1;visibility:visible;transition:opacity .38s ease}" +
+    "@media(prefers-reduced-motion:reduce){html.cp-agent-ready body{transition:none}}";
+  document.head.appendChild(gateStyle);
+  root.classList.add("cp-agent-loading");
+
+  function releaseGate(completed) {
+    if (gateReleased) return;
+    gateReleased = true;
+    gateTimedOut = !completed;
+    root.classList.remove("cp-agent-loading");
+    if (completed) root.classList.add("cp-agent-ready");
+  }
+
+  var gateSafetyTimer = window.setTimeout(function () {
+    releaseGate(false);
+  }, 10000);
+
   var ASSET_ROOT = "https://iamtpolk.github.io/lakeshore-site-public/assets/team/";
   var HEADSHOT = ASSET_ROOT + "chelsea-porter.webp";
 
   function waitForPage(attempt) {
+    if (gateTimedOut) return;
     var main = document.querySelector("main#app, .page-content");
     var footer = document.querySelector(".md-footer, footer");
     var listings = document.querySelector(".md-house");
@@ -25,7 +51,7 @@
     document.documentElement.classList.add("cp-agent-home");
     document.querySelectorAll("a, span, button").forEach(function (node) {
       if (node.children.length) return;
-      node.textContent = node.textContent.replace(/Ã¢â€ â€™|Ã‚â€ â€™/g, String.fromCharCode(8594)).replace(/Ã‚Â·/g, String.fromCharCode(183));
+      node.textContent = node.textContent.replace(/â†’|Â†’/g, String.fromCharCode(8594)).replace(/Â·/g, String.fromCharCode(183));
     });
 
     var font = document.createElement("link");
@@ -112,6 +138,11 @@
     }
     personalizeChat();
     new MutationObserver(personalizeChat).observe(document.documentElement, { childList:true, subtree:true, attributes:true, attributeFilter:["src"] });
+
+    window.clearTimeout(gateSafetyTimer);
+    window.requestAnimationFrame(function () {
+      window.requestAnimationFrame(function () { releaseGate(true); });
+    });
   }
 
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", function () { waitForPage(0); });
