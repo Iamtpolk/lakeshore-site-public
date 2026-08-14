@@ -26,12 +26,12 @@
 
   if(path==="/"){
     if(host==="chelseaporter.lakeshoreteam.com"){
-      Promise.all([load(CDN+"navbar.js?v=3"),load(CDN+"footer-v6.js"),load(CDN+"chelsea-homepage.js?v=7")]);
+      Promise.all([load(PIN+"9f548bb89ebb9cac638ef100da2bcc78cfceed66/navbar.js"),load(CDN+"footer-v6.js"),load(CDN+"chelsea-homepage.js?v=7")]);
     }else{
       load(PIN+"20c99e81c3ce139a173585a25f974221a1deead6/homepage-bundle.js");
     }
   }else{
-    Promise.all([load(CDN+"navbar.js?v=3"),load(CDN+"footer-v6.js")]);
+    Promise.all([load(PIN+"9f548bb89ebb9cac638ef100da2bcc78cfceed66/navbar.js"),load(CDN+"footer-v6.js")]);
     if(path==="/sell")load(pin("seller"));
     else if(path==="/cash-offer")load(pin("cash"));
     else if(path==="/contact")load(pin("contact"));
