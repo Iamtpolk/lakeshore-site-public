@@ -12,7 +12,7 @@
     ["02", "We Prepare the Opportunity", "A local Lakeshore Team specialist reviews the property and presents it to our network of vetted cash buyers."],
     ["03", "Investors Submit Their Numbers", "Qualified investors evaluate the opportunity and compete to provide a genuine cash offer, typically within 24 hours."],
     ["04", "Compare Every Selling Path", "We help you compare the cash offer with quick-list and full-market options so you can judge price, speed, and convenience together."],
-    ["05", "Choose Your Closing Date", "If the cash offer fits, select a closing timeline that works for youâ€”with no repairs, showings, or pressure to move forward."]
+    ["05", "Choose Your Closing Date", "If the cash offer fits, select a closing timeline that works for you - with no repairs, showings, or pressure to move forward."]
   ];
 
   var css = `
