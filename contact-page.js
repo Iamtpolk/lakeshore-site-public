@@ -1,6 +1,3 @@
-Exit code: 0
-Wall time: 0.6 seconds
-Output:
 (function () {
   "use strict";
 
@@ -69,7 +66,7 @@ Output:
     body:not(.home) .md-form .submit{border-radius:12px!important;background:linear-gradient(135deg,#d7c582,#b89052)!important;color:#240f0e!important;font-weight:800!important}
     body:not(.home) .md-form .disclaimer-content{color:rgba(248,247,242,.56)!important}body:not(.home) .md-form .disclaimer-content a{color:#d7c582!important}
     html.lst-contact-chelsea #lst-contact-page{display:none!important}
-    html.lst-contact-chelsea body:not(.home) .md-form::before{content:"Chelsea Porter · Lakeshore Team"}
+    html.lst-contact-chelsea body:not(.home) .md-form::before{content:"Chelsea Porter Â· Lakeshore Team"}
     html.lst-contact-chelsea body:not(.home) .md-form h2::after{content:"Tell Chelsea what you are planning and she will follow up personally with clear next steps."}
     @media(max-width:1120px){.lst-contact-grid{grid-template-columns:repeat(2,minmax(0,1fr));max-width:820px}.lst-contact-role{min-height:0}}
     @media(max-width:620px){.lst-contact-hero{padding:68px 18px 46px}.lst-contact-hero h1{font-size:46px}.lst-contact-directory{padding:0 16px 66px}.lst-contact-grid{grid-template-columns:1fr;max-width:430px}.lst-contact-card-copy{padding:21px 18px}body:not(.home) .md-form{padding:64px 16px!important}body:not(.home) .md-form-container{padding:23px 16px!important;border-radius:22px!important}}
