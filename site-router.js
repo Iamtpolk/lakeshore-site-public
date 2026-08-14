@@ -24,6 +24,10 @@
   document.documentElement.classList.add("lst-route-"+(path==="/"?"home":path.slice(1).replace(/[^a-z0-9]+/gi,"-")));
 
   if(path==="/"){
+    var heroPreload=document.createElement("link");
+    heroPreload.rel="preload";heroPreload.as="image";heroPreload.type="image/webp";
+    heroPreload.href=PIN+"a99370882624406e1a0c41fb1f2f1620eb86474f/assets/hero/louisiana-luxury-home.webp";
+    heroPreload.setAttribute("fetchpriority","high");document.head.appendChild(heroPreload);
     load(PIN+"cf3c3977808df59d3ae2d951737789b58130b4d6/homepage-bundle.js");
   }else{
     Promise.all([load(CDN+"navbar.js?v=2"),load(CDN+"footer-v6.js")]);
