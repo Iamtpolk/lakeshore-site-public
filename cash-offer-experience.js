@@ -6,7 +6,7 @@
   document.documentElement.classList.add("lst-cash-page");
 
   var formUrl = "#cash-offer-form";
-  var tallyEmbed = "https://tally.so/embed/RGbj2Q?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1";
+  var tallyEmbed = "https://tally.so/embed/RGbj2Q?alignLeft=1&transparentBackground=1&dynamicHeight=1";
   var steps = [
     ["01", "Tell Us About the Property", "Share the address and a few details about the home's condition. The request takes about a minute and creates no obligation."],
     ["02", "We Prepare the Opportunity", "A local Lakeshore Team specialist reviews the property and presents it to our network of vetted cash buyers."],
