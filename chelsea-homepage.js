@@ -60,7 +60,7 @@
     home.innerHTML = `
       <section class="cp-hero">
         <div class="cp-shell cp-hero-grid">
-          <div><div class="cp-eyebrow">Residential Specialist Â· South Louisiana</div><h1 class="cp-serif">Move with <span>confidence.</span></h1><p class="cp-hero-copy">Chelsea Porter delivers a seamless, stress-free real estate experience through thoughtful preparation, clear communication, and exceptional service from the first conversation to the closing table.</p><div class="cp-actions"><a class="cp-button cp-start-move" href="#chelsea-connect">Start your move</a><a class="cp-button cp-secondary" href="/listing">Search homes</a></div></div>
+          <div><div class="cp-eyebrow">Residential Specialist &middot; South Louisiana</div><h1 class="cp-serif">Move with <span>confidence.</span></h1><p class="cp-hero-copy">Chelsea Porter delivers a seamless, stress-free real estate experience through thoughtful preparation, clear communication, and exceptional service from the first conversation to the closing table.</p><div class="cp-actions"><a class="cp-button cp-start-move" href="#chelsea-connect">Start your move</a><a class="cp-button cp-secondary" href="/listing">Search homes</a></div></div>
           <div class="cp-portrait-wrap"><div class="cp-portrait"><img src="${HEADSHOT}" alt="Chelsea Porter, Residential Specialist with Lakeshore Team"></div><div class="cp-signature"><strong>Chelsea Porter</strong><span>Lakeshore Team Â· eXp Realty</span></div></div>
         </div>
       </section>
@@ -71,13 +71,13 @@
 
     var listingHead = document.createElement("section");
     listingHead.className = "cp-home cp-listing-head";
-    listingHead.innerHTML = `<div class="cp-shell cp-listing-row"><div><span class="cp-kicker">Featured homes</span><h2 class="cp-serif">Find your next address.</h2></div><a class="cp-text-link" href="/listing">Search all homes â†’</a></div>`;
+    listingHead.innerHTML = `<div class="cp-shell cp-listing-row"><div><span class="cp-kicker">Featured homes</span><h2 class="cp-serif">Find your next address.</h2></div><a class="cp-text-link" href="/listing">Search all homes &rarr;</a></div>`;
     main.insertBefore(listingHead, listings);
 
     var contact = document.createElement("section");
     contact.className = "cp-home cp-contact";
     contact.id = "chelsea-connect";
-    contact.innerHTML = `<div class="cp-shell cp-contact-card"><div class="cp-contact-person"><img src="${HEADSHOT}" alt="Chelsea Porter"><div class="cp-contact-badge"><strong>Chelsea Porter</strong><span>Residential Specialist Â· Lakeshore Team</span></div></div><div class="cp-contact-copy"><span class="cp-kicker">Connect with Chelsea</span><h2 class="cp-serif">Start your next move with confidence.</h2><p>Have a question about buying or selling? Reach Chelsea directly or start a private conversation through the Lakeshore Team form.</p><div class="cp-contact-details"><a class="cp-contact-detail" href="tel:+13373240588">Call or text Â· (337) 324-0588</a><a class="cp-contact-detail" href="mailto:chelsea.porter@exprealty.com">chelsea.porter@exprealty.com</a></div><div class="cp-contact-actions"><a class="cp-button" href="/contact?agent=chelsea#start-conversation">Start the conversation â†’</a><div class="cp-socials"><a href="https://www.instagram.com/cporter_realtor" target="_blank" rel="noopener noreferrer" aria-label="Chelsea on Instagram"><img src="https://cdn.simpleicons.org/instagram/E4405F" alt=""></a><a href="https://m.me/61582528467689" target="_blank" rel="noopener noreferrer" aria-label="Message Chelsea on Facebook"><img src="https://cdn.simpleicons.org/messenger/00B2FF" alt=""></a><a href="https://www.facebook.com/profile.php?id=61582528467689" target="_blank" rel="noopener noreferrer" aria-label="Chelsea on Facebook"><img src="https://cdn.simpleicons.org/facebook/1877F2" alt=""></a></div></div></div></div>`;
+    contact.innerHTML = `<div class="cp-shell cp-contact-card"><div class="cp-contact-person"><img src="${HEADSHOT}" alt="Chelsea Porter"><div class="cp-contact-badge"><strong>Chelsea Porter</strong><span>Residential Specialist &middot; Lakeshore Team</span></div></div><div class="cp-contact-copy"><span class="cp-kicker">Connect with Chelsea</span><h2 class="cp-serif">Start your next move with confidence.</h2><p>Have a question about buying or selling? Reach Chelsea directly or start a private conversation through the Lakeshore Team form.</p><div class="cp-contact-details"><a class="cp-contact-detail" href="tel:+13373240588">Call or text &middot; (337) 324-0588</a><a class="cp-contact-detail" href="mailto:chelsea.porter@exprealty.com">chelsea.porter@exprealty.com</a></div><div class="cp-contact-actions"><a class="cp-button" href="/contact?agent=chelsea#start-conversation">Start the conversation &rarr;</a><div class="cp-socials"><a href="https://www.instagram.com/cporter_realtor" target="_blank" rel="noopener noreferrer" aria-label="Chelsea on Instagram"><img src="https://cdn.simpleicons.org/instagram/E4405F" alt=""></a><a href="https://m.me/61582528467689" target="_blank" rel="noopener noreferrer" aria-label="Message Chelsea on Facebook"><img src="https://cdn.simpleicons.org/messenger/00B2FF" alt=""></a><a href="https://www.facebook.com/profile.php?id=61582528467689" target="_blank" rel="noopener noreferrer" aria-label="Chelsea on Facebook"><img src="https://cdn.simpleicons.org/facebook/1877F2" alt=""></a></div></div></div></div>`;
     main.insertBefore(contact, footer);
 
     function connectToChelsea(event) {
@@ -85,10 +85,21 @@
       var target = document.getElementById("chelsea-connect");
       if (target) target.scrollIntoView({ behavior:"smooth", block:"start" });
     }
-    document.querySelectorAll(".cp-start-move, #lst-premium-nav .lst-cta").forEach(function (link) {
-      link.setAttribute("href", "#chelsea-connect");
-      link.addEventListener("click", connectToChelsea);
-    });
+    function bindStartButtons() {
+      document.querySelectorAll(".cp-start-move, #lst-premium-nav .lst-cta").forEach(function (link) {
+        link.setAttribute("href", "#chelsea-connect");
+        if (link.dataset.cpChelseaBound) return;
+        link.dataset.cpChelseaBound = "true";
+        link.addEventListener("click", connectToChelsea);
+      });
+    }
+    bindStartButtons();
+    var bindAttempts = 0;
+    var bindTimer = window.setInterval(function () {
+      bindStartButtons();
+      bindAttempts += 1;
+      if (document.querySelector("#lst-premium-nav .lst-cta") || bindAttempts > 40) window.clearInterval(bindTimer);
+    }, 250);
   }
 
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", function () { waitForPage(0); });
