@@ -18,17 +18,20 @@
     html.lst-cash-page body .md-hero .banner{height:clamp(660px,74vh,800px)!important;min-height:660px!important;max-height:800px!important;overflow:hidden!important}
     html.lst-cash-page body .md-hero .single-picture{filter:saturate(.78) contrast(1.04);transform:scale(1.02)}
     html.lst-cash-page body .md-hero .banner-mask{background:linear-gradient(90deg,rgba(17,19,18,.7),rgba(36,15,14,.46) 55%,rgba(17,19,18,.58))!important}
-    html.lst-cash-page body .md-hero .media-content-v2{width:100%!important;padding:125px clamp(28px,8vw,170px) 80px!important;box-sizing:border-box!important;align-items:flex-start!important;text-align:left!important}
-    html.lst-cash-page body .md-hero .media-info{width:min(100%,900px)!important;margin:0!important}
-    html.lst-cash-page body .md-hero .title-text{display:flex!important;flex-direction:column!important;align-items:flex-start!important;gap:18px!important}
-    html.lst-cash-page body .md-hero .site-title{width:100%!important;text-align:left!important}
-    html.lst-cash-page body .md-hero .site-title[aria-level="1"]{max-width:850px!important}
+    html.lst-cash-page body .md-hero .media-content-v2{width:100%!important;padding:125px clamp(28px,8vw,170px) 80px!important;box-sizing:border-box!important;align-items:center!important;text-align:center!important}
+    html.lst-cash-page body .md-hero .media-info{width:min(100%,1120px)!important;margin:0 auto!important}
+    html.lst-cash-page body .md-hero .title-text{display:flex!important;flex-direction:column!important;align-items:center!important;gap:18px!important}
+    html.lst-cash-page body .md-hero .site-title{width:100%!important;text-align:center!important}
+    html.lst-cash-page body .md-hero .site-title[aria-level="1"]{max-width:1060px!important;margin-inline:auto!important}
     html.lst-cash-page body .md-hero .site-title[aria-level="1"] h1{margin:0!important;font-size:clamp(52px,5.2vw,84px)!important;line-height:.98!important;letter-spacing:-.04em!important;text-wrap:balance;text-shadow:0 4px 28px rgba(0,0,0,.55)}
-    html.lst-cash-page body .md-hero .site-title[aria-level="3"]{max-width:720px!important}
+    html.lst-cash-page body .md-hero .site-title[aria-level="3"]{max-width:760px!important;margin-inline:auto!important}
     html.lst-cash-page body .md-hero .site-title[aria-level="3"]>*{margin:0!important;font-size:clamp(17px,1.25vw,21px)!important;line-height:1.58!important;font-weight:400!important;text-wrap:balance}
-    .lst-cash-hero-actions{display:flex;flex-wrap:wrap;align-items:center;gap:18px;margin-top:34px}
+    .lst-cash-hero-actions{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:18px;margin-top:34px}
     .lst-cash-hero-btn,.lst-cash-final-btn{display:inline-flex;min-height:58px;align-items:center;justify-content:center;gap:10px;padding:0 27px;border:1px solid rgba(224,195,126,.74);border-radius:14px;background:linear-gradient(135deg,#d0b169,#a9833b);color:#1c160d!important;box-shadow:0 18px 38px rgba(0,0,0,.3);font:800 12px/1 Inter,Arial,sans-serif;letter-spacing:.085em;text-decoration:none!important;text-transform:uppercase;transition:transform .25s ease,filter .25s ease}
-    .lst-cash-hero-btn:hover,.lst-cash-final-btn:hover{transform:translateY(-3px);filter:brightness(1.08)}
+    .lst-cash-hero-btn:hover,.lst-cash-hero-btn:focus-visible{background:#fff!important;border-color:#fff!important;color:#240f0e!important;transform:translateY(-3px);filter:none!important}
+    .lst-cash-hero-btn:hover span,.lst-cash-hero-btn:focus-visible span{color:#240f0e!important}
+    .lst-cash-final-btn:hover,.lst-cash-final-btn:focus-visible{background:#240f0e!important;border-color:#b89052!important;color:#d5b873!important;transform:translateY(-3px);filter:none!important}
+    .lst-cash-final-btn:hover span,.lst-cash-final-btn:focus-visible span{color:#d5b873!important}
     .lst-cash-hero-note{color:rgba(255,255,255,.82);font:700 11px/1.4 Inter,Arial,sans-serif;letter-spacing:.11em;text-transform:uppercase}
     html.lst-cash-page body .md-custom-code.html-code{background:transparent!important}
     html.lst-cash-page body .md-custom-code.html-code .mg-container{width:100%!important;max-width:none!important;margin:0!important;padding:0!important}
