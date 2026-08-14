@@ -25,10 +25,7 @@
 
   Promise.all([load(CDN+"navbar.js?v=2"),load(CDN+"footer-v6.js")]);
   if(path==="/"){
-    Promise.all([
-      load(CDN+"searchbar.js?v=3"),load(CDN+"listing-cards.js?v=1"),load(CDN+"section-transitions.js?v=1"),
-      load(pin("team")),load(pin("reviews")),load(pin("why")),load(pin("areas")),load(pin("consult")),load(pin("hero"))
-    ]).then(function(){load(pin("order"));});
+    load(PIN+"cf3c3977808df59d3ae2d951737789b58130b4d6/homepage-bundle.js");
   }else if(path==="/sell")load(pin("seller"));
   else if(path==="/cash-offer")load(pin("cash"));
   else if(path==="/contact")load(pin("contact"));
