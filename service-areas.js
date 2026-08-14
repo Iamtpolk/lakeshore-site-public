@@ -5,11 +5,11 @@
   window.__lakeshoreServiceAreasLoaded = true;
 
   var areas = [
-    { name:"Lafayette", region:"Acadiana", note:"Culture, commerce, and connected neighborhoods at the heart of Acadiana.", tone:"gold" },
-    { name:"Youngsville", region:"Lafayette Parish", note:"Growing communities, newer construction, and a welcoming hometown feel.", tone:"cream" },
-    { name:"Broussard", region:"Lafayette Parish", note:"Established neighborhoods with convenient access to the places you go every day.", tone:"maroon" },
-    { name:"Lake Charles", region:"Southwest Louisiana", note:"Homes, land, and investment opportunities across the Lake Area.", tone:"charcoal" },
-    { name:"Surrounding Areas", region:"South Louisiana", note:"Guidance across Acadiana, Calcasieu Parish, and the communities in between.", tone:"olive" }
+    { name:"Lafayette", city:"Lafayette, LA", region:"Acadiana", note:"Culture, commerce, and connected neighborhoods at the heart of Acadiana.", tone:"gold" },
+    { name:"Youngsville", city:"Youngsville, LA", region:"Lafayette Parish", note:"Growing communities, newer construction, and a welcoming hometown feel.", tone:"cream" },
+    { name:"Broussard", city:"Broussard, LA", region:"Lafayette Parish", note:"Established neighborhoods with convenient access to the places you go every day.", tone:"maroon" },
+    { name:"Lake Charles", city:"Lake Charles, LA", region:"Southwest Louisiana", note:"Homes, land, and investment opportunities across the Lake Area.", tone:"charcoal" },
+    { name:"Surrounding Areas", href:"/listing", region:"South Louisiana", note:"Guidance across Acadiana, Calcasieu Parish, and the communities in between.", tone:"olive" }
   ];
 
   function escapeHtml(value) {
@@ -18,8 +18,15 @@
     });
   }
 
+  function citySearch(city) {
+    var condition = JSON.stringify({ location:{ city:[city] } });
+    return "/listing?listingSource=all%20listings&condition=" + encodeURIComponent(condition) + "&uiConfig=%7B%7D&zoom=12&page=1";
+  }
+
   function panel(area, index) {
-    return '<a class="lst-area-panel lst-area-panel--' + area.tone + '" href="/search" aria-label="Search homes in ' + escapeHtml(area.name) + '">' +
+    var href = area.href || citySearch(area.city);
+    var label = area.city ? "Search homes in " + area.name : "Search homes across South Louisiana";
+    return '<a class="lst-area-panel lst-area-panel--' + area.tone + '" href="' + escapeHtml(href) + '" aria-label="' + escapeHtml(label) + '">' +
       '<span class="lst-area-lines" aria-hidden="true"></span>' +
       '<span class="lst-area-index" aria-hidden="true">0' + (index + 1) + '</span>' +
       '<span class="lst-area-content"><small>' + escapeHtml(area.region) + '</small><strong>' + escapeHtml(area.name) + '</strong><span class="lst-area-note">' + escapeHtml(area.note) + '</span><span class="lst-area-link">Explore the area <b aria-hidden="true">&rarr;</b></span></span>' +
@@ -68,7 +75,7 @@
     var section = document.createElement("section");
     section.id = "lst-areas-root";
     section.setAttribute("aria-labelledby", "lst-areas-heading");
-    section.innerHTML = '<div class="lst-areas-wrap"><header class="lst-areas-head"><div><p class="lst-areas-kicker">Areas We Serve</p><h2 id="lst-areas-heading">Local guidance, wherever your next move leads.</h2></div><p class="lst-areas-intro">From Acadiana to Southwest Louisiana, our team brings market knowledge and dependable guidance to the communities we call home.</p></header><div class="lst-areas-panels">' + areas.map(panel).join("") + '</div><div class="lst-areas-foot"><p>Looking just outside these areas? Start a conversation&mdash;we serve communities throughout South Louisiana.</p><a class="lst-areas-cta" href="/search">Search All Homes <span aria-hidden="true">&rarr;</span></a></div></div>';
+    section.innerHTML = '<div class="lst-areas-wrap"><header class="lst-areas-head"><div><p class="lst-areas-kicker">Areas We Serve</p><h2 id="lst-areas-heading">Local guidance, wherever your next move leads.</h2></div><p class="lst-areas-intro">From Acadiana to Southwest Louisiana, our team brings market knowledge and dependable guidance to the communities we call home.</p></header><div class="lst-areas-panels">' + areas.map(panel).join("") + '</div><div class="lst-areas-foot"><p>Looking just outside these areas? Start a conversation&mdash;we serve communities throughout South Louisiana.</p><a class="lst-areas-cta" href="/listing">Search All Homes <span aria-hidden="true">&rarr;</span></a></div></div>';
     footer.parentNode.insertBefore(section, footer);
   }
 
@@ -81,3 +88,4 @@
   build();
   new MutationObserver(build).observe(document.documentElement,{childList:true,subtree:true});
 })();
+
