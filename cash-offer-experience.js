@@ -48,6 +48,7 @@
     .lst-cash-step{position:relative;min-height:270px;padding:34px 32px 30px;border:1px solid rgba(36,15,14,.14);border-radius:23px;background:rgba(255,255,255,.54);box-shadow:0 22px 50px rgba(54,44,32,.1);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);opacity:.62;transform:translateY(22px);transition:opacity .55s ease,transform .55s ease,border-color .55s ease,background .55s ease}
     .lst-cash-step:nth-of-type(odd){grid-column:1}
     .lst-cash-step:nth-of-type(even){grid-column:2;background:linear-gradient(150deg,rgba(36,15,14,.95),rgba(32,35,34,.96));color:#f8f7f2}
+    .lst-cash-step:nth-of-type(1){grid-row:1}.lst-cash-step:nth-of-type(2){grid-row:2}.lst-cash-step:nth-of-type(3){grid-row:3}.lst-cash-step:nth-of-type(4){grid-row:4}.lst-cash-step:nth-of-type(5){grid-row:5}
     .lst-cash-step.is-active{opacity:1;transform:none;border-color:rgba(184,144,82,.5)}
     .lst-cash-node{position:absolute;top:42px;width:14px;height:14px;border:3px solid #f5f1e8;border-radius:50%;background:#81796d;box-shadow:0 0 0 1px rgba(36,15,14,.18);transition:background .45s ease,box-shadow .45s ease}
     .lst-cash-step:nth-of-type(odd) .lst-cash-node{right:-92px}.lst-cash-step:nth-of-type(even) .lst-cash-node{left:-92px}
