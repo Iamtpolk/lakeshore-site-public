@@ -1,9 +1,13 @@
+Exit code: 0
+Wall time: 0.6 seconds
+Output:
 (function () {
   "use strict";
 
   if (window.__lakeshoreContactPageLoaded) return;
   window.__lakeshoreContactPageLoaded = true;
   if (!/^\/contact\/?$/.test(window.location.pathname)) return;
+  var chelseaMode = new URLSearchParams(window.location.search).get("agent") === "chelsea";
 
   var ASSET_ROOT = "https://iamtpolk.github.io/lakeshore-site-public/assets/team/";
   var members = [
@@ -64,6 +68,9 @@
     body:not(.home) .md-form input::placeholder,body:not(.home) .md-form textarea::placeholder{color:rgba(248,247,242,.56)!important}
     body:not(.home) .md-form .submit{border-radius:12px!important;background:linear-gradient(135deg,#d7c582,#b89052)!important;color:#240f0e!important;font-weight:800!important}
     body:not(.home) .md-form .disclaimer-content{color:rgba(248,247,242,.56)!important}body:not(.home) .md-form .disclaimer-content a{color:#d7c582!important}
+    html.lst-contact-chelsea #lst-contact-page{display:none!important}
+    html.lst-contact-chelsea body:not(.home) .md-form::before{content:"Chelsea Porter · Lakeshore Team"}
+    html.lst-contact-chelsea body:not(.home) .md-form h2::after{content:"Tell Chelsea what you are planning and she will follow up personally with clear next steps."}
     @media(max-width:1120px){.lst-contact-grid{grid-template-columns:repeat(2,minmax(0,1fr));max-width:820px}.lst-contact-role{min-height:0}}
     @media(max-width:620px){.lst-contact-hero{padding:68px 18px 46px}.lst-contact-hero h1{font-size:46px}.lst-contact-directory{padding:0 16px 66px}.lst-contact-grid{grid-template-columns:1fr;max-width:430px}.lst-contact-card-copy{padding:21px 18px}body:not(.home) .md-form{padding:64px 16px!important}body:not(.home) .md-form-container{padding:23px 16px!important;border-radius:22px!important}}
     @media(prefers-reduced-motion:reduce){#lst-contact-page *,#lst-contact-page *::before,#lst-contact-page *::after{transition:none!important}}
@@ -71,10 +78,16 @@
 
   function build(){
     var form=document.querySelector("main>.md-form");
-    if(!form||!form.parentNode||document.getElementById("lst-contact-page"))return;
-    var section=document.createElement("section");section.id="lst-contact-page";section.setAttribute("aria-labelledby","lst-contact-title");
-    section.innerHTML='<div class="lst-contact-hero"><p class="lst-contact-kicker">Connect With Lakeshore Team</p><h1 id="lst-contact-title">The right person for your next move.</h1><p>Choose the specialist who best fits your needs, or send one message to the team and we will make sure it reaches the right person.</p></div><div class="lst-contact-directory"><div class="lst-contact-grid">'+members.map(card).join("")+'</div></div>';
-    form.parentNode.insertBefore(section,form);
+    if(!form||!form.parentNode||form.dataset.lstContactReady)return;
+    form.dataset.lstContactReady="true";
+    if(chelseaMode){
+      document.documentElement.classList.add("lst-contact-chelsea");
+      form.id="start-conversation";
+    }else{
+      var section=document.createElement("section");section.id="lst-contact-page";section.setAttribute("aria-labelledby","lst-contact-title");
+      section.innerHTML='<div class="lst-contact-hero"><p class="lst-contact-kicker">Connect With Lakeshore Team</p><h1 id="lst-contact-title">The right person for your next move.</h1><p>Choose the specialist who best fits your needs, or send one message to the team and we will make sure it reaches the right person.</p></div><div class="lst-contact-directory"><div class="lst-contact-grid">'+members.map(card).join("")+'</div></div>';
+      form.parentNode.insertBefore(section,form);
+    }
     var heading=form.querySelector("h2");if(heading)heading.textContent="Start the conversation.";
   }
 
