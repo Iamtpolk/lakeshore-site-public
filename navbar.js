@@ -1,4 +1,4 @@
-/* Lakeshore TEAM (lakeshoreteam.com) — premium site-wide navigation.
+/* Lakeshore TEAM (lakeshoreteam.com) â€” premium site-wide navigation.
    Loaded by Lofty's site-wide Script. The native Lofty header remains in the DOM
    as the source of truth for Register / Sign In; this presentation layer forwards
    those actions so the platform's authentication behavior is preserved. */
@@ -13,7 +13,7 @@
     { label: 'Sell', href: '/sell' },
     { label: 'Cash Offer', href: '/cash-offer' },
     { label: 'Our Team', href: '/myteam' },
-    { label: 'About', href: '/contact' }
+    { label: 'Contact', href: '/contact' }
   ];
   var CTA_HREF = '/contact';
   var HOST = 'https://iamtpolk.github.io/lakeshore-site/';
@@ -125,7 +125,7 @@
         '<div class="lst-links">' + navLinks('lst-link') + '</div>' +
         '<div class="lst-actions">' +
           '<button class="lst-account" type="button" aria-expanded="false" aria-controls="lst-account-menu">Account</button>' +
-          '<a class="lst-cta" href="' + CTA_HREF + '">Start Your Move&nbsp; <span aria-hidden="true">→</span></a>' +
+          '<a class="lst-cta" href="' + CTA_HREF + '">Start Your Move&nbsp; <span aria-hidden="true">â†’</span></a>' +
           '<button class="lst-menu-toggle" type="button" aria-expanded="false" aria-controls="lst-mobile-menu" aria-label="Open navigation menu"><span></span></button>' +
         '</div>' +
         '<div class="lst-account-menu" id="lst-account-menu" data-open="false">' +
@@ -137,7 +137,7 @@
         navLinks('lst-mobile-link') +
         '<div class="lst-mobile-divider"></div>' +
         '<div class="lst-mobile-account"><button type="button" data-native="register">Register</button><button type="button" data-native="signin">Sign In</button></div>' +
-        '<a class="lst-cta" href="' + CTA_HREF + '">Start Your Move&nbsp; <span aria-hidden="true">→</span></a>' +
+        '<a class="lst-cta" href="' + CTA_HREF + '">Start Your Move&nbsp; <span aria-hidden="true">â†’</span></a>' +
       '</div>';
 
     document.body.appendChild(nav);
@@ -228,3 +228,4 @@
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', boot, { once: true });
   else boot();
 })();
+
