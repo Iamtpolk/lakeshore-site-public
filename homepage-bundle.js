@@ -16,7 +16,7 @@
     { label: 'Sell', href: '/sell' },
     { label: 'Cash Offer', href: '/cash-offer' },
     { label: 'Our Team', href: '/myteam' },
-    { label: 'About', href: '/contact' }
+    { label: 'Contact', href: '/contact' }
   ];
   var CTA_HREF = '/contact';
   var HOST = 'https://iamtpolk.github.io/lakeshore-site/';
