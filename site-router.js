@@ -21,10 +21,15 @@
   function load(src){return new Promise(function(resolve){var s=document.createElement("script");s.src=src;s.async=true;s.onload=resolve;s.onerror=resolve;document.head.appendChild(s);});}
   function pin(key){return PIN+pinned[key];}
   var path=location.pathname.replace(/\/$/,"")||"/";
+  var host=location.hostname.toLowerCase();
   document.documentElement.classList.add("lst-route-"+(path==="/"?"home":path.slice(1).replace(/[^a-z0-9]+/gi,"-")));
 
   if(path==="/"){
-    load(PIN+"20c99e81c3ce139a173585a25f974221a1deead6/homepage-bundle.js");
+    if(host==="chelseaporter.lakeshoreteam.com"){
+      Promise.all([load(CDN+"navbar.js?v=3"),load(CDN+"footer-v6.js"),load(CDN+"chelsea-homepage.js?v=1")]);
+    }else{
+      load(PIN+"20c99e81c3ce139a173585a25f974221a1deead6/homepage-bundle.js");
+    }
   }else{
     Promise.all([load(CDN+"navbar.js?v=3"),load(CDN+"footer-v6.js")]);
     if(path==="/sell")load(pin("seller"));
