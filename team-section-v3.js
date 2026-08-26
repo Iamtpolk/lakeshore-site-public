@@ -4,6 +4,8 @@
   if (window.__lakeshoreTeamSectionLoaded) return;
   window.__lakeshoreTeamSectionLoaded = true;
 
+  document.querySelectorAll(".md-team").forEach(function (node) { node.remove(); });
+
   var ASSET_ROOT = "https://iamtpolk.github.io/lakeshore-site-public/assets/team/";
   var members = [
     {
