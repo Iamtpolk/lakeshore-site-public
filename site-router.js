@@ -16,7 +16,7 @@
     seller:"bc82914cc02dada0a1b7aea552bd5c376f54ffc8/seller-experience.js",
     cash:"e7cbce4efa333e59920cf5b05916725b6209de2a/cash-offer-experience.js",
     contact:"84171628a6a0c38f38f229b1b7e927b49ad5a1bf/contact-page.js",
-    myteam:"9493d5de1c0002f7fef6f27fe9cb9e99cb94d91e/myteam-page.js"
+    myteam:"90d28ddc7e40824ae54843b13c669abd1b58c331/myteam-page.js"
   };
   function load(src){return new Promise(function(resolve){var s=document.createElement("script");s.src=src;s.async=true;s.onload=resolve;s.onerror=resolve;document.head.appendChild(s);});}
   function pin(key){return PIN+pinned[key];}
