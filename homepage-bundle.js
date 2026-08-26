@@ -1198,7 +1198,7 @@
     var section = document.createElement("section");
     section.id = "lst-team-root";
     section.setAttribute("aria-labelledby", "lst-team-heading");
-    section.innerHTML = '<div class="lst-team-wrap"><header class="lst-team-head"><p class="lst-team-kicker">Meet the Lakeshore Team</p><h2 id="lst-team-heading">The people behind every move.</h2><p class="lst-team-intro">Four specialists. One standard of service. Meet the South Louisiana real estate professionals who bring strategy, care, and steady guidance to every client relationship.</p></header><div class="lst-team-grid">' + members.map(card).join("") + '</div><div class="lst-team-footer"><a class="lst-team-full" href="/myteam">Meet the Full Team <span aria-hidden="true">&rarr;</span></a></div></div>';
+    section.innerHTML = '<div class="lst-team-wrap"><header class="lst-team-head"><p class="lst-team-kicker">Meet the Lakeshore Team</p><h2 id="lst-team-heading">The people behind every move.</h2><p class="lst-team-intro">Three specialists. One standard of service. Meet the South Louisiana real estate professionals who bring strategy, care, and steady guidance to every client relationship.</p></header><div class="lst-team-grid">' + members.map(card).join("") + '</div><div class="lst-team-footer"><a class="lst-team-full" href="/myteam">Meet the Full Team <span aria-hidden="true">&rarr;</span></a></div></div>';
     footer.parentNode.insertBefore(section, footer);
   }
 
