@@ -16,7 +16,7 @@
     seller:"bc82914cc02dada0a1b7aea552bd5c376f54ffc8/seller-experience.js",
     cash:"e7cbce4efa333e59920cf5b05916725b6209de2a/cash-offer-experience.js",
     contact:"84171628a6a0c38f38f229b1b7e927b49ad5a1bf/contact-page.js",
-    myteam:"cc6d8b6db63c2f61e10b05ff7468742f409dc686/myteam-page.js"
+    myteam:"360b3971e89fb127251f5661bd33f3bece040dd3/myteam-page.js"
   };
   function load(src){return new Promise(function(resolve){var s=document.createElement("script");s.src=src;s.async=true;s.onload=resolve;s.onerror=resolve;document.head.appendChild(s);});}
   function pin(key){return PIN+pinned[key];}
@@ -28,7 +28,7 @@
     if(host==="chelseaporter.lakeshoreteam.com"){
       Promise.all([load(PIN+"9f548bb89ebb9cac638ef100da2bcc78cfceed66/navbar.js"),load(CDN+"footer-v6.js"),load(CDN+"chelsea-homepage.js?v=12")]);
     }else{
-      load(PIN+"20c99e81c3ce139a173585a25f974221a1deead6/homepage-bundle.js");
+      load(PIN+"360b3971e89fb127251f5661bd33f3bece040dd3/homepage-bundle.js");
     }
   }else{
     Promise.all([load(PIN+"9f548bb89ebb9cac638ef100da2bcc78cfceed66/navbar.js"),load(CDN+"footer-v6.js")]);
