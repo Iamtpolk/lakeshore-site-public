@@ -5,6 +5,8 @@
   if(!/^\/myteam\/?$/.test(location.pathname))return;
 
   var ROOT="https://iamtpolk.github.io/lakeshore-site-public/assets/team/";
+  document.querySelectorAll(".md-team").forEach(function (node) { node.remove(); });
+
   var people=[
     {name:"Tyler Polk",role:"Founder of Lakeshore Team, Brokered by eXp Realty",license:"995706344",region:"South Louisiana",image:"tyler-polk.webp",position:"center bottom",bio:"Tyler Polk is the founder of Lakeshore Team, brokered by eXp Realty, serving agents and clients across South Louisiana with a focus on growth, leadership, systems, and real relationships. He specializes in residential, commercial, investment, and distressed properties.",phone:"+13372414963",email:"tyler.polk@exprealty.com",connect:"https://popl.co/profile/tpolktherealtor",instagram:"https://www.instagram.com/tpolk_therealtor/",facebook:"https://www.facebook.com/tyler.polk.908"},
     {name:"Chelsea Porter",role:"Residential Specialist",license:"995718627",region:"Acadiana",image:"chelsea-porter.webp",position:"center 38%",bio:"Chelsea is passionate about delivering a seamless, stress-free real estate experience. Known for her organization, attention to detail, and commitment to exceptional service, she is dedicated to helping every client feel confident from start to finish.",phone:"+13373240588",email:"chelsea.porter@exprealty.com",connect:"https://m.me/61582528467689",instagram:"https://www.instagram.com/cporter_realtor",facebook:"https://www.facebook.com/profile.php?id=61582528467689"},
