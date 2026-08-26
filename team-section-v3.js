@@ -99,7 +99,7 @@
     .lst-team-kicker { margin:0 0 12px;color:#c4ad66;font:700 12px/1.2 Inter,Arial,sans-serif;letter-spacing:.2em;text-transform:uppercase; }
     .lst-team-head h2 { margin:0;color:#fff;font:500 clamp(38px,4.7vw,68px)/1.04 Georgia,serif;letter-spacing:-.025em; }
     .lst-team-intro { max-width:66ch;margin:18px auto 0;color:rgba(255,255,255,.7);font:400 16px/1.7 Inter,Arial,sans-serif; }
-    .lst-team-grid { display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(16px,1.8vw,26px);align-items:stretch; }
+    .lst-team-grid { display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(16px,1.8vw,26px);align-items:stretch; }
     .lst-team-card { position:relative;display:flex;flex-direction:column;min-width:0;overflow:hidden;border:1px solid rgba(255,255,255,.16);border-radius:24px;background:linear-gradient(155deg,rgba(255,255,255,.13),rgba(255,255,255,.055));box-shadow:inset 0 1px 0 rgba(255,255,255,.12),0 24px 50px rgba(0,0,0,.25);backdrop-filter:blur(18px) saturate(125%);-webkit-backdrop-filter:blur(18px) saturate(125%);transition:transform .28s ease,border-color .28s ease,box-shadow .28s ease; }
     .lst-team-card:hover { transform:translateY(-7px);border-color:rgba(196,173,102,.55);box-shadow:inset 0 1px 0 rgba(255,255,255,.16),0 32px 66px rgba(0,0,0,.34),0 16px 42px rgba(177,154,85,.1); }
     .lst-team-glow { position:absolute;z-index:0;left:12%;right:12%;bottom:-30px;height:80px;border-radius:50%;background:rgba(177,154,85,.72);filter:blur(32px);opacity:.26;transition:opacity .28s ease; }
