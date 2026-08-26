@@ -50,20 +50,6 @@
         ["instagram", "https://www.instagram.com/movingwmadeleine"],
         ["facebook", "https://www.facebook.com/share/1DPDneSKJH/?mibextid=wwXIfr"]
       ]
-    },
-    {
-      name: "Carlie Trahan",
-      role: "Residential Specialist",
-      license: "REALTOR - License 995717085",
-      specialty: "Driven | Communicative | Acadiana",
-      bio: "As a Residential Real Estate Specialist with the Lakeshore Team, Carlie is passionate about helping clients buy and sell with confidence. Known for her drive, strong communication, and commitment to exceptional service, she is dedicated to making every real estate experience smooth, successful, and enjoyable.",
-      image: "carlie-trahan.webp",
-      position: "center 42%",
-      connect: "https://popl.co/card/pGPkjtrU/1/preview?showappcta=false",
-      socials: [
-        ["instagram", "https://www.instagram.com/movewithcarlie"],
-        ["facebook", "https://www.facebook.com/share/1GrrjiMPmc/?mibextid=wwXIfr"]
-      ]
     }
   ];
 
