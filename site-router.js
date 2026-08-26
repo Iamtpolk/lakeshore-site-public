@@ -27,6 +27,8 @@
   if(path==="/"){
     if(host==="chelseaporter.lakeshoreteam.com"){
       Promise.all([load(PIN+"9f548bb89ebb9cac638ef100da2bcc78cfceed66/navbar.js"),load(CDN+"footer-v6.js"),load(CDN+"chelsea-homepage.js?v=12")]);
+    }else if(host==="madeleinedavis.lakeshoreteam.com"){
+      Promise.all([load(PIN+"9f548bb89ebb9cac638ef100da2bcc78cfceed66/navbar.js"),load(CDN+"footer-v6.js"),load(PIN+"668c4a6dbc770025a0ecfe59ec303f6bac3cadba/madeleine-homepage.js")]);
     }else{
       load(PIN+"cc094a78ad09d213860dc6ecda9f48f4a88a9a3c/homepage-bundle.js");
     }
