@@ -28,7 +28,7 @@
     if(host==="chelseaporter.lakeshoreteam.com"){
       Promise.all([load(PIN+"9f548bb89ebb9cac638ef100da2bcc78cfceed66/navbar.js"),load(CDN+"footer-v6.js"),load(CDN+"chelsea-homepage.js?v=12")]);
     }else{
-      load(PIN+"360b3971e89fb127251f5661bd33f3bece040dd3/homepage-bundle.js");
+      load(PIN+"87e432093c4d1fef19105619965c0d92c3d4d20e/homepage-bundle.js");
     }
   }else{
     Promise.all([load(PIN+"9f548bb89ebb9cac638ef100da2bcc78cfceed66/navbar.js"),load(CDN+"footer-v6.js")]);
