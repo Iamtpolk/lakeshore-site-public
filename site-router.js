@@ -3,6 +3,7 @@
   if(window.__lakeshoreSiteRouterLoaded)return;
   window.__lakeshoreSiteRouterLoaded=true;
 
+
   var CDN="https://iamtpolk.github.io/lakeshore-site-public/";
   var PIN="https://cdn.jsdelivr.net/gh/Iamtpolk/lakeshore-site-public@";
   var pinned={
@@ -15,14 +16,15 @@
     hero:"7c7a1e5bdcad2bcaf091d2fb3330e4a28640bdb2/hero-scroll.js",
     seller:"bc82914cc02dada0a1b7aea552bd5c376f54ffc8/seller-experience.js",
     cash:"e7cbce4efa333e59920cf5b05916725b6209de2a/cash-offer-experience.js",
-    contact:"84171628a6a0c38f38f229b1b7e927b49ad5a1bf/contact-page.js",
-    myteam:"90d28ddc7e40824ae54843b13c669abd1b58c331/myteam-page.js"
+    contact:"a84fbd29b5dea6764e3de9f189b650d1f0c425ca/contact-page.js",
+    myteam:"a84fbd29b5dea6764e3de9f189b650d1f0c425ca/myteam-page.js"
   };
   function load(src){return new Promise(function(resolve){var s=document.createElement("script");s.src=src;s.async=true;s.onload=resolve;s.onerror=resolve;document.head.appendChild(s);});}
   function pin(key){return PIN+pinned[key];}
   var path=location.pathname.replace(/\/$/,"")||"/";
   var host=location.hostname.toLowerCase();
   document.documentElement.classList.add("lst-route-"+(path==="/"?"home":path.slice(1).replace(/[^a-z0-9]+/gi,"-")));
+
 
   if(path==="/"){
     if(host==="chelseaporter.lakeshoreteam.com"){
@@ -40,4 +42,6 @@
     else if(path==="/myteam")load(pin("myteam"));
   }
 })();
+
+
 
