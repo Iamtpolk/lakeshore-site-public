@@ -1722,6 +1722,18 @@
       },250);
     });
     frame.src = "/contact?embed=consultation";
+    // A platform layout move can leave a connected iframe at about:blank.
+    // Recover only that empty initial document, at most twice. Never reload
+    // a real form or a security-check document.
+    [1500,4500].forEach(function(delay){
+      setTimeout(function(){
+        try {
+          if(frame.isConnected && frame.contentDocument &&
+             frame.contentDocument.URL === "about:blank")
+            frame.src = "/contact?embed=consultation";
+        } catch(error) {}
+      },delay);
+    });
   }
 
   if (!document.getElementById("lakeshore-consultation-styles")) {
