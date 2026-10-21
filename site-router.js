@@ -16,7 +16,7 @@
     hero:"7c7a1e5bdcad2bcaf091d2fb3330e4a28640bdb2/hero-scroll.js",
     seller:"bc82914cc02dada0a1b7aea552bd5c376f54ffc8/seller-experience.js",
     cash:"e7cbce4efa333e59920cf5b05916725b6209de2a/cash-offer-experience.js",
-    contact:"a84fbd29b5dea6764e3de9f189b650d1f0c425ca/contact-page.js",
+    contact:"43536a3b92284ce97a59b7d87f0fad57e216c3d1/contact-page.js",
     myteam:"a84fbd29b5dea6764e3de9f189b650d1f0c425ca/myteam-page.js"
   };
   function load(src){return new Promise(function(resolve){var s=document.createElement("script");s.src=src;s.async=true;s.onload=resolve;s.onerror=resolve;document.head.appendChild(s);});}
@@ -28,14 +28,14 @@
 
   if(path==="/"){
     if(host==="chelseaporter.lakeshoreteam.com"){
-      Promise.all([load(PIN+"9f548bb89ebb9cac638ef100da2bcc78cfceed66/navbar.js"),load(CDN+"footer-v6.js"),load(CDN+"chelsea-homepage.js?v=12")]);
+      Promise.all([load(PIN+"43536a3b92284ce97a59b7d87f0fad57e216c3d1/navbar.js"),load(CDN+"footer-v6.js"),load(PIN+"43536a3b92284ce97a59b7d87f0fad57e216c3d1/chelsea-homepage.js")]);
     }else if(host==="madeleinedavis.lakeshoreteam.com"){
-      Promise.all([load(PIN+"9f548bb89ebb9cac638ef100da2bcc78cfceed66/navbar.js"),load(CDN+"footer-v6.js"),load(PIN+"668c4a6dbc770025a0ecfe59ec303f6bac3cadba/madeleine-homepage.js")]);
+      Promise.all([load(PIN+"43536a3b92284ce97a59b7d87f0fad57e216c3d1/navbar.js"),load(CDN+"footer-v6.js"),load(PIN+"43536a3b92284ce97a59b7d87f0fad57e216c3d1/madeleine-homepage.js")]);
     }else{
-      load(PIN+"cc094a78ad09d213860dc6ecda9f48f4a88a9a3c/homepage-bundle.js");
+      load(PIN+"43536a3b92284ce97a59b7d87f0fad57e216c3d1/homepage-bundle.js");
     }
   }else{
-    Promise.all([load(PIN+"9f548bb89ebb9cac638ef100da2bcc78cfceed66/navbar.js"),load(CDN+"footer-v6.js")]);
+    Promise.all([load(PIN+"43536a3b92284ce97a59b7d87f0fad57e216c3d1/navbar.js"),load(CDN+"footer-v6.js")]);
     if(path==="/sell")load(pin("seller"));
     else if(path==="/cash-offer")load(pin("cash"));
     else if(path==="/contact")load(pin("contact"));
