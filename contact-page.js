@@ -4,7 +4,9 @@
   if (window.__lakeshoreContactPageLoaded) return;
   window.__lakeshoreContactPageLoaded = true;
   if (!/^\/contact\/?$/.test(window.location.pathname)) return;
-  var chelseaMode = new URLSearchParams(window.location.search).get("agent") === "chelsea";
+  var params = new URLSearchParams(window.location.search);
+  var agentMode = {chelsea:"Chelsea Porter",madeleine:"Madeleine Davis"}[params.get("agent")] || "";
+  var embedMode = params.get("embed") === "consultation";
 
   var ASSET_ROOT = "https://iamtpolk.github.io/lakeshore-site-public/assets/team/";
   var members = [
@@ -67,6 +69,11 @@
     html.lst-contact-chelsea #lst-contact-page{display:none!important}
     html.lst-contact-chelsea body:not(.home) .md-form::before{content:"Chelsea Porter · Lakeshore Team"}
     html.lst-contact-chelsea body:not(.home) .md-form h2::after{content:"Tell Chelsea what you are planning and she will follow up personally with clear next steps."}
+    html.lst-contact-madeleine body:not(.home) .md-form::before{content:"Madeleine Davis · Lakeshore Team"}
+    html.lst-contact-madeleine body:not(.home) .md-form h2::after{content:"Tell Madeleine what you are planning and she will follow up personally with clear next steps."}
+    html.lst-contact-embed .md-header,html.lst-contact-embed #lst-premium-nav,html.lst-contact-embed .md-footer,html.lst-contact-embed #chat-app{display:none!important}
+    html.lst-contact-embed body:not(.home) .md-form{visibility:visible!important;padding:0!important}
+    html.lst-contact-embed body:not(.home) .md-form::before,html.lst-contact-embed body:not(.home) .md-form h2{display:none!important}
     @media(max-width:1120px){.lst-contact-grid{grid-template-columns:repeat(2,minmax(0,1fr));max-width:820px}.lst-contact-role{min-height:0}}
     @media(max-width:620px){.lst-contact-hero{padding:68px 18px 46px}.lst-contact-hero h1{font-size:46px}.lst-contact-directory{padding:0 16px 66px}.lst-contact-grid{grid-template-columns:1fr;max-width:430px}.lst-contact-card-copy{padding:21px 18px}body:not(.home) .md-form{padding:64px 16px!important}body:not(.home) .md-form-container{padding:23px 16px!important;border-radius:22px!important}}
     @media(prefers-reduced-motion:reduce){#lst-contact-page *,#lst-contact-page *::before,#lst-contact-page *::after{transition:none!important}}
@@ -76,8 +83,10 @@
     var form=document.querySelector("main>.md-form");
     if(!form||!form.parentNode||form.dataset.lstContactReady)return;
     form.dataset.lstContactReady="true";
-    if(chelseaMode){
-      document.documentElement.classList.add("lst-contact-chelsea");
+    if(agentMode || embedMode){
+      document.documentElement.classList.add("lst-contact-agent");
+      if(agentMode) document.documentElement.classList.add("lst-contact-"+params.get("agent"));
+      if(embedMode) document.documentElement.classList.add("lst-contact-embed");
       form.id="start-conversation";
     }else{
       var section=document.createElement("section");section.id="lst-contact-page";section.setAttribute("aria-labelledby","lst-contact-title");

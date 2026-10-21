@@ -186,7 +186,7 @@
         if (window.Util && typeof window.Util[isRegister ? 'register' : 'login'] === 'function') {
           window.Util[isRegister ? 'register' : 'login']({ allowClose: true });
         } else if (target && document.documentElement.contains(target)) target.click();
-      } else if (event.target.closest('.lst-mobile-link')) closeMenu(false);
+      } else if (event.target.closest('.lst-mobile-link, #lst-mobile-menu .lst-cta')) closeMenu(false);
     });
     document.addEventListener('click', function (event) {
       if (!event.target.closest('#lst-premium-nav')) closeAccount();
