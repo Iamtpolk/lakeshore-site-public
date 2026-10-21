@@ -32,7 +32,7 @@
     }else if(host==="madeleinedavis.lakeshoreteam.com"){
       Promise.all([load(PIN+"43536a3b92284ce97a59b7d87f0fad57e216c3d1/navbar.js"),load(CDN+"footer-v6.js"),load(PIN+"43536a3b92284ce97a59b7d87f0fad57e216c3d1/madeleine-homepage.js")]);
     }else{
-      load(PIN+"7ff8d1aaf92c46b8aa1644da1112da5ca195ffb7/homepage-bundle.js");
+      load(PIN+"74f9b961b621b6b17c3779280a4d533f5ce36ef8/homepage-bundle.js");
     }
   }else{
     Promise.all([load(PIN+"43536a3b92284ce97a59b7d87f0fad57e216c3d1/navbar.js"),load(CDN+"footer-v6.js")]);
