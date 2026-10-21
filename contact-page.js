@@ -81,7 +81,9 @@
 
   function build(){
     var form=document.querySelector("main>.md-form");
-    if(!form||!form.parentNode||form.dataset.lstContactReady)return;
+    if(!form||!form.parentNode)return;
+    if(form.id!=="start-conversation")form.id="start-conversation";
+    if(form.dataset.lstContactReady)return;
     form.dataset.lstContactReady="true";
     form.id="start-conversation";
     if(agentMode || embedMode){
