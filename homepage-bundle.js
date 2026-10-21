@@ -1702,16 +1702,9 @@
     }
   }
 
-  function build() {
-    if (document.getElementById("lst-consult-root")) return;
-    var footer = document.querySelector("body.home .md-footer");
-    if (!footer || !footer.parentNode) return;
-    var section = document.createElement("section");
-    section.id = "lst-consult-root";
-    section.setAttribute("aria-labelledby", "lst-consult-heading");
-    section.innerHTML = '<div class="lst-consult-wrap"><div class="lst-consult-copy"><p class="lst-consult-kicker">Request a Consultation</p><h2 id="lst-consult-heading">Thinking about making a move? Let&rsquo;s talk.</h2><p>Tell us what you are considering and a Lakeshore Team specialist will follow up with clear, practical next steps.</p><ul class="lst-consult-points"><li><span aria-hidden="true">01</span>No pressure or obligation</li><li><span aria-hidden="true">02</span>Local guidance from the right specialist</li><li><span aria-hidden="true">03</span>A straightforward plan for your next move</li></ul><div class="lst-consult-direct"><a href="tel:+13372414963">Call the Team</a><a href="sms:+13372414963">Text the Team</a></div></div><div class="lst-consult-form-shell"><div class="lst-consult-form-head"><h3>Start the conversation.</h3><p>Share a few details and we will be in touch.</p></div><iframe class="lst-consult-frame" title="Request a consultation with Lakeshore Team"></iframe><p class="lst-consult-fallback">Form not loading? <a href="/contact">Open the consultation form</a>.</p></div></div>';
-    footer.parentNode.insertBefore(section,footer);
-    var frame = section.querySelector(".lst-consult-frame");
+  function wireFrame(frame) {
+    if (!frame || frame.__lstConsultWired) return;
+    frame.__lstConsultWired = true;
     frame.addEventListener("load",function () {
       styleFrame(frame);
       var checks = 0;
@@ -1734,6 +1727,19 @@
         } catch(error) {}
       },delay);
     });
+  }
+
+  function build() {
+    var existing = document.getElementById("lst-consult-root");
+    if (existing) { wireFrame(existing.querySelector(".lst-consult-frame")); return; }
+    var footer = document.querySelector("body.home .md-footer");
+    if (!footer || !footer.parentNode) return;
+    var section = document.createElement("section");
+    section.id = "lst-consult-root";
+    section.setAttribute("aria-labelledby", "lst-consult-heading");
+    section.innerHTML = '<div class="lst-consult-wrap"><div class="lst-consult-copy"><p class="lst-consult-kicker">Request a Consultation</p><h2 id="lst-consult-heading">Thinking about making a move? Let&rsquo;s talk.</h2><p>Tell us what you are considering and a Lakeshore Team specialist will follow up with clear, practical next steps.</p><ul class="lst-consult-points"><li><span aria-hidden="true">01</span>No pressure or obligation</li><li><span aria-hidden="true">02</span>Local guidance from the right specialist</li><li><span aria-hidden="true">03</span>A straightforward plan for your next move</li></ul><div class="lst-consult-direct"><a href="tel:+13372414963">Call the Team</a><a href="sms:+13372414963">Text the Team</a></div></div><div class="lst-consult-form-shell"><div class="lst-consult-form-head"><h3>Start the conversation.</h3><p>Share a few details and we will be in touch.</p></div><iframe class="lst-consult-frame" title="Request a consultation with Lakeshore Team"></iframe><p class="lst-consult-fallback">Form not loading? <a href="/contact">Open the consultation form</a>.</p></div></div>';
+    footer.parentNode.insertBefore(section,footer);
+    wireFrame(section.querySelector(".lst-consult-frame"));
   }
 
   if (!document.getElementById("lakeshore-consultation-styles")) {
