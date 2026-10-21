@@ -83,6 +83,7 @@
     var form=document.querySelector("main>.md-form");
     if(!form||!form.parentNode||form.dataset.lstContactReady)return;
     form.dataset.lstContactReady="true";
+    form.id="start-conversation";
     if(agentMode || embedMode){
       document.documentElement.classList.add("lst-contact-agent");
       if(agentMode) document.documentElement.classList.add("lst-contact-"+params.get("agent"));
