@@ -165,7 +165,7 @@
       region: "Acadiana",
       headshot: "team/kate-mouton.webp",
       /* Matches her Instagram bio. */
-      socialBios: { instagram: "Real Estate Agent<br>Your go-to-gal for all things Real Estate &#128133;<br>@thekmcollectiveteam &#10024; | @exprealty<br>Let&rsquo;s work together!" },
+      socialBios: { instagram: "Real Estate Agent<br>Your go-to-gal for all things Real Estate &#128133;<br>Lakeshore Team &#10024; | @exprealty<br>Let&rsquo;s work together!" },
       headshotPosition: "center 42%",
       accent: { main: "#8F8E55", soft: "#CFCC9C", ink: "#58572E" },
       headline: ["Your best", "move yet."],
