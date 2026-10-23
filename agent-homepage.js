@@ -194,7 +194,7 @@
 
       /* hero */
       ".cp-hero{position:relative;min-height:820px;padding:150px 0 70px;overflow:hidden;color:#fff;background:radial-gradient(circle at 75% 40%,color-mix(in srgb,var(--cp-accent) 26%,transparent),transparent 30%),linear-gradient(110deg,#160b0a 0%,#241110 52%,#101210 100%)}",
-      ".cp-hero-grid{display:grid;grid-template-columns:.9fr 1.1fr;align-items:center;gap:44px;min-height:600px}",
+      ".cp-hero-grid{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);align-items:center;gap:44px;min-height:600px}",
       ".cp-eyebrow{display:flex;align-items:center;gap:12px;margin-bottom:22px;color:var(--cp-accent-soft);font-size:.7rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase}.cp-eyebrow:before{content:'';width:38px;height:1px;flex:0 0 38px;background:var(--cp-accent-soft)}",
       ".cp-hero .cp-hero-title{max-width:650px;margin:0;color:#fff;font-size:clamp(4rem,8vw,7.6rem);font-weight:500;line-height:.88;letter-spacing:-.055em}",
       ".cp-hero .cp-hero-title span{display:block;margin-left:1.08em;color:var(--cp-accent-soft);font-style:italic}",
@@ -587,6 +587,28 @@
     }
     personalizeChat();
     new MutationObserver(personalizeChat).observe(document.documentElement, { childList: true, subtree: true, attributes: true, attributeFilter: ["src"] });
+
+    /* Long headline words (e.g. "confidence.") shrink to fit their column instead of crowding the photo. */
+    function fitHeadline() {
+      var t = document.querySelector(".cp-hero-title");
+      if (!t) return;
+      t.style.fontSize = "";
+      var box = t.parentNode.clientWidth;
+      var widest = 0;
+      [t].concat([].slice.call(t.querySelectorAll("span"))).forEach(function (n) {
+        var r = document.createRange(); r.selectNodeContents(n);
+        var w = r.getBoundingClientRect().width + (n === t ? 0 : parseFloat(getComputedStyle(n).marginLeft) || 0);
+        if (w > widest) widest = w;
+      });
+      if (widest > box && box > 0) {
+        var size = parseFloat(getComputedStyle(t).fontSize) * (box / widest) * 0.98;
+        t.style.fontSize = Math.max(40, size) + "px";
+      }
+    }
+    fitHeadline();
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(fitHeadline);
+    var fitTimer;
+    window.addEventListener("resize", function () { clearTimeout(fitTimer); fitTimer = setTimeout(fitHeadline, 120); });
 
     window.clearTimeout(gateSafetyTimer);
     window.requestAnimationFrame(function () { window.requestAnimationFrame(function () { releaseGate(true); }); });
