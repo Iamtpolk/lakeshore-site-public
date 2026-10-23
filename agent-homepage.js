@@ -238,7 +238,13 @@
       },
       reviews: [
         ["She talked me into listing it&hellip;she got it sold and closed quickly. She was outstanding &#128079;", "Lisa Fontenot Leger", "Sold a home in Branch, LA"]
-      ]
+      ],
+      /* Real reviews for a teammate, always shown under that teammate's name. */
+      teamReviews: {
+        from: "listwithalexis.lakeshoreteam.com",
+        names: ["Sherry Briley", "Jake Guillory", "Emily Gardner"],
+        note: "Haylee works side by side with her sister Alexis Lacomb. Here&rsquo;s what Alexis&rsquo;s clients say about working with their team."
+      }
     }
   };
 
@@ -412,6 +418,9 @@
       ".cp-review-long .cp-quote{font-size:clamp(1.02rem,1.25vw,1.2rem);line-height:1.62}.cp-review-mid .cp-quote{font-size:clamp(1.15rem,1.6vw,1.5rem)}",
       ".cp-review{min-height:0!important}.cp-reviews.cp-show-all .cp-review:last-child:nth-child(odd){grid-column:1/-1}",
       ".cp-review-toggle-row{display:flex;justify-content:center;margin-top:28px}",
+      ".cp-review-solo{grid-column:1/-1;align-items:center;text-align:center;padding:48px 36px}.cp-review-solo .cp-quote{font-size:clamp(1.4rem,2.4vw,2rem)}.cp-review-solo .cp-reviewer{margin-top:22px;text-align:left}",
+      ".cp-team-reviews{margin-top:56px;padding-top:40px;border-top:1px solid rgba(255,255,255,.12)}.cp-team-reviews-head{display:flex;flex-direction:column;gap:10px;margin-bottom:22px;max-width:640px}.cp-team-reviews-head p{margin:0;color:rgba(255,255,255,.66);line-height:1.6}",
+      ".cp-review-grid-3{grid-template-columns:repeat(3,1fr)}.cp-review-team{padding:28px}.cp-review-team .cp-quote{font-size:1.05rem!important;line-height:1.6}",
       ".cp-stars{color:var(--cp-accent-soft);font-size:1.1rem;letter-spacing:.18em}",
       ".cp-quote{margin:30px 0;font-family:'Playfair Display',serif;font-size:clamp(1.35rem,2vw,1.9rem);line-height:1.48}",
       ".cp-reviewer{display:flex;align-items:center;gap:14px;margin-top:auto}",
@@ -480,7 +489,7 @@
       "html.cp-agent-home main section.cp-home.cp-contact{background:var(--cp-ink)!important}",
       "@media(min-width:561px){.cp-hero .cp-actions{gap:10px;flex-wrap:nowrap}.cp-hero .cp-actions .cp-button{padding:0 17px;white-space:nowrap}}",
       "@media(min-width:561px) and (max-width:1100px){.cp-hero .cp-actions{flex-wrap:wrap}}",
-      "@media(max-width:900px){.cp-hero-grid,.cp-section-head,.cp-contact-card{grid-template-columns:1fr}.cp-portrait-wrap{min-height:620px}.cp-section-head{gap:25px}.cp-values,.cp-review-grid,.cp-know-grid{grid-template-columns:1fr}.cp-value{min-height:auto}.cp-value h3{margin-top:32px}.cp-listing-row{align-items:flex-start;flex-direction:column}.cp-contact-person{min-height:620px}}",
+      "@media(max-width:900px){.cp-hero-grid,.cp-section-head,.cp-contact-card{grid-template-columns:1fr}.cp-portrait-wrap{min-height:620px}.cp-section-head{gap:25px}.cp-values,.cp-review-grid,.cp-review-grid-3,.cp-know-grid{grid-template-columns:1fr}.cp-value{min-height:auto}.cp-value h3{margin-top:32px}.cp-listing-row{align-items:flex-start;flex-direction:column}.cp-contact-person{min-height:620px}}",
       "@media(max-width:700px){.cp-guide-book{grid-template-columns:1fr;justify-items:center;text-align:center}.cp-book3d{width:160px}}",
       "@media(max-width:560px){.cp-shell{width:min(100% - 26px,1180px)}.cp-hero{min-height:0;padding:120px 0 60px}.cp-hero .cp-hero-title{font-size:3.65rem}.cp-hero .cp-hero-title span{margin-left:.35em}.cp-hero .cp-actions{display:grid;grid-template-columns:1fr}.cp-hero .cp-actions .cp-button{width:100%}.cp-portrait-wrap{min-height:490px}.cp-portrait{left:0;border-radius:120px 120px 18px 18px}.cp-signature{left:14px;right:14px;bottom:16px;min-width:0;max-width:none}.cp-signature span{letter-spacing:.09em}.cp-section{padding:76px 0}.cp-fact{padding:26px 22px}.cp-review{padding:26px}.cp-contact-person{min-height:470px}.cp-contact-copy{padding:34px 24px}.cp-contact-details{grid-template-columns:1fr}.cp-contact-actions>.cp-button{width:100%}}",
       "@media(prefers-reduced-motion:reduce){.cp-value,.cp-value:before,.cp-value:after,.cp-fact,.cp-text-link,.cp-socials a,.cp-socials a svg,.cp-flip,.cp-contact-detail,.cp-chip,.cp-book3d img{transition:none!important}.cp-flip .front{animation:none!important}}"
@@ -536,13 +545,24 @@
       }).join("") + "</div></div></section>";
   }
 
+  function reviewCard(r, cls) {
+    var len = r[0].replace(/&[a-z#0-9]+;/gi, "x").length;
+    return '<article class="cp-review' + cls + (len > 420 ? " cp-review-long" : len > 220 ? " cp-review-mid" : "") + '"><div class="cp-stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p class="cp-quote">&ldquo;' + r[0] + '&rdquo;</p><div class="cp-reviewer"><span class="cp-avatar">' + initials(r[1]) + "</span><div><strong>" + esc(r[1]) + "</strong><span>" + esc(r[2]) + "</span></div></div></article>";
+  }
+  function teamReviewsHTML() {
+    var t = A.teamReviews, mate = t && AGENTS[t.from];
+    if (!mate || !mate.reviews) return "";
+    var picks = mate.reviews.filter(function (r) { return t.names.indexOf(r[1]) > -1; });
+    if (!picks.length) return "";
+    return '<div class="cp-team-reviews"><div class="cp-team-reviews-head"><span class="cp-kicker">From the team</span><p>' + t.note + '</p></div><div class="cp-review-grid cp-review-grid-3">' +
+      picks.map(function (r) { return reviewCard([r[0], r[1], "Worked with " + mate.name], " cp-review-team"); }).join("") + "</div></div>";
+  }
   function reviewsHTML() {
     if (!A.reviews || !A.reviews.length) return "";
     return '<section class="cp-section cp-reviews"><div class="cp-shell"><div class="cp-section-head"><div><span class="cp-kicker">Verified client reviews</span><h2 class="cp-serif">Kind words from real moves.</h2></div><p>Recommendations from clients who trusted ' + esc(A.first) + ' to guide them home.</p></div><div class="cp-review-grid">' +
       A.reviews.map(function (r, i) {
-        var len = r[0].replace(/&[a-z#0-9]+;/gi, "x").length;
-        return '<article class="cp-review' + (i >= 4 ? " cp-review-more" : "") + (len > 420 ? " cp-review-long" : len > 220 ? " cp-review-mid" : "") + '"><div class="cp-stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p class="cp-quote">&ldquo;' + r[0] + '&rdquo;</p><div class="cp-reviewer"><span class="cp-avatar">' + initials(r[1]) + "</span><div><strong>" + esc(r[1]) + "</strong><span>" + esc(r[2]) + "</span></div></div></article>";
-      }).join("") + "</div>" +
+        return reviewCard(r, (i >= 4 ? " cp-review-more" : "") + (A.reviews.length === 1 ? " cp-review-solo" : ""));
+      }).join("") + "</div>" + teamReviewsHTML() +
       (A.reviews.length > 4 ? '<div class="cp-review-toggle-row"><button type="button" class="cp-button cp-secondary cp-review-toggle" aria-expanded="false">Show all ' + A.reviews.length + " reviews</button></div>" : "") +
       "</div></section>";
   }
