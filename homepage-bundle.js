@@ -1088,7 +1088,7 @@
       site: "https://lakeshoreteam.homes/",
       role: "Founder of Lakeshore Team",
       license: "REALTOR - License 995706344",
-      specialty: "Leadership | Strategy | South Louisiana",
+      specialty: "Creative | Strategy | Problem Solver",
       bio: "Tyler Polk is the founder of Lakeshore Team, brokered by eXp Realty, serving agents and clients across South Louisiana, with a focus on growth, leadership, systems, and real relationships. He specializes in residential, commercial, investment, and distressed properties. He built his business through consistency, adaptability, and a genuine drive to help people get better, personally and professionally.",
       image: "tyler-polk.webp",
       position: "center bottom",
