@@ -153,6 +153,27 @@
           ["No question too small", "Alexis makes it comfortable to ask anything, so you feel confident at every step."]
         ]
       }
+    },
+
+    "haylee.lakeshoreteam.com": {
+      key: "haylee",
+      name: "Haylee Meaux",
+      first: "Haylee",
+      title: "",
+      region: "",
+      headshot: "team/haylee-meaux.webp",
+      headshotPosition: "40% 10%",
+      accent: { main: "#A5826A", soft: "#D2B49C", ink: "#49352C" },
+      headline: ["Move with", "ease."],
+      heroCopy: "",
+      parishes: [],
+      phone: "",
+      phoneLabel: "",
+      email: "",
+      socials: {
+        instagram: "https://www.instagram.com/haylee.meaux/",
+        facebook: "https://www.facebook.com/haylee.meaux"
+      }
     }
   };
 
@@ -404,14 +425,14 @@
       ? '<p class="cp-chips-label">' + ICON.pin + 'Parishes served</p><div class="cp-chips">' + A.parishes.map(function (p) { return '<span class="cp-chip">' + esc(p) + "</span>"; }).join("") + "</div>"
       : "";
     return '<section class="cp-hero"><div class="cp-shell cp-hero-grid"><div>' +
-      '<div class="cp-eyebrow">' + esc(A.title) + " &middot; " + esc(A.region) + "</div>" +
+      '<div class="cp-eyebrow">' + ([A.title, A.region].filter(Boolean).map(esc).join(" &middot; ") || "Lakeshore Team") + "</div>" +
       '<h1 class="cp-serif cp-hero-title">' + A.headline[0] + " <span>" + A.headline[1] + "</span></h1>" +
-      '<p class="cp-hero-copy">' + A.heroCopy + "</p>" + chips +
+      (A.heroCopy ? '<p class="cp-hero-copy">' + A.heroCopy + "</p>" : '<div style="height:26px"></div>') + chips +
       '<div class="cp-actions"><a class="cp-button cp-start-move" href="#' + CONNECT_ID + '">Start your move</a>' +
       '<a class="cp-button cp-secondary" href="/listing">Search homes</a>' +
       (g ? '<button class="cp-button cp-secondary cp-guide-btn" type="button" data-cp-guide="0">' + ICON.book + esc(g.heroButton || g.title) + "</button>" : "") +
       "</div></div>" +
-      '<div class="cp-portrait-wrap"><div class="cp-portrait"><img src="' + HEADSHOT + '" alt="' + esc(A.name) + ", " + esc(A.title) + ' with Lakeshore Team" style="object-position:' + (A.headshotPosition || "center 34%") + '"></div>' +
+      '<div class="cp-portrait-wrap"><div class="cp-portrait"><img src="' + HEADSHOT + '" alt="' + esc(A.name) + (A.title ? ", " + esc(A.title) : "") + ' with Lakeshore Team" style="object-position:' + (A.headshotPosition || "center 34%") + '"></div>' +
       '<div class="cp-signature"><strong>' + esc(A.name) + "</strong><span>Lakeshore Team &middot; eXp Realty</span></div></div>" +
       "</div></section>";
   }
@@ -430,6 +451,7 @@
 
   function whyHTML() {
     var w = A.why;
+    if (!w) return "";
     return '<section class="cp-section cp-intro"><div class="cp-shell"><div class="cp-section-head"><div><span class="cp-kicker">Why work with ' + esc(A.first) + '</span><h2 class="cp-serif">' + w.heading + "</h2></div><p>" + w.intro + '</p></div><div class="cp-values">' +
       w.values.map(function (v, i) { return '<article class="cp-value"><span class="cp-value-num">' + pad(i + 1) + "</span><h3>" + v[0] + "</h3><p>" + v[1] + "</p></article>"; }).join("") +
       "</div></div></section>";
@@ -468,7 +490,7 @@
     var details = "";
     if (A.phone) details += '<a class="cp-contact-detail" href="tel:' + A.phone + '">Call or text &middot; ' + esc(A.phoneLabel) + "</a>";
     if (A.email) details += '<a class="cp-contact-detail" href="mailto:' + A.email + '">' + esc(A.email) + "</a>";
-    return '<div class="cp-shell cp-contact-card"><div class="cp-contact-person"><img src="' + HEADSHOT + '" alt="' + esc(A.name) + '" style="object-position:' + (A.headshotPosition || "center 38%") + '"><div class="cp-contact-badge"><strong>' + esc(A.name) + "</strong><span>" + esc(A.title) + " &middot; Lakeshore Team</span></div></div>" +
+    return '<div class="cp-shell cp-contact-card"><div class="cp-contact-person"><img src="' + HEADSHOT + '" alt="' + esc(A.name) + '" style="object-position:' + (A.headshotPosition || "center 38%") + '"><div class="cp-contact-badge"><strong>' + esc(A.name) + "</strong><span>" + (A.title ? esc(A.title) + " &middot; " : "") + "Lakeshore Team</span></div></div>" +
       '<div class="cp-contact-copy"><span class="cp-kicker">Connect with ' + esc(A.first) + '</span><h2 class="cp-serif">Start your next move with confidence.</h2><p>Have a question about buying or selling? Reach ' + esc(A.first) + " directly or start a private conversation through the Lakeshore Team form.</p>" +
       (details ? '<div class="cp-contact-details">' + details + "</div>" : "") +
       '<div class="cp-contact-actions"><a class="cp-button" href="/contact?agent=' + A.key + '#start-conversation">Start the conversation &rarr;</a>' + socialsHTML() + "</div></div></div>";
