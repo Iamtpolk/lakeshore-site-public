@@ -1102,36 +1102,6 @@
       ]
     },
     {
-      name: "Chelsea Porter",
-      site: "https://chelseaporter.lakeshoreteam.com/",
-      role: "Residential Specialist",
-      license: "REALTOR - License 995718627",
-      specialty: "Organized | Detail-focused | Client-first",
-      bio: "Chelsea is passionate about delivering a seamless, stress-free real estate experience. Known for her organization, attention to detail, and commitment to exceptional service, Chelsea is dedicated to helping every client feel confident from start to finish.",
-      image: "chelsea-porter.webp",
-      position: "center 38%",
-      connect: "https://m.me/61582528467689",
-      socials: [
-        ["instagram", "https://www.instagram.com/cporter_realtor"],
-        ["facebook", "https://www.facebook.com/profile.php?id=61582528467689"]
-      ]
-    },
-    {
-      name: "Madeleine Davis",
-      site: "https://madeleinedavis.lakeshoreteam.com/",
-      role: "Residential Specialist / Marketing Genius",
-      license: "REALTOR - License 995706355",
-      specialty: "Personalized guidance | Southwest Louisiana",
-      bio: "Madeleine guides buyers and sellers throughout Southwest Louisiana with a thoughtful and personalized approach. Friendly, responsive, and dedicated, she believes real estate is about more than transactions - it is about helping people navigate important life moments. She is committed to providing clear guidance and dependable support every step of the way.",
-      image: "madeleine-davis.webp",
-      position: "center 35%",
-      connect: "https://hihello.com/p/593bf9e9-8a27-4b7d-8e6a-60473c6a7fbf",
-      socials: [
-        ["instagram", "https://www.instagram.com/movingwmadeleine"],
-        ["facebook", "https://www.facebook.com/Madeleine-Davis,-Realtor-273470091185196"]
-      ]
-    },
-    {
       name: "Alexis Lacomb",
       site: "https://listwithalexis.lakeshoreteam.com/",
       role: "Residential Specialist",
@@ -1147,6 +1117,21 @@
       ]
     },
     {
+      name: "Chelsea Porter",
+      site: "https://chelseaporter.lakeshoreteam.com/",
+      role: "Residential Specialist",
+      license: "REALTOR - License 995718627",
+      specialty: "Organized | Detail-focused | Client-first",
+      bio: "Chelsea is passionate about delivering a seamless, stress-free real estate experience. Known for her organization, attention to detail, and commitment to exceptional service, Chelsea is dedicated to helping every client feel confident from start to finish.",
+      image: "chelsea-porter.webp",
+      position: "center 38%",
+      connect: "https://m.me/61582528467689",
+      socials: [
+        ["instagram", "https://www.instagram.com/cporter_realtor"],
+        ["facebook", "https://www.facebook.com/profile.php?id=61582528467689"]
+      ]
+    },
+    {
       name: "Haylee Meaux",
       site: "https://haylee.lakeshoreteam.com/",
       role: "Residential Specialist",
@@ -1159,6 +1144,21 @@
       socials: [
         ["instagram", "https://www.instagram.com/haylee.meaux/"],
         ["facebook", "https://www.facebook.com/haylee.meaux"]
+      ]
+    },
+    {
+      name: "Madeleine Davis",
+      site: "https://madeleinedavis.lakeshoreteam.com/",
+      role: "Residential Specialist / Marketing Genius",
+      license: "REALTOR - License 995706355",
+      specialty: "Personalized guidance | Southwest Louisiana",
+      bio: "Madeleine guides buyers and sellers throughout Southwest Louisiana with a thoughtful and personalized approach. Friendly, responsive, and dedicated, she believes real estate is about more than transactions - it is about helping people navigate important life moments. She is committed to providing clear guidance and dependable support every step of the way.",
+      image: "madeleine-davis.webp",
+      position: "center 35%",
+      connect: "https://hihello.com/p/593bf9e9-8a27-4b7d-8e6a-60473c6a7fbf",
+      socials: [
+        ["instagram", "https://www.instagram.com/movingwmadeleine"],
+        ["facebook", "https://www.facebook.com/Madeleine-Davis,-Realtor-273470091185196"]
       ]
     }
   ].filter(function (m) { return m.ready !== false; });
