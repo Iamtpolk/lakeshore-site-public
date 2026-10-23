@@ -449,6 +449,31 @@
 
       /* social icons + flipping contact-card headshot */
       ".cp-socials{display:flex;gap:12px}",
+      /* social preview pop-up */
+      ".cp-smodal{position:fixed;inset:0;z-index:2147483001;display:grid;place-items:center;padding:18px;background:rgba(10,6,5,.72);backdrop-filter:blur(8px);opacity:0;pointer-events:none;transition:opacity .25s ease}",
+      ".cp-smodal.on{opacity:1;pointer-events:auto}",
+      ".cp-scard{position:relative;display:grid;grid-template-columns:1fr auto;width:min(720px,100%);overflow:hidden;border-radius:26px;background:#fffdf9;color:#231a17;box-shadow:0 40px 100px rgba(0,0,0,.45);transform:translateY(18px) scale(.97);transition:transform .35s cubic-bezier(.2,.9,.3,1.2)}",
+      ".cp-smodal.on .cp-scard{transform:none}",
+      ".cp-sband{grid-column:1/-1;height:96px;background:var(--net-bg)}",
+      ".cp-smain{padding:0 34px 34px}",
+      ".cp-savatar{position:relative;width:104px;height:104px;margin-top:-52px;border:5px solid #fffdf9;border-radius:50%;background:var(--cp-accent);box-shadow:0 10px 24px rgba(0,0,0,.18)}",
+      ".cp-savatar img{width:100%;height:100%;border-radius:50%;object-fit:cover;object-position:center 25%}",
+      ".cp-savatar .badge{position:absolute;right:-4px;bottom:-2px;display:grid;width:36px;height:36px;place-items:center;border:3px solid #fffdf9;border-radius:50%;background:var(--net-bg);color:#fff}",
+      ".cp-savatar .badge svg{width:17px;height:17px}",
+      ".cp-scard h3{margin:18px 0 2px;font-family:Georgia,serif;font-size:1.65rem;font-weight:400;letter-spacing:-.02em}",
+      ".cp-handle{color:#7a6c64;font:700 .82rem/1.4 Arial,sans-serif}",
+      ".cp-scard p{max-width:380px;margin:16px 0 26px;color:#4d413b;font:400 .98rem/1.6 Arial,sans-serif}",
+      ".cp-sactions{display:flex;flex-wrap:wrap;gap:10px}",
+      ".cp-sfollow{display:inline-flex;align-items:center;gap:9px;min-height:50px;padding:0 24px;border-radius:999px;background:var(--net-bg);color:#fff!important;font:800 .74rem/1 Arial,sans-serif;letter-spacing:.12em;text-transform:uppercase;text-decoration:none!important;box-shadow:0 12px 26px rgba(0,0,0,.18);transition:transform .2s ease}",
+      ".cp-sfollow:hover{transform:translateY(-2px)}",
+      ".cp-slater{min-height:50px;padding:0 20px;border:1px solid #e3dad1;border-radius:999px;background:transparent;color:#4d413b;font:700 .74rem/1 Arial,sans-serif;letter-spacing:.12em;text-transform:uppercase;cursor:pointer}",
+      ".cp-slater:hover{border-color:#b9aca1}",
+      ".cp-sqr{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;margin:22px 30px 30px 0;padding:20px;border-radius:20px;background:#f4eee6;text-align:center}",
+      ".cp-sqr .code{width:150px;height:150px;padding:8px;border-radius:12px;background:#fff}.cp-sqr .code svg,.cp-sqr .code img{display:block;width:100%;height:100%}",
+      ".cp-sqr span{max-width:150px;color:#6d5f57;font:700 .66rem/1.45 Arial,sans-serif;letter-spacing:.12em;text-transform:uppercase}",
+      ".cp-sclose{position:absolute;top:14px;right:14px;display:grid;width:38px;height:38px;place-items:center;border:0;border-radius:50%;background:rgba(0,0,0,.28);color:#fff;font-size:22px;line-height:1;cursor:pointer;backdrop-filter:blur(6px)}",
+      ".cp-sclose:hover{background:rgba(0,0,0,.45)}",
+      "@media(max-width:640px){.cp-scard{grid-template-columns:1fr}.cp-sqr{display:none}.cp-smain{padding:0 24px 28px}.cp-sfollow,.cp-slater{flex:1 1 100%;justify-content:center}}",
       ".cp-socials a{position:relative;display:grid;width:52px;height:52px;place-items:center;border:1px solid rgba(255,255,255,.16);border-radius:14px;background:rgba(255,255,255,.07);text-decoration:none!important;transition:transform .28s cubic-bezier(.2,.9,.3,1.4),border-color .25s ease,background .25s ease,box-shadow .25s ease}",
       ".cp-socials a svg{transition:transform .35s cubic-bezier(.2,.9,.3,1.4)}",
       ".cp-socials a:hover,.cp-socials a:focus-visible{transform:translateY(-5px);border-color:var(--glow,var(--cp-accent));background:rgba(255,255,255,.13);box-shadow:0 12px 26px rgba(0,0,0,.35),0 0 0 4px color-mix(in srgb,var(--glow,var(--cp-accent)) 22%,transparent)}",
@@ -563,12 +588,12 @@
 
   function socialsHTML() {
     var s = A.socials || {}, out = "";
-    if (s.instagram) out += '<a class="ig" data-tip="Instagram" href="' + s.instagram + '" target="_blank" rel="noopener noreferrer" aria-label="' + esc(A.first) + ' on Instagram">' + ICON.instagram + "</a>";
+    if (s.instagram) out += '<a class="ig" data-cp-social="instagram" data-tip="Instagram" href="' + s.instagram + '" target="_blank" rel="noopener noreferrer" aria-label="' + esc(A.first) + ' on Instagram">' + ICON.instagram + "</a>";
     if (s.contactCard) out += '<a class="vcard" data-tip="Save my contact" href="' + s.contactCard + '" target="_blank" rel="noopener noreferrer" aria-label="Save ' + esc(A.first) + '&rsquo;s contact card"><span class="cp-flip"><span class="front"><img onerror="this.style.visibility=\'hidden\'" src="' + HEADSHOT + '" alt=""></span><span class="back">' + ICON.card + "</span></span></a>";
     if (s.messenger) out += '<a class="msg" data-tip="Message me" href="' + s.messenger + '" target="_blank" rel="noopener noreferrer" aria-label="Message ' + esc(A.first) + ' on Facebook Messenger">' + ICON.messenger + "</a>";
-    if (s.facebook) out += '<a class="fb" data-tip="Facebook" href="' + s.facebook + '" target="_blank" rel="noopener noreferrer" aria-label="' + esc(A.first) + ' on Facebook">' + ICON.facebook + "</a>";
-    if (s.linkedin) out += '<a class="li" data-tip="LinkedIn" href="' + s.linkedin + '" target="_blank" rel="noopener noreferrer" aria-label="' + esc(A.first) + ' on LinkedIn">' + ICON.linkedin + "</a>";
-    if (s.tiktok) out += '<a class="tt" data-tip="TikTok" href="' + s.tiktok + '" target="_blank" rel="noopener noreferrer" aria-label="' + esc(A.first) + ' on TikTok">' + ICON.tiktok + "</a>";
+    if (s.facebook) out += '<a class="fb" data-cp-social="facebook" data-tip="Facebook" href="' + s.facebook + '" target="_blank" rel="noopener noreferrer" aria-label="' + esc(A.first) + ' on Facebook">' + ICON.facebook + "</a>";
+    if (s.linkedin) out += '<a class="li" data-cp-social="linkedin" data-tip="LinkedIn" href="' + s.linkedin + '" target="_blank" rel="noopener noreferrer" aria-label="' + esc(A.first) + ' on LinkedIn">' + ICON.linkedin + "</a>";
+    if (s.tiktok) out += '<a class="tt" data-cp-social="tiktok" data-tip="TikTok" href="' + s.tiktok + '" target="_blank" rel="noopener noreferrer" aria-label="' + esc(A.first) + ' on TikTok">' + ICON.tiktok + "</a>";
     return out ? '<div class="cp-socials">' + out + "</div>" : "";
   }
 
@@ -720,11 +745,80 @@
         if (!open) sec.scrollIntoView({ behavior: "smooth", block: "start" });
         return;
       }
+      var soc = e.target.closest && e.target.closest("[data-cp-social]");
+      if (soc) {
+        e.preventDefault();
+        openSocial(soc.getAttribute("data-cp-social"), soc.getAttribute("href"));
+        return;
+      }
       var t = e.target.closest && e.target.closest("[data-cp-guide]");
       if (!t) return;
       e.preventDefault();
       openGuide(+t.getAttribute("data-cp-guide"));
     });
+
+    var NETS = {
+      instagram: { label: "Instagram", bg: "linear-gradient(135deg,#feda75 0%,#fa7e1e 25%,#d62976 55%,#962fbf 80%,#4f5bd5 100%)", verb: "Follow", copy: "Follow along for new listings, open houses, and a look at life around " },
+      facebook: { label: "Facebook", bg: "linear-gradient(135deg,#1877F2,#0b5bd3)", verb: "Follow", copy: "Connect on Facebook for listings, market updates, and community news from " },
+      linkedin: { label: "LinkedIn", bg: "linear-gradient(135deg,#0A66C2,#004182)", verb: "Connect", copy: "Connect on LinkedIn for market insight and professional updates from " },
+      tiktok: { label: "TikTok", bg: "linear-gradient(135deg,#111 0%,#25F4EE 140%)", verb: "Follow", copy: "Watch home tours and real estate tips from " }
+    };
+    function handleFor(net, url) {
+      try {
+        var u = new URL(url), parts = u.pathname.split("/").filter(Boolean);
+        if (net === "linkedin") return parts[1] ? "in/" + parts[1] : A.name;
+        if (!parts.length || /profile\.php/.test(u.pathname)) return A.name;
+        return "@" + parts[parts.length - 1].replace(/^@/, "");
+      } catch (err) { return A.name; }
+    }
+    var qrLib = null;
+    function drawQR(box, url) {
+      function render() {
+        try { var q = window.qrcode(0, "M"); q.addData(url); q.make(); box.innerHTML = q.createSvgTag({ cellSize: 4, margin: 0, scalable: true }); }
+        catch (err) { box.parentNode.style.display = "none"; }
+      }
+      if (window.qrcode) return render();
+      if (!qrLib) {
+        qrLib = document.createElement("script");
+        qrLib.src = "https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.js";
+        document.head.appendChild(qrLib);
+      }
+      qrLib.addEventListener("load", render);
+      qrLib.addEventListener("error", function () { box.parentNode.style.display = "none"; });
+    }
+    var smodal = null, lastFocus = null;
+    function closeSocial() {
+      if (!smodal) return;
+      smodal.classList.remove("on");
+      document.documentElement.style.overflow = "";
+      if (lastFocus) lastFocus.focus();
+    }
+    function openSocial(net, url) {
+      var n = NETS[net];
+      if (!n) return window.open(url, "_blank", "noopener");
+      lastFocus = document.activeElement;
+      if (!smodal) {
+        smodal = document.createElement("div");
+        smodal.className = "cp-smodal";
+        smodal.setAttribute("role", "dialog");
+        smodal.setAttribute("aria-modal", "true");
+        smodal.addEventListener("click", function (e) { if (e.target === smodal || (e.target.closest && e.target.closest(".cp-sclose,.cp-slater"))) closeSocial(); });
+        document.addEventListener("keydown", function (e) { if (e.key === "Escape" && smodal.classList.contains("on")) closeSocial(); });
+        document.body.appendChild(smodal);
+      }
+      smodal.setAttribute("aria-label", A.name + " on " + n.label);
+      smodal.innerHTML = '<div class="cp-scard" style="--net-bg:' + n.bg + '"><div class="cp-sband"></div>' +
+        '<div class="cp-smain"><div class="cp-savatar"><img src="' + HEADSHOT + '" alt="" onerror="this.style.visibility=\'hidden\'"><span class="badge">' + ICON[net] + "</span></div>" +
+        "<h3>" + esc(A.name) + '</h3><div class="cp-handle">' + esc(handleFor(net, url)) + " &middot; " + n.label + "</div>" +
+        "<p>" + n.copy + esc(A.region || "South Louisiana") + ".</p>" +
+        '<div class="cp-sactions"><a class="cp-sfollow" href="' + url + '" target="_blank" rel="noopener noreferrer">' + n.verb + " on " + n.label + ' <span aria-hidden="true">&#8599;</span></a><button type="button" class="cp-slater">Stay on site</button></div></div>' +
+        '<div class="cp-sqr"><div class="code"></div><span>Scan to ' + n.verb.toLowerCase() + " from your phone</span></div>" +
+        '<button type="button" class="cp-sclose" aria-label="Close">&times;</button></div>';
+      if (window.matchMedia("(min-width:641px)").matches) drawQR(smodal.querySelector(".cp-sqr .code"), url);
+      smodal.classList.add("on");
+      document.documentElement.style.overflow = "hidden";
+      setTimeout(function () { var b = smodal.querySelector(".cp-sfollow"); if (b) b.focus(); }, 60);
+    }
 
     function goToConnect(event) {
       event.preventDefault();
