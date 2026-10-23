@@ -30,7 +30,9 @@
     if(host==="chelseaporter.lakeshoreteam.com"){
       Promise.all([load(PIN+"43536a3b92284ce97a59b7d87f0fad57e216c3d1/navbar.js"),load(CDN+"footer-v6.js"),load(PIN+"43536a3b92284ce97a59b7d87f0fad57e216c3d1/chelsea-homepage.js")]);
     }else if(host==="madeleinedavis.lakeshoreteam.com"){
-      Promise.all([load(PIN+"43536a3b92284ce97a59b7d87f0fad57e216c3d1/navbar.js"),load(CDN+"footer-v6.js"),load(PIN+"43536a3b92284ce97a59b7d87f0fad57e216c3d1/madeleine-homepage.js")]);
+      /* Private test: only visitors who open ?preview=new get the new shared agent template. Everyone else gets the current page. */
+      var agentPreview=/[?&]preview=new(&|$)/.test(location.search);
+      Promise.all([load(PIN+"43536a3b92284ce97a59b7d87f0fad57e216c3d1/navbar.js"),load(CDN+"footer-v6.js"),load(agentPreview?CDN+"agent-homepage.js?v="+Date.now():PIN+"43536a3b92284ce97a59b7d87f0fad57e216c3d1/madeleine-homepage.js")]);
     }else{
       load(PIN+"1715e9b3e67cf8d3e417286de93c7b693f77f34b/homepage-bundle.js");
     }
