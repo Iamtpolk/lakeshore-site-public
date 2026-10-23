@@ -1151,7 +1151,7 @@
       ready: false,
       name: "Haylee Meaux",
       site: "https://haylee.lakeshoreteam.com/",
-      role: "",
+      role: "Residential Specialist",
       license: "REALTOR - License 995719642",
       specialty: "",
       bio: "",

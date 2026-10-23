@@ -16,7 +16,7 @@
     { name:"Madeleine Davis", site:"https://madeleinedavis.lakeshoreteam.com/", role:"Residential Specialist / Marketing Genius", license:"License 995706355", image:"madeleine-davis.webp", position:"center 35%", region:"Southwest Louisiana", connect:"https://hihello.com/p/593bf9e9-8a27-4b7d-8e6a-60473c6a7fbf", action:"View Madeleine's Contact Card", instagram:"https://www.instagram.com/movingwmadeleine", facebook:"https://www.facebook.com/Madeleine-Davis,-Realtor-273470091185196" },
     { name:"Alexis Lacomb", site:"https://listwithalexis.lakeshoreteam.com/", role:"Residential Specialist", license:"License 995713710", image:"alexis-lacomb.webp", position:"48% 24%", region:"Acadiana", connect:"https://m.me/alexis.fincher.2025", action:"Message Alexis", instagram:"https://www.instagram.com/listwithalexis/", facebook:"https://www.facebook.com/alexis.fincher.2025", phone:"+13375221290" },
     /* Shown once title and region are in (ready:false hides). */
-    { ready:false, name:"Haylee Meaux", site:"https://haylee.lakeshoreteam.com/", role:"", license:"License 995719642", image:"haylee-meaux.webp", position:"40% 12%", region:"", connect:"https://m.me/haylee.meaux", action:"Message Haylee", instagram:"https://www.instagram.com/haylee.meaux/", facebook:"https://www.facebook.com/haylee.meaux" }
+    { name:"Haylee Meaux", site:"https://haylee.lakeshoreteam.com/", role:"Residential Specialist", license:"License 995719642", image:"haylee-meaux.webp", position:"40% 12%", region:"Acadiana", phone:"+13373241789", connect:"https://m.me/haylee.meaux", action:"Message Haylee", instagram:"https://www.instagram.com/haylee.meaux/", facebook:"https://www.facebook.com/haylee.meaux" }
   ].filter(function(m){ return m.ready !== false; });
 
   var icons = {
