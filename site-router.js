@@ -56,7 +56,7 @@
   var AGENT_HOSTS=["madeleinedavis.lakeshoreteam.com","chelseaporter.lakeshoreteam.com","listwithalexis.lakeshoreteam.com","kate.lakeshoreteam.com","haylee.lakeshoreteam.com"];
   var agentPreview=path==="/"&&AGENT_HOSTS.indexOf(host)>-1&&/[?&]preview=new(&|$)/.test(location.search);
 
-  var REL="338f0a1a4944c2edc7799f79723d2e583bff4c22/";
+  var REL="d882de244cc17ed3c8af709301651f68d7f0e88c/";
   /* Reveal: the Header Meta Tags style keeps the page hidden until html gets .lst-ready,
      so visitors never see Lofty's template flash first (it also reveals itself after a few seconds). */
   var html=document.documentElement,jobs=[],ready=function(){return !!document.getElementById("lst-premium-nav");};
