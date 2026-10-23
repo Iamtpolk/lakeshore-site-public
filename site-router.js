@@ -16,8 +16,8 @@
     hero:"7c7a1e5bdcad2bcaf091d2fb3330e4a28640bdb2/hero-scroll.js",
     seller:"bc82914cc02dada0a1b7aea552bd5c376f54ffc8/seller-experience.js",
     cash:"e7cbce4efa333e59920cf5b05916725b6209de2a/cash-offer-experience.js",
-    contact:"690cac9fc7239a632977be60e823192993fb618c/contact-page.js",
-    myteam:"690cac9fc7239a632977be60e823192993fb618c/myteam-page.js"
+    contact:"338f0a1a4944c2edc7799f79723d2e583bff4c22/contact-page.js",
+    myteam:"338f0a1a4944c2edc7799f79723d2e583bff4c22/myteam-page.js"
   };
   function load(src){return new Promise(function(resolve){var s=document.createElement("script");s.src=src;s.async=true;s.onload=resolve;s.onerror=resolve;document.head.appendChild(s);});}
   function pin(key){return PIN+pinned[key];}
@@ -31,7 +31,7 @@
   var AGENT_HOSTS=["madeleinedavis.lakeshoreteam.com","chelseaporter.lakeshoreteam.com","listwithalexis.lakeshoreteam.com","kate.lakeshoreteam.com","haylee.lakeshoreteam.com"];
   var agentPreview=path==="/"&&AGENT_HOSTS.indexOf(host)>-1&&/[?&]preview=new(&|$)/.test(location.search);
 
-  var REL="690cac9fc7239a632977be60e823192993fb618c/";
+  var REL="338f0a1a4944c2edc7799f79723d2e583bff4c22/";
   if(agentPreview){
     Promise.all([load(PIN+REL+"navbar.js"),load(CDN+"footer-v6.js"),load(CDN+"agent-homepage.js?v="+Date.now())]);
   }else if(path==="/"){
