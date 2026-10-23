@@ -1067,6 +1067,7 @@
   var members = [
     {
       name: "Tyler Polk",
+      lead: true,
       site: "https://lakeshoreteam.homes/",
       role: "Founder of Lakeshore Team, Brokered by eXp Realty",
       license: "REALTOR - License 995706344",
@@ -1085,6 +1086,7 @@
     },
     {
       name: "Kate Mouton",
+      lead: true,
       site: "https://kate.lakeshoreteam.com/",
       role: "Co-Owner & Team Leader",
       license: "REALTOR - License 995709117",
@@ -1210,6 +1212,14 @@
     .lst-team-intro { max-width:66ch;margin:18px auto 0;color:rgba(248,247,242,.78);font:400 16px/1.7 Inter,Arial,sans-serif; }
     .lst-team-grid { --lst-gap:clamp(16px,1.8vw,26px);display:flex;flex-wrap:wrap;justify-content:center;gap:var(--lst-gap);align-items:stretch; }
     .lst-team-grid > .lst-team-card { flex:0 0 calc((100% - 2 * var(--lst-gap)) / 3); }
+    .lst-team-grid--lead { max-width:980px;margin:0 auto; }
+    .lst-team-grid--lead > .lst-team-card { flex-basis:calc((100% - var(--lst-gap)) / 2); }
+    .lst-team-grid--agents > .lst-team-card { flex-basis:calc((100% - 3 * var(--lst-gap)) / 4); }
+    .lst-team-grid--agents .lst-team-card h3 { font-size:clamp(23px,1.7vw,28px); }
+    .lst-team-grid--agents .lst-team-bio { font-size:12.5px; }
+    .lst-team-tier { display:flex;align-items:center;justify-content:center;gap:14px;margin:0 0 18px;color:#ead9a6;font:700 11px/1 Inter,Arial,sans-serif;letter-spacing:.22em;text-transform:uppercase; }
+    .lst-team-tier::before,.lst-team-tier::after { content:"";width:48px;height:1px;background:rgba(234,217,166,.45); }
+    .lst-team-grid--lead + .lst-team-tier { margin-top:clamp(40px,4.5vw,64px); }
     .lst-team-card { position:relative;display:flex;flex-direction:column;min-width:0;overflow:hidden;border:1px solid rgba(185,144,82,.34);border-radius:24px;background:linear-gradient(155deg,rgba(52,24,22,.94),rgba(36,15,14,.92) 48%,rgba(20,8,8,.97));box-shadow:inset 0 1px 0 rgba(255,255,255,.12),inset 0 -1px 0 rgba(185,144,82,.1),0 24px 50px rgba(0,0,0,.34);backdrop-filter:blur(18px) saturate(102%);-webkit-backdrop-filter:blur(18px) saturate(102%);transition:transform .28s ease,border-color .28s ease,box-shadow .28s ease; }
     .lst-team-card:hover { transform:translateY(-7px);border-color:rgba(185,144,82,.72);box-shadow:inset 0 1px 0 rgba(255,255,255,.2),0 32px 66px rgba(0,0,0,.38),0 16px 42px rgba(93,7,9,.3); }
     .lst-team-glow { position:absolute;z-index:0;left:12%;right:12%;bottom:-30px;height:80px;border-radius:50%;background:rgba(185,144,82,.78);filter:blur(32px);opacity:.2;transition:opacity .28s ease; }
@@ -1244,8 +1254,8 @@
     .lst-team-footer { display:flex;align-items:center;justify-content:center;margin-top:clamp(34px,4vw,50px); }
     .lst-team-full { display:inline-flex;min-height:50px;align-items:center;justify-content:center;gap:10px;padding:0 24px;color:#fff!important;border:1px solid rgba(255,255,255,.2);border-radius:14px;background:rgba(255,255,255,.08);box-shadow:inset 0 1px 0 rgba(255,255,255,.1);backdrop-filter:blur(12px);font:700 12px/1 Inter,Arial,sans-serif;letter-spacing:.09em;text-decoration:none!important;text-transform:uppercase;transition:background .2s ease,border-color .2s ease,transform .2s ease; }
     .lst-team-full:hover { transform:translateY(-2px);background:rgba(177,154,85,.17);border-color:rgba(196,173,102,.55); }
-    @media(max-width:1180px){.lst-team-grid{max-width:820px;margin:0 auto}.lst-team-grid > .lst-team-card{flex-basis:calc((100% - var(--lst-gap)) / 2)}.lst-team-role{min-height:0}}
-    @media(max-width:620px){#lst-team-root{padding:62px 16px}.lst-team-grid{max-width:430px;--lst-gap:20px}.lst-team-grid > .lst-team-card{flex-basis:100%}.lst-team-head{margin-bottom:34px}.lst-team-head h2{font-size:40px}.lst-team-intro{font-size:14px}.lst-team-card-body{padding:22px 19px 20px}.lst-team-bio{font-size:13px}.lst-team-actions{align-items:stretch}.lst-team-connect{min-height:40px}}
+    @media(max-width:1180px){.lst-team-grid{max-width:820px;margin:0 auto}.lst-team-grid > .lst-team-card,.lst-team-grid--lead > .lst-team-card,.lst-team-grid--agents > .lst-team-card{flex-basis:calc((100% - var(--lst-gap)) / 2)}.lst-team-role{min-height:0}}
+    @media(max-width:620px){#lst-team-root{padding:62px 16px}.lst-team-grid{max-width:430px;--lst-gap:20px}.lst-team-grid > .lst-team-card,.lst-team-grid--lead > .lst-team-card,.lst-team-grid--agents > .lst-team-card{flex-basis:100%}.lst-team-head{margin-bottom:34px}.lst-team-head h2{font-size:40px}.lst-team-intro{font-size:14px}.lst-team-card-body{padding:22px 19px 20px}.lst-team-bio{font-size:13px}.lst-team-actions{align-items:stretch}.lst-team-connect{min-height:40px}}
     @media(prefers-reduced-motion:reduce){.lst-team-card,.lst-team-card *{transition:none!important}}
   `;
 
@@ -1258,7 +1268,12 @@
     var section = document.createElement("section");
     section.id = "lst-team-root";
     section.setAttribute("aria-labelledby", "lst-team-heading");
-    section.innerHTML = '<div class="lst-team-wrap"><header class="lst-team-head"><p class="lst-team-kicker">Meet the Lakeshore Team</p><h2 id="lst-team-heading">The people behind every move.</h2><p class="lst-team-intro">One team. One standard of service. Meet the South Louisiana real estate professionals who bring strategy, care, and steady guidance to every client relationship.</p></header><div class="lst-team-grid">' + members.map(card).join("") + '</div><div class="lst-team-footer"><a class="lst-team-full" href="/myteam">Meet the Full Team <span aria-hidden="true">&rarr;</span></a></div></div>';
+    section.innerHTML = '<div class="lst-team-wrap"><header class="lst-team-head"><p class="lst-team-kicker">Meet the Lakeshore Team</p><h2 id="lst-team-heading">The people behind every move.</h2><p class="lst-team-intro">One team. One standard of service. Meet the South Louisiana real estate professionals who bring strategy, care, and steady guidance to every client relationship.</p></header>' + (function () {
+      var leads = members.filter(function (m) { return m.lead; });
+      var agents = members.filter(function (m) { return !m.lead; });
+      return (leads.length ? '<p class="lst-team-tier">Leadership</p><div class="lst-team-grid lst-team-grid--lead">' + leads.map(card).join("") + '</div>' : '') +
+        (agents.length ? '<p class="lst-team-tier">Our Agents</p><div class="lst-team-grid lst-team-grid--agents">' + agents.map(card).join("") + '</div>' : '');
+    })() + '<div class="lst-team-footer"><a class="lst-team-full" href="/myteam">Meet the Full Team <span aria-hidden="true">&rarr;</span></a></div></div>';
     footer.parentNode.insertBefore(section, footer);
   }
 
