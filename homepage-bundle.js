@@ -1066,25 +1066,6 @@
   var ASSET_ROOT = "https://iamtpolk.github.io/lakeshore-site-public/assets/team/";
   var members = [
     {
-      name: "Tyler Polk",
-      lead: true,
-      site: "https://lakeshoreteam.homes/",
-      role: "Founder of Lakeshore Team, Brokered by eXp Realty",
-      license: "REALTOR - License 995706344",
-      specialty: "Leadership | Strategy | South Louisiana",
-      bio: "Tyler Polk is the founder of Lakeshore Team, brokered by eXp Realty, serving agents and clients across South Louisiana, with a focus on growth, leadership, systems, and real relationships. He specializes in residential, commercial, investment, and distressed properties. He built his business through consistency, adaptability, and a genuine drive to help people get better, personally and professionally.",
-      image: "tyler-polk.webp",
-      position: "center bottom",
-      connect: "https://popl.co/profile/tpolktherealtor",
-      socials: [
-        ["instagram", "https://www.instagram.com/tpolk_therealtor/"],
-        ["facebook", "https://www.facebook.com/tyler.polk.908"],
-        ["linkedin", "https://www.linkedin.com/in/tyler-polk/"],
-        ["threads", "https://www.threads.com/@tpolk_therealtor"],
-        ["youtube", "https://www.youtube.com/@tyler_polk"]
-      ]
-    },
-    {
       name: "Kate Mouton",
       lead: true,
       site: "https://kate.lakeshoreteam.com/",
@@ -1099,6 +1080,25 @@
         ["instagram", "https://www.instagram.com/katemouton/"],
         ["facebook", "https://www.facebook.com/katherine.b.mouton"],
         ["linkedin", "https://www.linkedin.com/in/kate-mouton-90667abb/"]
+      ]
+    },
+    {
+      name: "Tyler Polk",
+      lead: true,
+      site: "https://lakeshoreteam.homes/",
+      role: "Founder of Lakeshore Team",
+      license: "REALTOR - License 995706344",
+      specialty: "Leadership | Strategy | South Louisiana",
+      bio: "Tyler Polk is the founder of Lakeshore Team, brokered by eXp Realty, serving agents and clients across South Louisiana, with a focus on growth, leadership, systems, and real relationships. He specializes in residential, commercial, investment, and distressed properties. He built his business through consistency, adaptability, and a genuine drive to help people get better, personally and professionally.",
+      image: "tyler-polk.webp",
+      position: "center bottom",
+      connect: "https://popl.co/profile/tpolktherealtor",
+      socials: [
+        ["instagram", "https://www.instagram.com/tpolk_therealtor/"],
+        ["facebook", "https://www.facebook.com/tyler.polk.908"],
+        ["linkedin", "https://www.linkedin.com/in/tyler-polk/"],
+        ["threads", "https://www.threads.com/@tpolk_therealtor"],
+        ["youtube", "https://www.youtube.com/@tyler_polk"]
       ]
     },
     {
