@@ -108,6 +108,39 @@
         ["The wife and I were moving across country on a very short timer, and Chelsea was there to help us every step of the way&mdash;even when we were 2,000 miles away.", "Benjamin Looney", "Facebook recommendation"],
         ["Chelsea was the best. Kept me updated with everything, very patient, answered every question I had. I highly recommend her.", "Megan Miller", "Facebook recommendation"]
       ]
+    },
+
+    "listwithalexis.lakeshoreteam.com": {
+      key: "alexis",
+      name: "Alexis Lacomb",
+      first: "Alexis",
+      title: "Residential Specialist",
+      region: "Acadiana",
+      headshot: "team/alexis-lacomb.webp",
+      headshotPosition: "48% 28%",
+      accent: { main: "#c47a7a", soft: "#e3a9a9", ink: "#9a4f4f" },
+      headline: ["Find your", "place."],
+      heroCopy: "Alexis Lacomb helps buyers and sellers across Acadiana with a down-to-earth approach: she listens, keeps it real, and treats every client like a neighbor.",
+      parishes: ["Evangeline", "Vermilion", "Lafayette", "St. Landry", "Jeff Davis"],
+      phone: "",
+      phoneLabel: "",
+      email: "",
+      socials: {},
+      know: {
+        intro: "Wife, mom, and small-town Louisiana girl. Here&rsquo;s a little about the person who&rsquo;ll be guiding your move.",
+        hometown: ["Midland, Louisiana (not Texas!)", "My grandparents had crawfish farms, my dad worked on the rigs, and I grew up knowing the value of hard work, good people, and a place to call home."],
+        spot: ["Gatti&rsquo;s &amp; C&rsquo;est Bon", "When I&rsquo;m not helping clients, you can find me spending time with my family or grabbing a bite at two of my local favorites: Gatti&rsquo;s in Crowley and C&rsquo;est Bon in Mermentau!"],
+        why: ["From Caribbean villas to Louisiana homes", "Before real estate, I managed multimillion-dollar villas in the Caribbean. But even from a young age, I knew I wanted to help people fall in love with a home and help them sell when it was time for their next chapter."]
+      },
+      why: {
+        heading: "Real talk, neighbor to neighbor.",
+        intro: "Buying or selling a home is personal, and you deserve someone who listens, understands what matters to you, and treats you like a neighbor.",
+        values: [
+          ["Meets you where you are", "Every move starts with your situation, your timeline, and what matters most to you."],
+          ["Keeps it real", "Honest, straightforward guidance so you always know where things stand."],
+          ["No question too small", "Alexis makes it comfortable to ask anything, so you feel confident at every step."]
+        ]
+      }
     }
   };
 
