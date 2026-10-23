@@ -173,6 +173,7 @@
       email: "katherine.mouton@exprealty.com",
       socials: {
         instagram: "https://www.instagram.com/katemouton/",
+        contactCard: "https://popl.co/card/MZQ6p8BD/1/dash",
         facebook: "https://www.facebook.com/katherine.b.mouton",
         linkedin: "https://www.linkedin.com/in/kate-mouton-90667abb/"
       },

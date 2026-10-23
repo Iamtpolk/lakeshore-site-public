@@ -1092,7 +1092,7 @@
       bio: "Kate is a top-producing Realtor from Lafayette with an accounting and business background. She helps buyers, sellers, and new agents navigate real estate with clarity and confidence, bringing the systems, hustle, and heart needed to get results.",
       image: "kate-mouton.webp",
       position: "center 22%",
-      connect: "https://m.me/katherine.b.mouton",
+      connect: "https://popl.co/card/MZQ6p8BD/1/dash",
       socials: [
         ["instagram", "https://www.instagram.com/katemouton/"],
         ["facebook", "https://www.facebook.com/katherine.b.mouton"],
