@@ -1083,6 +1083,21 @@
       ]
     },
     {
+      name: "Kate Mouton",
+      role: "Co-Owner & Team Leader",
+      license: "REALTOR - License 995709117",
+      specialty: "Systems | Hustle | Heart",
+      bio: "Kate is a top-producing Realtor from Lafayette with an accounting and business background. She helps buyers, sellers, and new agents navigate real estate with clarity and confidence, bringing the systems, hustle, and heart needed to get results.",
+      image: "kate-mouton.webp",
+      position: "center 22%",
+      connect: "https://kate.lakeshoreteam.com/",
+      socials: [
+        ["instagram", "https://www.instagram.com/katemouton/"],
+        ["facebook", "https://www.facebook.com/katherine.b.mouton"],
+        ["linkedin", "https://www.linkedin.com/in/kate-mouton-90667abb/"]
+      ]
+    },
+    {
       name: "Chelsea Porter",
       role: "Residential Specialist",
       license: "REALTOR - License 995718627",
@@ -1123,19 +1138,6 @@
         ["instagram", "https://www.instagram.com/listwithalexis/"],
         ["facebook", "https://www.facebook.com/alexis.fincher.2025"]
       ]
-    },
-    {
-      /* Shown once her title and bio are in (ready: true). */
-      ready: false,
-      name: "Kate Mouton",
-      role: "",
-      license: "REALTOR - License 995709117",
-      specialty: "",
-      bio: "",
-      image: "kate-mouton.webp",
-      position: "center 30%",
-      connect: "https://kate.lakeshoreteam.com/",
-      socials: []
     },
     {
       /* Shown once her title and bio are in (ready: true). */
