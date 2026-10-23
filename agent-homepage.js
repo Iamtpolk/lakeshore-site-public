@@ -457,7 +457,7 @@
       ".cp-sband{grid-column:1/-1;height:96px;background:var(--net-bg)}",
       ".cp-smain{padding:0 34px 34px}",
       ".cp-savatar{position:relative;width:104px;height:104px;margin-top:-52px;border:5px solid #fffdf9;border-radius:50%;background:var(--cp-accent);box-shadow:0 10px 24px rgba(0,0,0,.18)}",
-      ".cp-savatar img{width:100%;height:100%;border-radius:50%;object-fit:cover;object-position:center 25%}",
+      ".cp-savatar{overflow:visible}.cp-savatar .crop{display:block;width:100%;height:100%;overflow:hidden;border-radius:50%}.cp-savatar img{width:100%;height:100%;object-fit:cover;object-position:center 20%;transform:scale(1.9);transform-origin:50% 24%}",
       ".cp-savatar .badge{position:absolute;right:-4px;bottom:-2px;display:grid;width:36px;height:36px;place-items:center;border:3px solid #fffdf9;border-radius:50%;background:var(--net-bg);color:#fff}",
       ".cp-savatar .badge svg{width:17px;height:17px}",
       ".cp-scard h3{margin:18px 0 2px;font-family:Georgia,serif;font-size:1.65rem;font-weight:400;letter-spacing:-.02em}",
@@ -808,7 +808,7 @@
       }
       smodal.setAttribute("aria-label", A.name + " on " + n.label);
       smodal.innerHTML = '<div class="cp-scard" style="--net-bg:' + n.bg + '"><div class="cp-sband"></div>' +
-        '<div class="cp-smain"><div class="cp-savatar"><img src="' + HEADSHOT + '" alt="" onerror="this.style.visibility=\'hidden\'"><span class="badge">' + ICON[net] + "</span></div>" +
+        '<div class="cp-smain"><div class="cp-savatar"><span class="crop"><img src="' + HEADSHOT + '" alt="" onerror="this.style.visibility=\'hidden\'"></span><span class="badge">' + ICON[net] + "</span></div>" +
         "<h3>" + esc(A.name) + '</h3><div class="cp-handle">' + esc(handleFor(net, url)) + " &middot; " + n.label + "</div>" +
         "<p>" + n.copy + esc(A.region || "South Louisiana") + ".</p>" +
         '<div class="cp-sactions"><a class="cp-sfollow" href="' + url + '" target="_blank" rel="noopener noreferrer">' + n.verb + " on " + n.label + ' <span aria-hidden="true">&#8599;</span></a><button type="button" class="cp-slater">Stay on site</button></div></div>' +
