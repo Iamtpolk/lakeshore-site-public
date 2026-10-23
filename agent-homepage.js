@@ -156,6 +156,50 @@
       }
     },
 
+    "kate.lakeshoreteam.com": {
+      key: "kate",
+      name: "Kate Mouton",
+      first: "Kate",
+      title: "Realtor",
+      region: "South Louisiana",
+      headshot: "team/kate-mouton.webp",
+      headshotPosition: "center 28%",
+      accent: { main: "#4E9A73", soft: "#93CBAC", ink: "#2E6B4C" },
+      headline: ["Your best", "move yet."],
+      heroCopy: "Kate Mouton helps buyers, sellers, and new agents across South Louisiana navigate real estate with clarity and confidence, bringing the systems, hustle, and heart needed to get results.",
+      parishes: [],
+      phone: "",
+      phoneLabel: "",
+      email: "",
+      socials: {
+        instagram: "https://www.instagram.com/katemouton/",
+        facebook: "https://www.facebook.com/katherine.b.mouton",
+        linkedin: "https://www.linkedin.com/in/kate-mouton-90667abb/"
+      },
+      know: {
+        intro: "Lafayette roots and a head for business. Here&rsquo;s a little about the person who&rsquo;ll be guiding your move.",
+        hometown: ["Lafayette, Louisiana", ""],
+        spot: ["Judice Inn", ""],
+        why: ["The people behind the move", "Getting to know the people behind the move and helping turn a big, sometimes overwhelming decision into an exciting next chapter."],
+        fun: ["A numbers person at heart", "I have an accounting &amp; business background prior to real estate."]
+      },
+      why: {
+        heading: "Systems, hustle, and heart.",
+        intro: "From strategic marketing to seamless transactions, Kate brings the systems, hustle, and heart needed to get results&mdash;so your next move is your best one yet.",
+        values: [
+          ["Strategic marketing", "A clear plan to position your home or your offer for the strongest possible result."],
+          ["Seamless transactions", "Organized systems keep every deadline, document, and detail moving smoothly to the closing table."],
+          ["Clarity &amp; confidence", "Straightforward guidance so you understand every step and feel confident in every decision."]
+        ]
+      },
+      reviews: [
+        ["Kate was awesome! She was very knowledgeable and thus, the whole process went quickly and smoothly. Kate negotiated everything I wanted and was very responsive. She has local relationships with other service providers so that I was able to have all my needs met quickly. Best of all, Kate is so personable and really listened to the most important things to me in looking for a new home. From start to finish, Kate took care of all my needs and was vested in my home buying experience. Only realtor I will ever use and recommend to others!", "Kristi Nelson", "Bought a home in Broussard, LA"],
+        ["Kate helped me find my first house, and I couldn&rsquo;t be happier with the experience. She made the entire process feel easy and stress-free! I highly recommend her to anyone looking for a realtor they can trust!", "Julia Eisler", "Facebook recommendation"],
+        ["If your looking or even THINKING about buying, Kate is your girl! Literally went above and beyond for us with everything that came with buying a home! First time Homebuyers and living in our dream home &#10084;&#65039;", "Chyenne Reed", "Facebook recommendation"],
+        ["Kate was an amazing agent all the way around!! I would HIGHLY recommend her to anyone. She made the experience painless and exciting. Her knowledge is expansive and she was always available whenever I had any questions. There&rsquo;s no need to worry when you hire her, seriously.", "Victoria Roy", "Bought a home in 2025"]
+      ]
+    },
+
     "haylee.lakeshoreteam.com": {
       key: "haylee",
       name: "Haylee Meaux",
@@ -235,6 +279,7 @@
     instagram: '<svg viewBox="0 0 24 24" width="23" height="23" aria-hidden="true"><defs><linearGradient id="cp-igg" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#feda75"/><stop offset=".5" stop-color="#d62976"/><stop offset="1" stop-color="#4f5bd5"/></linearGradient></defs><rect x="2.5" y="2.5" width="19" height="19" rx="5.5" fill="none" stroke="url(#cp-igg)" stroke-width="2.2"/><circle cx="12" cy="12" r="4.3" fill="none" stroke="url(#cp-igg)" stroke-width="2.2"/><circle cx="17.4" cy="6.6" r="1.4" fill="#d62976"/></svg>',
     facebook: '<svg viewBox="0 0 24 24" width="23" height="23" aria-hidden="true"><circle cx="12" cy="12" r="10.5" fill="#1877F2"/><path d="M13.4 20.4v-6.1h2.1l.3-2.5h-2.4v-1.6c0-.7.2-1.2 1.2-1.2h1.3V6.8c-.2 0-1-.1-1.9-.1-1.9 0-3.2 1.2-3.2 3.3v1.8H8.7v2.5h2.1v6.1z" fill="#fff"/></svg>',
     messenger: '<svg viewBox="0 0 24 24" width="23" height="23" aria-hidden="true"><defs><linearGradient id="cp-msg" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#0099FF"/><stop offset=".6" stop-color="#A033FF"/><stop offset="1" stop-color="#FF5C87"/></linearGradient></defs><path d="M12 2.5C6.6 2.5 2.5 6.4 2.5 11.6c0 2.7 1.1 5.1 2.9 6.7v3.2l3-1.6c1.1.3 2.3.5 3.6.5 5.4 0 9.5-3.9 9.5-9.1S17.4 2.5 12 2.5z" fill="url(#cp-msg)"/><path d="M6.6 14.4l3-4.7 2.3 1.8 3.4-1.9-3 4.7-2.3-1.8z" fill="#fff"/></svg>',
+    linkedin: '<svg viewBox="0 0 24 24" width="21" height="21" aria-hidden="true"><rect x="1.5" y="1.5" width="21" height="21" rx="4" fill="#0A66C2"/><path d="M6.6 9.6h2.3v7.6H6.6zM7.75 5.9a1.33 1.33 0 1 1 0 2.66 1.33 1.33 0 0 1 0-2.66zM10.4 9.6h2.2v1h.03c.31-.58 1.06-1.2 2.18-1.2 2.33 0 2.76 1.53 2.76 3.53v4.27h-2.3v-3.79c0-.9-.02-2.07-1.26-2.07-1.26 0-1.45.98-1.45 2v3.86h-2.3z" fill="#fff"/></svg>',
     tiktok: '<svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M14.5 3v11.2a3.3 3.3 0 1 1-3.3-3.3" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/><path d="M14.5 3c.4 2.6 2.2 4.3 4.8 4.5" fill="none" stroke="#25F4EE" stroke-width="2.2" stroke-linecap="round"/></svg>'
   };
 
@@ -384,7 +429,7 @@
       ".cp-socials a svg{transition:transform .35s cubic-bezier(.2,.9,.3,1.4)}",
       ".cp-socials a:hover,.cp-socials a:focus-visible{transform:translateY(-5px);border-color:var(--glow,var(--cp-accent));background:rgba(255,255,255,.13);box-shadow:0 12px 26px rgba(0,0,0,.35),0 0 0 4px color-mix(in srgb,var(--glow,var(--cp-accent)) 22%,transparent)}",
       ".cp-socials a:hover svg{transform:scale(1.15) rotate(-6deg)}",
-      ".cp-socials a.ig{--glow:#d62976}.cp-socials a.msg{--glow:#A033FF}.cp-socials a.fb{--glow:#1877F2}.cp-socials a.tt{--glow:#25F4EE}",
+      ".cp-socials a.ig{--glow:#d62976}.cp-socials a.msg{--glow:#A033FF}.cp-socials a.li{--glow:#0A66C2}.cp-socials a.fb{--glow:#1877F2}.cp-socials a.tt{--glow:#25F4EE}",
       ".cp-socials a[data-tip]:after{content:attr(data-tip);position:absolute;bottom:calc(100% + 10px);left:50%;padding:6px 10px;border-radius:8px;background:#f8f7f2;color:#240f0e;font:800 .68rem 'DM Sans',sans-serif;letter-spacing:.06em;white-space:nowrap;opacity:0;transform:translate(-50%,6px);pointer-events:none;transition:opacity .2s ease,transform .2s ease}",
       ".cp-socials a:hover:after,.cp-socials a:focus-visible:after{opacity:1;transform:translate(-50%,0)}",
       ".cp-socials a.vcard{perspective:500px;padding:0;border-radius:50%;line-height:0;--glow:var(--cp-accent)}",
@@ -408,6 +453,7 @@
       "html.cp-agent-home #chat-app .chat-window-loading-w{background:#f8f7f2!important}html.cp-agent-home #chat-app .chat-window-text{color:#241f1d!important;font-weight:600!important}",
 
       /* responsive */
+      ".cp-no-photo{display:grid;place-items:center;background:linear-gradient(160deg,color-mix(in srgb,var(--cp-accent) 55%,#2b1210),#1a0c0b)!important}.cp-no-photo>img{display:none!important}.cp-no-photo:before{content:attr(data-initials);color:rgba(255,255,255,.55);font:500 clamp(4rem,9vw,7rem)/1 'Playfair Display',serif;letter-spacing:.02em}",
       /* Lofty paints sections that sit directly inside its main container white; win that fight */
       "html.cp-agent-home main section.cp-home.cp-listing-head{background:var(--cp-cream)!important}",
       "html.cp-agent-home main section.cp-home.cp-contact{background:var(--cp-ink)!important}",
@@ -436,7 +482,7 @@
       '<a class="cp-button cp-secondary" href="/listing">Search homes</a>' +
       (g ? '<button class="cp-button cp-secondary cp-guide-btn" type="button" data-cp-guide="0">' + ICON.book + esc(g.heroButton || g.title) + "</button>" : "") +
       "</div></div>" +
-      '<div class="cp-portrait-wrap"><div class="cp-portrait"><img src="' + HEADSHOT + '" alt="' + esc(A.name) + (A.title ? ", " + esc(A.title) : "") + ' with Lakeshore Team" style="object-position:' + (A.headshotPosition || "center 34%") + '"></div>' +
+      '<div class="cp-portrait-wrap"><div class="cp-portrait" data-initials="' + initials(A.name) + '"><img onerror="this.parentNode.classList.add(\'cp-no-photo\')" src="' + HEADSHOT + '" alt="' + esc(A.name) + (A.title ? ", " + esc(A.title) : "") + ' with Lakeshore Team" style="object-position:' + (A.headshotPosition || "center 34%") + '"></div>' +
       '<div class="cp-signature"><strong>' + esc(A.name) + "</strong><span>Lakeshore Team &middot; eXp Realty</span></div></div>" +
       "</div></section>";
   }
@@ -483,9 +529,10 @@
   function socialsHTML() {
     var s = A.socials || {}, out = "";
     if (s.instagram) out += '<a class="ig" data-tip="Instagram" href="' + s.instagram + '" target="_blank" rel="noopener noreferrer" aria-label="' + esc(A.first) + ' on Instagram">' + ICON.instagram + "</a>";
-    if (s.contactCard) out += '<a class="vcard" data-tip="Save my contact" href="' + s.contactCard + '" target="_blank" rel="noopener noreferrer" aria-label="Save ' + esc(A.first) + '&rsquo;s contact card"><span class="cp-flip"><span class="front"><img src="' + HEADSHOT + '" alt=""></span><span class="back">' + ICON.card + "</span></span></a>";
+    if (s.contactCard) out += '<a class="vcard" data-tip="Save my contact" href="' + s.contactCard + '" target="_blank" rel="noopener noreferrer" aria-label="Save ' + esc(A.first) + '&rsquo;s contact card"><span class="cp-flip"><span class="front"><img onerror="this.style.visibility=\'hidden\'" src="' + HEADSHOT + '" alt=""></span><span class="back">' + ICON.card + "</span></span></a>";
     if (s.messenger) out += '<a class="msg" data-tip="Message me" href="' + s.messenger + '" target="_blank" rel="noopener noreferrer" aria-label="Message ' + esc(A.first) + ' on Facebook Messenger">' + ICON.messenger + "</a>";
     if (s.facebook) out += '<a class="fb" data-tip="Facebook" href="' + s.facebook + '" target="_blank" rel="noopener noreferrer" aria-label="' + esc(A.first) + ' on Facebook">' + ICON.facebook + "</a>";
+    if (s.linkedin) out += '<a class="li" data-tip="LinkedIn" href="' + s.linkedin + '" target="_blank" rel="noopener noreferrer" aria-label="' + esc(A.first) + ' on LinkedIn">' + ICON.linkedin + "</a>";
     if (s.tiktok) out += '<a class="tt" data-tip="TikTok" href="' + s.tiktok + '" target="_blank" rel="noopener noreferrer" aria-label="' + esc(A.first) + ' on TikTok">' + ICON.tiktok + "</a>";
     return out ? '<div class="cp-socials">' + out + "</div>" : "";
   }
@@ -494,7 +541,7 @@
     var details = "";
     if (A.phone) details += '<a class="cp-contact-detail" href="tel:' + A.phone + '">Call or text &middot; ' + esc(A.phoneLabel) + "</a>";
     if (A.email) details += '<a class="cp-contact-detail" href="mailto:' + A.email + '">' + esc(A.email) + "</a>";
-    return '<div class="cp-shell cp-contact-card"><div class="cp-contact-person"><img src="' + HEADSHOT + '" alt="' + esc(A.name) + '" style="object-position:' + (A.headshotPosition || "center 38%") + '"><div class="cp-contact-badge"><strong>' + esc(A.name) + "</strong><span>" + (A.title ? esc(A.title) + " &middot; " : "") + "Lakeshore Team</span></div></div>" +
+    return '<div class="cp-shell cp-contact-card"><div class="cp-contact-person" data-initials="' + initials(A.name) + '"><img onerror="this.parentNode.classList.add(\'cp-no-photo\')" src="' + HEADSHOT + '" alt="' + esc(A.name) + '" style="object-position:' + (A.headshotPosition || "center 38%") + '"><div class="cp-contact-badge"><strong>' + esc(A.name) + "</strong><span>" + (A.title ? esc(A.title) + " &middot; " : "") + "Lakeshore Team</span></div></div>" +
       '<div class="cp-contact-copy"><span class="cp-kicker">Connect with ' + esc(A.first) + '</span><h2 class="cp-serif">Start your next move with confidence.</h2><p>Have a question about buying or selling? Reach ' + esc(A.first) + " directly or start a private conversation through the Lakeshore Team form.</p>" +
       (details ? '<div class="cp-contact-details">' + details + "</div>" : "") +
       '<div class="cp-contact-actions"><a class="cp-button" href="/contact?agent=' + A.key + '#start-conversation">Start the conversation &rarr;</a>' + socialsHTML() + "</div></div></div>";
