@@ -1107,7 +1107,21 @@
       connect: "https://hihello.com/p/593bf9e9-8a27-4b7d-8e6a-60473c6a7fbf",
       socials: [
         ["instagram", "https://www.instagram.com/movingwmadeleine"],
-        ["facebook", "https://www.facebook.com/share/1DPDneSKJH/?mibextid=wwXIfr"]
+        ["facebook", "https://www.facebook.com/Madeleine-Davis,-Realtor-273470091185196"]
+      ]
+    },
+    {
+      name: "Alexis Lacomb",
+      role: "Residential Specialist",
+      license: "",
+      specialty: "Down-to-earth | Acadiana",
+      bio: "Alexis is a wife, mom, and small-town Louisiana girl from Midland. Before real estate, she managed multimillion-dollar villas in the Caribbean. Her approach is simple: meet people where they are, keep it real, and treat every client like a neighbor.",
+      image: "alexis-lacomb.webp",
+      position: "48% 22%",
+      connect: "https://listwithalexis.lakeshoreteam.com/",
+      socials: [
+        ["instagram", "https://www.instagram.com/listwithalexis/"],
+        ["facebook", "https://www.facebook.com/alexis.fincher.2025"]
       ]
     }
   ];
@@ -1139,7 +1153,7 @@
         '<p class="lst-team-specialty">' + escapeHtml(member.specialty) + '</p>' +
         '<h3>' + escapeHtml(member.name) + '</h3>' +
         '<p class="lst-team-role">' + escapeHtml(member.role) + '</p>' +
-        '<p class="lst-team-license">' + escapeHtml(member.license) + '</p>' +
+        (member.license ? '<p class="lst-team-license">' + escapeHtml(member.license) + '</p>' : '') +
         '<p class="lst-team-bio">' + escapeHtml(member.bio) + '</p>' +
         '<div class="lst-team-actions"><div class="lst-team-socials">' + socials + '</div>' +
         '<a class="lst-team-connect" href="' + escapeHtml(member.connect) + '" target="_blank" rel="noopener noreferrer">Connect <span aria-hidden="true">&rarr;</span></a></div>' +
@@ -1156,7 +1170,8 @@
     .lst-team-kicker { margin:0 0 12px;color:#ead9a6;font:700 12px/1.2 Inter,Arial,sans-serif;letter-spacing:.2em;text-transform:uppercase;text-shadow:0 1px 12px rgba(36,15,14,.24); }
     .lst-team-head h2 { margin:0;color:#fff;font:500 clamp(38px,4.7vw,68px)/1.04 Georgia,serif;letter-spacing:-.025em; }
     .lst-team-intro { max-width:66ch;margin:18px auto 0;color:rgba(248,247,242,.78);font:400 16px/1.7 Inter,Arial,sans-serif; }
-    .lst-team-grid { display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(16px,1.8vw,26px);align-items:stretch; }
+    .lst-team-grid { --lst-gap:clamp(16px,1.8vw,26px);display:flex;flex-wrap:wrap;justify-content:center;gap:var(--lst-gap);align-items:stretch; }
+    .lst-team-grid > .lst-team-card { flex:0 0 calc((100% - 2 * var(--lst-gap)) / 3); }
     .lst-team-card { position:relative;display:flex;flex-direction:column;min-width:0;overflow:hidden;border:1px solid rgba(185,144,82,.34);border-radius:24px;background:linear-gradient(155deg,rgba(52,24,22,.94),rgba(36,15,14,.92) 48%,rgba(20,8,8,.97));box-shadow:inset 0 1px 0 rgba(255,255,255,.12),inset 0 -1px 0 rgba(185,144,82,.1),0 24px 50px rgba(0,0,0,.34);backdrop-filter:blur(18px) saturate(102%);-webkit-backdrop-filter:blur(18px) saturate(102%);transition:transform .28s ease,border-color .28s ease,box-shadow .28s ease; }
     .lst-team-card:hover { transform:translateY(-7px);border-color:rgba(185,144,82,.72);box-shadow:inset 0 1px 0 rgba(255,255,255,.2),0 32px 66px rgba(0,0,0,.38),0 16px 42px rgba(93,7,9,.3); }
     .lst-team-glow { position:absolute;z-index:0;left:12%;right:12%;bottom:-30px;height:80px;border-radius:50%;background:rgba(185,144,82,.78);filter:blur(32px);opacity:.2;transition:opacity .28s ease; }
@@ -1186,8 +1201,8 @@
     .lst-team-footer { display:flex;align-items:center;justify-content:center;margin-top:clamp(34px,4vw,50px); }
     .lst-team-full { display:inline-flex;min-height:50px;align-items:center;justify-content:center;gap:10px;padding:0 24px;color:#fff!important;border:1px solid rgba(255,255,255,.2);border-radius:14px;background:rgba(255,255,255,.08);box-shadow:inset 0 1px 0 rgba(255,255,255,.1);backdrop-filter:blur(12px);font:700 12px/1 Inter,Arial,sans-serif;letter-spacing:.09em;text-decoration:none!important;text-transform:uppercase;transition:background .2s ease,border-color .2s ease,transform .2s ease; }
     .lst-team-full:hover { transform:translateY(-2px);background:rgba(177,154,85,.17);border-color:rgba(196,173,102,.55); }
-    @media(max-width:1180px){.lst-team-grid{grid-template-columns:repeat(2,minmax(0,1fr));max-width:820px;margin:0 auto}.lst-team-role{min-height:0}}
-    @media(max-width:620px){#lst-team-root{padding:62px 16px}.lst-team-grid{grid-template-columns:1fr;max-width:430px;gap:20px}.lst-team-head{margin-bottom:34px}.lst-team-head h2{font-size:40px}.lst-team-intro{font-size:14px}.lst-team-card-body{padding:22px 19px 20px}.lst-team-bio{font-size:13px}.lst-team-actions{align-items:flex-end}.lst-team-connect{min-height:40px}}
+    @media(max-width:1180px){.lst-team-grid{max-width:820px;margin:0 auto}.lst-team-grid > .lst-team-card{flex-basis:calc((100% - var(--lst-gap)) / 2)}.lst-team-role{min-height:0}}
+    @media(max-width:620px){#lst-team-root{padding:62px 16px}.lst-team-grid{max-width:430px;--lst-gap:20px}.lst-team-grid > .lst-team-card{flex-basis:100%}.lst-team-head{margin-bottom:34px}.lst-team-head h2{font-size:40px}.lst-team-intro{font-size:14px}.lst-team-card-body{padding:22px 19px 20px}.lst-team-bio{font-size:13px}.lst-team-actions{align-items:flex-end}.lst-team-connect{min-height:40px}}
     @media(prefers-reduced-motion:reduce){.lst-team-card,.lst-team-card *{transition:none!important}}
   `;
 
@@ -1200,7 +1215,7 @@
     var section = document.createElement("section");
     section.id = "lst-team-root";
     section.setAttribute("aria-labelledby", "lst-team-heading");
-    section.innerHTML = '<div class="lst-team-wrap"><header class="lst-team-head"><p class="lst-team-kicker">Meet the Lakeshore Team</p><h2 id="lst-team-heading">The people behind every move.</h2><p class="lst-team-intro">Three specialists. One standard of service. Meet the South Louisiana real estate professionals who bring strategy, care, and steady guidance to every client relationship.</p></header><div class="lst-team-grid">' + members.map(card).join("") + '</div><div class="lst-team-footer"><a class="lst-team-full" href="/myteam">Meet the Full Team <span aria-hidden="true">&rarr;</span></a></div></div>';
+    section.innerHTML = '<div class="lst-team-wrap"><header class="lst-team-head"><p class="lst-team-kicker">Meet the Lakeshore Team</p><h2 id="lst-team-heading">The people behind every move.</h2><p class="lst-team-intro">One team. One standard of service. Meet the South Louisiana real estate professionals who bring strategy, care, and steady guidance to every client relationship.</p></header><div class="lst-team-grid">' + members.map(card).join("") + '</div><div class="lst-team-footer"><a class="lst-team-full" href="/myteam">Meet the Full Team <span aria-hidden="true">&rarr;</span></a></div></div>';
     footer.parentNode.insertBefore(section, footer);
   }
 
