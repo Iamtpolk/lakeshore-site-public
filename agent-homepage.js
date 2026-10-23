@@ -238,13 +238,7 @@
       },
       reviews: [
         ["She talked me into listing it&hellip;she got it sold and closed quickly. She was outstanding &#128079;", "Lisa Fontenot Leger", "Sold a home in Branch, LA"]
-      ],
-      /* Real reviews for a teammate, always shown under that teammate's name. */
-      teamReviews: {
-        from: "listwithalexis.lakeshoreteam.com",
-        names: ["Sherry Briley", "Jake Guillory", "Emily Gardner"],
-        note: "Haylee works side by side with her sister Alexis Lacomb. Here&rsquo;s what Alexis&rsquo;s clients say about working with their team."
-      }
+      ]
     }
   };
 
