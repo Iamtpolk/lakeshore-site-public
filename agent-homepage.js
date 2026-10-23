@@ -122,10 +122,22 @@
       headline: ["Find your", "place."],
       heroCopy: "Alexis Lacomb helps buyers and sellers across Acadiana with a down-to-earth approach: she listens, keeps it real, and treats every client like a neighbor.",
       parishes: ["Evangeline", "Vermilion", "Lafayette", "St. Landry", "Jeff Davis"],
-      phone: "",
-      phoneLabel: "",
+      phone: "+13375221290",
+      phoneLabel: "(337) 522-1290",
       email: "",
-      socials: {},
+      socials: {
+        instagram: "https://www.instagram.com/listwithalexis/",
+        facebook: "https://www.facebook.com/alexis.fincher.2025"
+      },
+      reviews: [
+        ["We had the absolute best experience working with Alexis to buy our home! From the very first conversation, she was kind, patient, and incredibly knowledgeable. She took the time to understand exactly what we were looking for and was always available to answer our (many) questions. Alexis made what could have been a stressful process feel easy and exciting. She was always on top of things, ensuring we never missed a beat. Her dedication and expertise truly set her apart&mdash;we always felt like we had someone in our corner, looking out for our best interests. Thanks to Alexis, we found the perfect home, and we couldn&rsquo;t be more grateful. If you&rsquo;re looking for a real estate agent who genuinely cares and will go above and beyond, we highly recommend her!", "Kelsey Myers", "Facebook recommendation"],
+        ["Alexis was absolutely wonderful to work with! She always responds quickly, guided us through every step of the process, and made everything feel easy and stress-free! We are very grateful that we found her and would highly recommend her to anyone buying or selling a home.", "Dillon Morvant", "Bought a home in Lafayette, LA"],
+        ["I would highly recommend Alexis as a realtor! She was a life saver when we sold our house! She was very knowledgeable and took care of every detail!", "Sherry Briley", "Facebook recommendation"],
+        ["When I say she was 100% an advocate for me and my husband I mean it. She managed to find us our actual dream &#129392;", "Emily Gardner", "Facebook recommendation"],
+        ["We cannot recommend Alexis enough! Working with her was truly the best experience we could have asked for. From the very beginning, Alexis was incredibly patient with us and walked us through every step of the home-buying process, making sure we understood everything along the way. She never rushed us or pressured us into making a decision. Instead, she took the time to make sure we found the right home for us. She always had our best interests at heart and made us feel confident in every decision we made. Alexis was the sweetest, always available to answer our questions, and went above and beyond to help us with anything and everything we needed. She made what could have been a stressful process feel exciting and enjoyable. We are so grateful for everything Alexis did for us and couldn&rsquo;t have asked for a better realtor. We highly recommend her to anyone looking to buy or sell a home&mdash;you&rsquo;ll be in the best hands!", "Misdy Ortega", "Facebook recommendation"],
+        ["We enjoyed working with Alexis through our home selling process. She guided us through every step with professionalism, market knowledge and genuine commitment to our success.", "Jake Guillory", "Facebook recommendation"],
+        ["highly recommend. You want the perfect house. she will work day and night to make you happy. and will find you the best deal on the market. thank you so much for helping me and my wife!", "Joshua Henry", "Facebook recommendation"]
+      ],
       know: {
         intro: "Wife, mom, and small-town Louisiana girl. Here&rsquo;s a little about the person who&rsquo;ll be guiding your move.",
         hometown: ["Midland, Louisiana (not Texas!)", "My grandparents had crawfish farms, my dad worked on the rigs, and I grew up knowing the value of hard work, good people, and a place to call home."],
@@ -308,6 +320,10 @@
       ".cp-reviews .cp-kicker{color:var(--cp-accent-soft)}.cp-reviews .cp-section-head p{color:rgba(255,255,255,.66)}",
       ".cp-review-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}",
       ".cp-review{display:flex;flex-direction:column;min-height:360px;padding:36px;border:1px solid rgba(255,255,255,.13);border-radius:22px;background:linear-gradient(145deg,rgba(255,255,255,.11),rgba(255,255,255,.045));backdrop-filter:blur(18px);box-shadow:0 18px 55px rgba(0,0,0,.2)}",
+      ".cp-review-more{display:none!important}.cp-reviews.cp-show-all .cp-review-more{display:flex!important}",
+      ".cp-review-long .cp-quote{font-size:clamp(1.02rem,1.25vw,1.2rem);line-height:1.62}.cp-review-mid .cp-quote{font-size:clamp(1.15rem,1.6vw,1.5rem)}",
+      ".cp-review{min-height:0!important}.cp-reviews.cp-show-all .cp-review:last-child:nth-child(odd){grid-column:1/-1}",
+      ".cp-review-toggle-row{display:flex;justify-content:center;margin-top:28px}",
       ".cp-stars{color:var(--cp-accent-soft);font-size:1.1rem;letter-spacing:.18em}",
       ".cp-quote{margin:30px 0;font-family:'Playfair Display',serif;font-size:clamp(1.35rem,2vw,1.9rem);line-height:1.48}",
       ".cp-reviewer{display:flex;align-items:center;gap:14px;margin-top:auto}",
@@ -430,9 +446,12 @@
   function reviewsHTML() {
     if (!A.reviews || !A.reviews.length) return "";
     return '<section class="cp-section cp-reviews"><div class="cp-shell"><div class="cp-section-head"><div><span class="cp-kicker">Verified client reviews</span><h2 class="cp-serif">Kind words from real moves.</h2></div><p>Recommendations from clients who trusted ' + esc(A.first) + ' to guide them home.</p></div><div class="cp-review-grid">' +
-      A.reviews.map(function (r) {
-        return '<article class="cp-review"><div class="cp-stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p class="cp-quote">&ldquo;' + r[0] + '&rdquo;</p><div class="cp-reviewer"><span class="cp-avatar">' + initials(r[1]) + "</span><div><strong>" + esc(r[1]) + "</strong><span>" + esc(r[2]) + "</span></div></div></article>";
-      }).join("") + "</div></div></section>";
+      A.reviews.map(function (r, i) {
+        var len = r[0].replace(/&[a-z#0-9]+;/gi, "x").length;
+        return '<article class="cp-review' + (i >= 4 ? " cp-review-more" : "") + (len > 420 ? " cp-review-long" : len > 220 ? " cp-review-mid" : "") + '"><div class="cp-stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p class="cp-quote">&ldquo;' + r[0] + '&rdquo;</p><div class="cp-reviewer"><span class="cp-avatar">' + initials(r[1]) + "</span><div><strong>" + esc(r[1]) + "</strong><span>" + esc(r[2]) + "</span></div></div></article>";
+      }).join("") + "</div>" +
+      (A.reviews.length > 4 ? '<div class="cp-review-toggle-row"><button type="button" class="cp-button cp-secondary cp-review-toggle" aria-expanded="false">Show all ' + A.reviews.length + " reviews</button></div>" : "") +
+      "</div></section>";
   }
 
   function socialsHTML() {
@@ -584,6 +603,15 @@
     main.appendChild(contact); /* moved right after the listings once they load */
 
     document.addEventListener("click", function (e) {
+      var tog = e.target.closest && e.target.closest(".cp-review-toggle");
+      if (tog) {
+        var sec = tog.closest(".cp-reviews"), open = !sec.classList.contains("cp-show-all");
+        sec.classList.toggle("cp-show-all", open);
+        tog.setAttribute("aria-expanded", open ? "true" : "false");
+        tog.textContent = open ? "Show fewer reviews" : "Show all " + A.reviews.length + " reviews";
+        if (!open) sec.scrollIntoView({ behavior: "smooth", block: "start" });
+        return;
+      }
       var t = e.target.closest && e.target.closest("[data-cp-guide]");
       if (!t) return;
       e.preventDefault();
