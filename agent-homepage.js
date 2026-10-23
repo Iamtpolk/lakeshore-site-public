@@ -178,7 +178,9 @@
         instagram: "https://www.instagram.com/katemouton/",
         contactCard: "https://popl.co/card/MZQ6p8BD/1/dash",
         facebook: "https://www.facebook.com/katherine.b.mouton",
-        linkedin: "https://www.linkedin.com/in/kate-mouton-90667abb/"
+        linkedin: "https://www.linkedin.com/in/kate-mouton-90667abb/",
+        threads: "https://www.threads.com/@katemouton",
+        store: "https://stan.store/katemouton"
       },
       know: {
         intro: "Lafayette roots and a head for business. Here&rsquo;s a little about the person who&rsquo;ll be guiding your move.",
@@ -300,6 +302,8 @@
     pin: svg('<path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0 1 13 0c0 5.4-6.5 11-6.5 11z"/><circle cx="12" cy="10" r="2.3"/>', 13, ' stroke-width="2.2"'),
     book: svg('<path d="M12 6.5C10 5 7 4.5 3.5 5v13c3.5-.5 6.5 0 8.5 1.5 2-1.5 5-2 8.5-1.5V5C17 4.5 14 5 12 6.5z"/><path d="M12 6.5v13"/>', 17, ' stroke-width="1.9"'),
     card: svg('<rect x="2.5" y="5" width="19" height="14" rx="2.5"/><circle cx="8.5" cy="11" r="2.2"/><path d="M5.2 16.2c.8-1.7 2-2.4 3.3-2.4s2.5.7 3.3 2.4M14.5 10h4.5M14.5 13.5h3"/>', 22, ' stroke-width="2"'),
+    threads: '<svg viewBox="0 0 24 24" width="21" height="21" fill="currentColor" aria-hidden="true"><path d="M16.7 11.1c-.1-2.6-1.7-4-4.4-4.1-2.1-.1-3.7.8-4.6 2.4l2.2 1.1c.5-.9 1.3-1.3 2.4-1.3 1.2 0 2 .5 2.2 1.5-3.8-.2-6.3 1.2-6.3 3.8 0 2.2 1.8 3.7 4.1 3.7 2.2 0 3.8-1.2 4.3-3.3 1 .6 1.6 1.5 1.6 2.7 0 2.8-2.4 4.4-6.1 4.4-5.5 0-8.7-3.9-8.7-9.8 0-6 3.4-9.8 8.7-9.8 4.2 0 7.1 2.2 8.1 6.1l2.2-.6C21.2 3 17.5.1 12.1.1 5.5.1 1 4.9 1 12.2 1 19.4 5.4 24 12.1 24c5.1 0 8.5-2.6 8.5-6.5 0-3-1.5-5.1-3.9-6.4Zm-4.2 4.9c-1.1 0-1.9-.6-1.9-1.5 0-1.2 1.2-1.8 3.9-1.6-.1 2.1-.8 3.1-2 3.1Z"/></svg>',
+    store: svg('<path d="M6 7h12l1.2 13H4.8L6 7z"/><path d="M9 9V6a3 3 0 0 1 6 0v3"/>', 21, ' stroke-width="2"'),
     instagram: '<svg viewBox="0 0 24 24" width="23" height="23" aria-hidden="true"><defs><linearGradient id="cp-igg" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#feda75"/><stop offset=".5" stop-color="#d62976"/><stop offset="1" stop-color="#4f5bd5"/></linearGradient></defs><rect x="2.5" y="2.5" width="19" height="19" rx="5.5" fill="none" stroke="url(#cp-igg)" stroke-width="2.2"/><circle cx="12" cy="12" r="4.3" fill="none" stroke="url(#cp-igg)" stroke-width="2.2"/><circle cx="17.4" cy="6.6" r="1.4" fill="#d62976"/></svg>',
     facebook: '<svg viewBox="0 0 24 24" width="23" height="23" aria-hidden="true"><circle cx="12" cy="12" r="10.5" fill="#1877F2"/><path d="M13.4 20.4v-6.1h2.1l.3-2.5h-2.4v-1.6c0-.7.2-1.2 1.2-1.2h1.3V6.8c-.2 0-1-.1-1.9-.1-1.9 0-3.2 1.2-3.2 3.3v1.8H8.7v2.5h2.1v6.1z" fill="#fff"/></svg>',
     messenger: '<svg viewBox="0 0 24 24" width="23" height="23" aria-hidden="true"><defs><linearGradient id="cp-msg" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#0099FF"/><stop offset=".6" stop-color="#A033FF"/><stop offset="1" stop-color="#FF5C87"/></linearGradient></defs><path d="M12 2.5C6.6 2.5 2.5 6.4 2.5 11.6c0 2.7 1.1 5.1 2.9 6.7v3.2l3-1.6c1.1.3 2.3.5 3.6.5 5.4 0 9.5-3.9 9.5-9.1S17.4 2.5 12 2.5z" fill="url(#cp-msg)"/><path d="M6.6 14.4l3-4.7 2.3 1.8 3.4-1.9-3 4.7-2.3-1.8z" fill="#fff"/></svg>',
@@ -482,7 +486,7 @@
       ".cp-socials a svg{transition:transform .35s cubic-bezier(.2,.9,.3,1.4)}",
       ".cp-socials a:hover,.cp-socials a:focus-visible{transform:translateY(-5px);border-color:var(--glow,var(--cp-accent));background:rgba(255,255,255,.13);box-shadow:0 12px 26px rgba(0,0,0,.35),0 0 0 4px color-mix(in srgb,var(--glow,var(--cp-accent)) 22%,transparent)}",
       ".cp-socials a:hover svg{transform:scale(1.15) rotate(-6deg)}",
-      ".cp-socials a.ig{--glow:#d62976}.cp-socials a.msg{--glow:#A033FF}.cp-socials a.li{--glow:#0A66C2}.cp-socials a.fb{--glow:#1877F2}.cp-socials a.tt{--glow:#25F4EE}",
+      ".cp-socials a.ig{--glow:#d62976}.cp-socials a.msg{--glow:#A033FF}.cp-socials a.li{--glow:#0A66C2}.cp-socials a.fb{--glow:#1877F2}.cp-socials a.tt{--glow:#25F4EE}.cp-socials a.th{--glow:#ffffff;color:#fff}.cp-socials a.st{--glow:#2fd17c;color:#fff}",
       ".cp-socials a[data-tip]:after{content:attr(data-tip);position:absolute;bottom:calc(100% + 10px);left:50%;padding:6px 10px;border-radius:8px;background:#f8f7f2;color:#240f0e;font:800 .68rem 'DM Sans',sans-serif;letter-spacing:.06em;white-space:nowrap;opacity:0;transform:translate(-50%,6px);pointer-events:none;transition:opacity .2s ease,transform .2s ease}",
       ".cp-socials a:hover:after,.cp-socials a:focus-visible:after{opacity:1;transform:translate(-50%,0)}",
       ".cp-socials a.vcard{perspective:500px;padding:0;border-radius:50%;line-height:0;--glow:var(--cp-accent)}",
@@ -597,6 +601,8 @@
     if (s.messenger) out += '<a class="msg" data-tip="Message me" href="' + s.messenger + '" target="_blank" rel="noopener noreferrer" aria-label="Message ' + esc(A.first) + ' on Facebook Messenger">' + ICON.messenger + "</a>";
     if (s.facebook) out += '<a class="fb" data-cp-social="facebook" data-tip="Facebook" href="' + s.facebook + '" target="_blank" rel="noopener noreferrer" aria-label="' + esc(A.first) + ' on Facebook">' + ICON.facebook + "</a>";
     if (s.linkedin) out += '<a class="li" data-cp-social="linkedin" data-tip="LinkedIn" href="' + s.linkedin + '" target="_blank" rel="noopener noreferrer" aria-label="' + esc(A.first) + ' on LinkedIn">' + ICON.linkedin + "</a>";
+    if (s.threads) out += '<a class="th" data-cp-social="threads" data-tip="Threads" href="' + s.threads + '" target="_blank" rel="noopener noreferrer" aria-label="' + esc(A.first) + ' on Threads">' + ICON.threads + "</a>";
+    if (s.store) out += '<a class="st" data-tip="My Stan Store" href="' + s.store + '" target="_blank" rel="noopener noreferrer" aria-label="' + esc(A.first) + '&rsquo;s Stan Store">' + ICON.store + "</a>";
     if (s.tiktok) out += '<a class="tt" data-cp-social="tiktok" data-tip="TikTok" href="' + s.tiktok + '" target="_blank" rel="noopener noreferrer" aria-label="' + esc(A.first) + ' on TikTok">' + ICON.tiktok + "</a>";
     return out ? '<div class="cp-socials">' + out + "</div>" : "";
   }
@@ -765,6 +771,7 @@
       instagram: { label: "Instagram", bg: "linear-gradient(135deg,#feda75 0%,#fa7e1e 25%,#d62976 55%,#962fbf 80%,#4f5bd5 100%)", verb: "Follow", copy: "Follow along for new listings, open houses, and a look at life around " },
       facebook: { label: "Facebook", bg: "linear-gradient(135deg,#1877F2,#0b5bd3)", verb: "Follow", copy: "Connect on Facebook for listings, market updates, and community news from " },
       linkedin: { label: "LinkedIn", bg: "linear-gradient(135deg,#0A66C2,#004182)", verb: "Connect", copy: "Connect on LinkedIn for market insight and professional updates from " },
+      threads: { label: "Threads", bg: "linear-gradient(135deg,#1c1c1c,#000)", verb: "Follow", copy: "Join the conversation on Threads for real estate talk and everyday updates from " },
       tiktok: { label: "TikTok", bg: "linear-gradient(135deg,#111 0%,#25F4EE 140%)", verb: "Follow", copy: "Watch home tours and real estate tips from " }
     };
     function handleFor(net, url) {

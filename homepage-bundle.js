@@ -1079,7 +1079,9 @@
       socials: [
         ["instagram", "https://www.instagram.com/katemouton/"],
         ["facebook", "https://www.facebook.com/katherine.b.mouton"],
-        ["linkedin", "https://www.linkedin.com/in/kate-mouton-90667abb/"]
+        ["linkedin", "https://www.linkedin.com/in/kate-mouton-90667abb/"],
+        ["threads", "https://www.threads.com/@katemouton"],
+        ["store", "https://stan.store/katemouton"]
       ]
     },
     {
@@ -1168,6 +1170,7 @@
     facebook: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 8h3V4.4c-.5-.1-2.2-.2-4.1-.2-4 0-6.7 2.4-6.7 6.9V15H2v4h4.2v10h5.1V19h4.2l.7-4h-4.9v-3.5C11.3 10.3 11.6 8 14 8Z" transform="scale(.75) translate(5 0)"/></svg>',
     linkedin: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5.3 7.8A2.3 2.3 0 1 0 5.3 3a2.3 2.3 0 0 0 0 4.7ZM3.3 21h4V9.2h-4V21Zm6.5 0h4v-6.5c0-1.7.3-3.4 2.5-3.4 2.2 0 2.2 2 2.2 3.5V21h4v-7.2c0-3.6-.8-6.3-5-6.3-2 0-3.4 1.1-4 2.1h-.1V9.2H9.8V21Z"/></svg>',
     youtube: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 7.4a3 3 0 0 0-2.1-2.1C18 4.8 12 4.8 12 4.8s-6 0-7.9.5A3 3 0 0 0 2 7.4 31 31 0 0 0 1.5 12c0 1.5.1 3.1.5 4.6a3 3 0 0 0 2.1 2.1c1.9.5 7.9.5 7.9.5s6 0 7.9-.5a3 3 0 0 0 2.1-2.1c.4-1.5.5-3.1.5-4.6s-.1-3.1-.5-4.6ZM9.8 15.3V8.7l5.7 3.3-5.7 3.3Z"/></svg>',
+    store: '<svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 7h12l1.2 13H4.8L6 7z"/><path d="M9 9V6a3 3 0 0 1 6 0v3"/></svg>',
     threads: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.7 11.1c-.1-2.6-1.7-4-4.4-4.1-2.1-.1-3.7.8-4.6 2.4l2.2 1.1c.5-.9 1.3-1.3 2.4-1.3 1.2 0 2 .5 2.2 1.5-3.8-.2-6.3 1.2-6.3 3.8 0 2.2 1.8 3.7 4.1 3.7 2.2 0 3.8-1.2 4.3-3.3 1 .6 1.6 1.5 1.6 2.7 0 2.8-2.4 4.4-6.1 4.4-5.5 0-8.7-3.9-8.7-9.8 0-6 3.4-9.8 8.7-9.8 4.2 0 7.1 2.2 8.1 6.1l2.2-.6C21.2 3 17.5.1 12.1.1 5.5.1 1 4.9 1 12.2 1 19.4 5.4 24 12.1 24c5.1 0 8.5-2.6 8.5-6.5 0-3-1.5-5.1-3.9-6.4Zm-4.2 4.9c-1.1 0-1.9-.6-1.9-1.5 0-1.2 1.2-1.8 3.9-1.6-.1 2.1-.8 3.1-2 3.1Z"/></svg>'
   };
 
@@ -1179,7 +1182,7 @@
 
   function card(member) {
     var socials = member.socials.map(function (social) {
-      var label = social[0].charAt(0).toUpperCase() + social[0].slice(1);
+      var label = social[0] === "store" ? "Stan Store" : social[0].charAt(0).toUpperCase() + social[0].slice(1);
       return '<a class="lst-team-social lst-team-social--' + social[0] + '" href="' + escapeHtml(social[1]) + '" target="_blank" rel="noopener noreferrer" aria-label="' + escapeHtml(member.name + ' on ' + label) + '">' + icons[social[0]] + '</a>';
     }).join("");
 
@@ -1245,6 +1248,7 @@
     .lst-team-social--facebook { color:#1877f2;box-shadow:inset 0 1px 0 rgba(255,255,255,.12),0 5px 14px rgba(24,119,242,.1); }
     .lst-team-social--linkedin { color:#0a66c2;box-shadow:inset 0 1px 0 rgba(255,255,255,.12),0 5px 14px rgba(10,102,194,.1); }
     .lst-team-social--youtube { color:#ff0033;box-shadow:inset 0 1px 0 rgba(255,255,255,.12),0 5px 14px rgba(255,0,51,.1); }
+    .lst-team-social--store { color:#2fd17c; }
     .lst-team-social--threads { color:#fff;background:rgba(0,0,0,.32);border-color:rgba(255,255,255,.2); }
     .lst-team-connect { display:inline-flex;min-height:38px;align-items:center;justify-content:center;gap:8px;padding:0 14px;white-space:nowrap;color:#211d12!important;border:1px solid #aa9149;border-radius:11px;background:linear-gradient(135deg,#cdbb86,#b19a55);box-shadow:0 8px 20px rgba(177,154,85,.16);font:700 11px/1 Inter,Arial,sans-serif;letter-spacing:.055em;text-decoration:none!important;text-transform:uppercase;transition:transform .2s ease,filter .2s ease; }
     .lst-team-connect:hover { transform:translateY(-2px);filter:brightness(1.07); }
