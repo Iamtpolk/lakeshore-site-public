@@ -163,7 +163,7 @@
       region: "",
       headshot: "team/haylee-meaux.webp",
       headshotPosition: "40% 10%",
-      accent: { main: "#A5826A", soft: "#D2B49C", ink: "#49352C" },
+      accent: { main: "#A5826A", soft: "#D2B49C", ink: "#49352C", ivory: "#F5F0E8", cream: "#ECE3D6" },
       headline: ["Move with", "ease."],
       heroCopy: "",
       parishes: [],
@@ -243,7 +243,7 @@
   function css() {
     var a = A.accent;
     return [
-      ":root{--cp-ink:#202322;--cp-ox:#240f0e;--cp-ivory:#f8f7f2;--cp-line:rgba(36,15,14,.14);--cp-accent:" + a.main + ";--cp-accent-soft:" + a.soft + ";--cp-accent-ink:" + a.ink + "}",
+      ":root{--cp-ink:#202322;--cp-ox:#240f0e;--cp-ivory:" + (a.ivory || "#f8f7f2") + ";--cp-cream:" + (a.cream || "#efece3") + ";--cp-line:rgba(36,15,14,.14);--cp-accent:" + a.main + ";--cp-accent-soft:" + a.soft + ";--cp-accent-ink:" + a.ink + "}",
       "html.cp-agent-home body{background:var(--cp-ivory);color:var(--cp-ink)}",
       "html.cp-agent-home .md-hero,html.cp-agent-home .md-listing-search,html.cp-agent-home .md-team-desc,html.cp-agent-home .md-cta,html.cp-agent-home .md-team{display:none!important}",
       ".cp-home,.cp-home *{box-sizing:border-box}.cp-home{font-family:'DM Sans',sans-serif}",
@@ -284,7 +284,7 @@
       ".cp-section-head p{margin:0;color:#575853;font-size:1rem;line-height:1.8}",
 
       /* get to know */
-      ".cp-know{background:#efece3}",
+      ".cp-know{background:var(--cp-cream)}",
       ".cp-know-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}",
       ".cp-fact{position:relative;overflow:hidden;display:flex;flex-direction:column;padding:30px 30px 32px;border:1px solid var(--cp-line);border-radius:22px;background:#fff;transition:transform .3s ease,box-shadow .3s ease}",
       ".cp-fact:before{content:'';position:absolute;top:-60px;right:-50px;width:160px;height:160px;border-radius:50%;background:radial-gradient(circle,color-mix(in srgb,var(--cp-accent) 20%,transparent),transparent 70%);pointer-events:none}",
@@ -308,7 +308,7 @@
       ".cp-value p{margin:0;color:#62635e;line-height:1.7}",
 
       /* guides */
-      ".cp-guides{background:#efece3}",
+      ".cp-guides{background:var(--cp-cream)}",
       ".cp-guide-list{display:grid;gap:20px}",
       ".cp-guide-book{display:grid;grid-template-columns:auto 1fr;gap:34px;align-items:center;max-width:820px;padding:30px;border:0;border-radius:26px;background:linear-gradient(150deg,#2b1210,#160b0a);color:#fff;font:inherit;text-align:left;cursor:pointer;box-shadow:0 22px 55px rgba(36,15,14,.18);transition:transform .3s ease,box-shadow .3s ease;position:relative;overflow:hidden}",
       ".cp-guide-book:before{content:'';position:absolute;top:-80px;right:-80px;width:260px;height:260px;border-radius:50%;background:radial-gradient(circle,color-mix(in srgb,var(--cp-accent) 40%,transparent),transparent 70%);pointer-events:none}",
@@ -352,11 +352,11 @@
       ".cp-reviewer strong{display:block}.cp-reviewer span:not(.cp-avatar){display:block;margin-top:4px;color:rgba(255,255,255,.62);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase}",
 
       /* Lofty listings header */
-      ".cp-listing-head{order:6!important;padding:100px 0 32px;background:#efece3}",
+      ".cp-listing-head{order:6!important;padding:100px 0 32px;background:var(--cp-cream)}",
       ".cp-listing-row{display:flex;justify-content:space-between;gap:28px;align-items:end}",
       ".cp-text-link{display:inline-flex;min-height:48px;align-items:center;justify-content:center;padding:0 20px;border:1px solid rgba(36,15,14,.28);border-radius:999px;background:#240f0e;color:#f8f7f2!important;box-shadow:0 12px 28px rgba(36,15,14,.14);font-size:.72rem;font-weight:800;letter-spacing:.1em;text-decoration:none!important;text-transform:uppercase;transition:background .25s ease,color .25s ease,border-color .25s ease,transform .25s ease}",
       ".cp-text-link:hover{border-color:var(--cp-accent);background:var(--cp-accent);color:#17120c!important;transform:translateY(-2px)}",
-      "html.cp-agent-home .md-house{order:7!important;margin:0!important;padding:0 0 100px!important;background:#efece3!important}",
+      "html.cp-agent-home .md-house{order:7!important;margin:0!important;padding:0 0 100px!important;background:var(--cp-cream)!important}",
       "html.cp-agent-home .md-house>div:first-child,html.cp-agent-home .md-house h2{display:none!important}",
 
       /* contact */
