@@ -1118,7 +1118,7 @@
       bio: "Alexis is a wife, mom, and small-town Louisiana girl from Midland. Before real estate, she managed multimillion-dollar villas in the Caribbean. Her approach is simple: meet people where they are, keep it real, and treat every client like a neighbor.",
       image: "alexis-lacomb.webp",
       position: "48% 22%",
-      connect: "https://listwithalexis.lakeshoreteam.com/",
+      connect: "https://m.me/alexis.fincher.2025",
       socials: [
         ["instagram", "https://www.instagram.com/listwithalexis/"],
         ["facebook", "https://www.facebook.com/alexis.fincher.2025"]
