@@ -1067,6 +1067,7 @@
   var members = [
     {
       name: "Tyler Polk",
+      site: "https://lakeshoreteam.homes/",
       role: "Founder of Lakeshore Team, Brokered by eXp Realty",
       license: "REALTOR - License 995706344",
       specialty: "Leadership | Strategy | South Louisiana",
@@ -1084,13 +1085,14 @@
     },
     {
       name: "Kate Mouton",
+      site: "https://kate.lakeshoreteam.com/",
       role: "Co-Owner & Team Leader",
       license: "REALTOR - License 995709117",
       specialty: "Systems | Hustle | Heart",
       bio: "Kate is a top-producing Realtor from Lafayette with an accounting and business background. She helps buyers, sellers, and new agents navigate real estate with clarity and confidence, bringing the systems, hustle, and heart needed to get results.",
       image: "kate-mouton.webp",
       position: "center 22%",
-      connect: "https://kate.lakeshoreteam.com/",
+      connect: "https://m.me/katherine.b.mouton",
       socials: [
         ["instagram", "https://www.instagram.com/katemouton/"],
         ["facebook", "https://www.facebook.com/katherine.b.mouton"],
@@ -1099,6 +1101,7 @@
     },
     {
       name: "Chelsea Porter",
+      site: "https://chelseaporter.lakeshoreteam.com/",
       role: "Residential Specialist",
       license: "REALTOR - License 995718627",
       specialty: "Organized | Detail-focused | Client-first",
@@ -1113,6 +1116,7 @@
     },
     {
       name: "Madeleine Davis",
+      site: "https://madeleinedavis.lakeshoreteam.com/",
       role: "Residential Specialist / Marketing Genius",
       license: "REALTOR - License 995706355",
       specialty: "Personalized guidance | Southwest Louisiana",
@@ -1127,6 +1131,7 @@
     },
     {
       name: "Alexis Lacomb",
+      site: "https://listwithalexis.lakeshoreteam.com/",
       role: "Residential Specialist",
       license: "REALTOR - License 995713710",
       specialty: "Down-to-earth | Acadiana",
@@ -1143,13 +1148,14 @@
       /* Shown once her title and bio are in (ready: true). */
       ready: false,
       name: "Haylee Meaux",
+      site: "https://haylee.lakeshoreteam.com/",
       role: "",
       license: "REALTOR - License 995719642",
       specialty: "",
       bio: "",
       image: "haylee-meaux.webp",
       position: "40% 12%",
-      connect: "https://haylee.lakeshoreteam.com/",
+      connect: "https://m.me/haylee.meaux",
       socials: [
         ["instagram", "https://www.instagram.com/haylee.meaux/"],
         ["facebook", "https://www.facebook.com/haylee.meaux"]
@@ -1187,7 +1193,8 @@
         (member.license ? '<p class="lst-team-license">' + escapeHtml(member.license) + '</p>' : '') +
         '<p class="lst-team-bio">' + escapeHtml(member.bio) + '</p>' +
         '<div class="lst-team-actions"><div class="lst-team-socials">' + socials + '</div>' +
-        '<a class="lst-team-connect" href="' + escapeHtml(member.connect) + '" target="_blank" rel="noopener noreferrer">Connect <span aria-hidden="true">&rarr;</span></a></div>' +
+        '<div class="lst-team-buttons"><a class="lst-team-connect" href="' + escapeHtml(member.connect) + '" target="_blank" rel="noopener noreferrer">Connect <span aria-hidden="true">&rarr;</span></a>' +
+        (member.site ? '<a class="lst-team-connect lst-team-site" href="' + escapeHtml(member.site) + '" target="_blank" rel="noopener noreferrer">Website</a>' : '') + '</div></div>' +
       '</div>' +
     '</article>';
   }
@@ -1217,7 +1224,12 @@
     .lst-team-role { min-height:38px;margin:8px 0 3px;color:rgba(248,247,242,.9);font:600 12px/1.45 Inter,Arial,sans-serif;letter-spacing:.035em;text-transform:uppercase; }
     .lst-team-license { margin:0;color:rgba(248,247,242,.58);font:500 10px/1.5 Inter,Arial,sans-serif;letter-spacing:.04em; }
     .lst-team-bio { flex:1;margin:18px 0 22px;color:rgba(248,247,242,.76);font:400 13px/1.65 Inter,Arial,sans-serif; }
-    .lst-team-actions { display:flex;align-items:center;justify-content:space-between;gap:12px;padding-top:17px;border-top:1px solid rgba(185,144,82,.3); }
+    .lst-team-actions { display:flex;flex-direction:column;align-items:stretch;gap:14px;padding-top:17px;border-top:1px solid rgba(185,144,82,.3); }
+    .lst-team-buttons { display:flex;gap:10px; }
+    .lst-team-buttons .lst-team-connect { flex:1 1 0; }
+    .lst-team-site { color:#f8f7f2!important;border-color:rgba(205,187,134,.55)!important;background:rgba(255,255,255,.06)!important;box-shadow:none!important; }
+    .lst-team-site:hover { background:rgba(205,187,134,.16)!important; }
+    .lst-team-actions > .lst-agent-site { display:none!important; }
     .lst-team-socials { display:flex;flex-wrap:wrap;gap:7px; }
     .lst-team-social { display:inline-flex;width:34px;height:34px;align-items:center;justify-content:center;color:#fff;border:1px solid rgba(248,247,242,.2);border-radius:10px;background:rgba(248,247,242,.11);box-shadow:inset 0 1px 0 rgba(255,255,255,.14);transition:background .2s ease,border-color .2s ease,box-shadow .2s ease,transform .2s ease; }
     .lst-team-social svg { width:16px;height:16px;fill:currentColor;stroke:currentColor;stroke-width:1.7; }
@@ -1233,7 +1245,7 @@
     .lst-team-full { display:inline-flex;min-height:50px;align-items:center;justify-content:center;gap:10px;padding:0 24px;color:#fff!important;border:1px solid rgba(255,255,255,.2);border-radius:14px;background:rgba(255,255,255,.08);box-shadow:inset 0 1px 0 rgba(255,255,255,.1);backdrop-filter:blur(12px);font:700 12px/1 Inter,Arial,sans-serif;letter-spacing:.09em;text-decoration:none!important;text-transform:uppercase;transition:background .2s ease,border-color .2s ease,transform .2s ease; }
     .lst-team-full:hover { transform:translateY(-2px);background:rgba(177,154,85,.17);border-color:rgba(196,173,102,.55); }
     @media(max-width:1180px){.lst-team-grid{max-width:820px;margin:0 auto}.lst-team-grid > .lst-team-card{flex-basis:calc((100% - var(--lst-gap)) / 2)}.lst-team-role{min-height:0}}
-    @media(max-width:620px){#lst-team-root{padding:62px 16px}.lst-team-grid{max-width:430px;--lst-gap:20px}.lst-team-grid > .lst-team-card{flex-basis:100%}.lst-team-head{margin-bottom:34px}.lst-team-head h2{font-size:40px}.lst-team-intro{font-size:14px}.lst-team-card-body{padding:22px 19px 20px}.lst-team-bio{font-size:13px}.lst-team-actions{align-items:flex-end}.lst-team-connect{min-height:40px}}
+    @media(max-width:620px){#lst-team-root{padding:62px 16px}.lst-team-grid{max-width:430px;--lst-gap:20px}.lst-team-grid > .lst-team-card{flex-basis:100%}.lst-team-head{margin-bottom:34px}.lst-team-head h2{font-size:40px}.lst-team-intro{font-size:14px}.lst-team-card-body{padding:22px 19px 20px}.lst-team-bio{font-size:13px}.lst-team-actions{align-items:stretch}.lst-team-connect{min-height:40px}}
     @media(prefers-reduced-motion:reduce){.lst-team-card,.lst-team-card *{transition:none!important}}
   `;
 
