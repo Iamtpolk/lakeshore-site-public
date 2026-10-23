@@ -163,7 +163,7 @@
       title: "Co-Owner & Team Leader",
       region: "Acadiana",
       headshot: "team/kate-mouton.webp",
-      headshotPosition: "center 22%",
+      headshotPosition: "center 42%",
       accent: { main: "#8F8E55", soft: "#CFCC9C", ink: "#58572E" },
       headline: ["Your best", "move yet."],
       heroCopy: "Kate Mouton helps buyers, sellers, and new agents across Acadiana navigate real estate with clarity and confidence, bringing the systems, hustle, and heart needed to get results.",
