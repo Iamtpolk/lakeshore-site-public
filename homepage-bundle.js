@@ -1356,6 +1356,30 @@
       source: "Facebook"
     },
     {
+      quote: "Kate helped me find my first house, and I couldn't be happier with the experience. She made the entire process feel easy and stress-free! I highly recommend her to anyone looking for a realtor they can trust!",
+      name: "Julia Eisler",
+      detail: "Worked with Kate Mouton",
+      source: "Facebook"
+    },
+    {
+      quote: "If your looking or even THINKING about buying, Kate is your girl! Literally went above and beyond for us with everything that came with buying a home! First time Homebuyers and living in our dream home \u2764\ufe0f",
+      name: "Chyenne Reed",
+      detail: "Worked with Kate Mouton",
+      source: "Facebook"
+    },
+    {
+      quote: "I would highly recommend Alexis as a realtor! She was a life saver when we sold our house! She was very knowledgeable and took care of every detail!",
+      name: "Sherry Briley",
+      detail: "Worked with Alexis Lacomb",
+      source: "Facebook"
+    },
+    {
+      quote: "We enjoyed working with Alexis through our home selling process. She guided us through every step with professionalism, market knowledge and genuine commitment to our success.",
+      name: "Jake Guillory",
+      detail: "Worked with Alexis Lacomb",
+      source: "Facebook"
+    },
+    {
       quote: "Tyler has been a pleasure to work with. His communication is on point. I highly recommend.",
       name: "Ory Law Group",
       detail: "Recommends Lakeshore Team",
