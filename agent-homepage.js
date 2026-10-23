@@ -67,6 +67,47 @@
         ["I&rsquo;m so grateful for Madeleine and the support she gave me throughout my search for the perfect Airbnb property. She was attentive from day one, always made herself available, and truly understood what I needed for my business.", "Alicia Noviskie", "Facebook recommendation"],
         ["We couldn&rsquo;t be more grateful to Madeleine for helping us find our first home. She was incredibly patient, knowledgeable, and always made sure we felt comfortable throughout the entire process.", "Brodde Corley", "Facebook recommendation"]
       ]
+    },
+
+    "chelseaporter.lakeshoreteam.com": {
+      key: "chelsea",
+      name: "Chelsea Porter",
+      first: "Chelsea",
+      title: "Residential Specialist",
+      region: "Southwest Louisiana",
+      headshot: "team/chelsea-porter.webp",
+      headshotPosition: "center 34%",
+      accent: { main: "#b89052", soft: "#d7be7c", ink: "#86682f" },
+      headline: ["Move with", "confidence."],
+      heroCopy: "Chelsea Porter delivers a seamless, stress-free real estate experience through thoughtful preparation, clear communication, and exceptional service from the first conversation to the closing table.",
+      parishes: ["Calcasieu", "Jeff Davis", "Beauregard", "Allen", "Cameron"],
+      phone: "+13373240588",
+      phoneLabel: "(337) 324-0588",
+      email: "chelsea.porter@exprealty.com",
+      socials: {
+        instagram: "https://www.instagram.com/cporter_realtor",
+        messenger: "https://m.me/61582528467689",
+        facebook: "https://www.facebook.com/profile.php?id=61582528467689"
+      },
+      know: {
+        intro: "Small-town Louisiana roots and a soft spot for making big moves feel easier. Here&rsquo;s a little about the person who&rsquo;ll be guiding yours.",
+        hometown: ["Longville, Louisiana", ""],
+        why: ["Less stress on the biggest purchase.", "I love helping people through one of the biggest purchases of their lives and making the process feel a little less stressful."],
+        fun: ["Happiest doing too much", "I&rsquo;m stressed 99.9% of the time &amp; I thrive on doing too much."]
+      },
+      why: {
+        heading: "A calmer way to make your move.",
+        intro: "Real estate decisions carry a lot of weight. Chelsea brings structure, responsiveness, and genuine care to the process so you always understand what is happening and what comes next.",
+        values: [
+          ["Organized &amp; detail-focused", "Every deadline, document, and next step is handled with care&mdash;keeping your transaction moving without unnecessary stress."],
+          ["Clear communication", "You receive timely updates and straightforward guidance, with answers that help you make confident decisions."],
+          ["Client-first guidance", "Your goals lead the process. Chelsea stays involved from the first conversation through closing and beyond."]
+        ]
+      },
+      reviews: [
+        ["The wife and I were moving across country on a very short timer, and Chelsea was there to help us every step of the way&mdash;even when we were 2,000 miles away.", "Benjamin Looney", "Facebook recommendation"],
+        ["Chelsea was the best. Kept me updated with everything, very patient, answered every question I had. I highly recommend her.", "Megan Miller", "Facebook recommendation"]
+      ]
     }
   };
 
@@ -126,6 +167,7 @@
     card: svg('<rect x="2.5" y="5" width="19" height="14" rx="2.5"/><circle cx="8.5" cy="11" r="2.2"/><path d="M5.2 16.2c.8-1.7 2-2.4 3.3-2.4s2.5.7 3.3 2.4M14.5 10h4.5M14.5 13.5h3"/>', 22, ' stroke-width="2"'),
     instagram: '<svg viewBox="0 0 24 24" width="23" height="23" aria-hidden="true"><defs><linearGradient id="cp-igg" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#feda75"/><stop offset=".5" stop-color="#d62976"/><stop offset="1" stop-color="#4f5bd5"/></linearGradient></defs><rect x="2.5" y="2.5" width="19" height="19" rx="5.5" fill="none" stroke="url(#cp-igg)" stroke-width="2.2"/><circle cx="12" cy="12" r="4.3" fill="none" stroke="url(#cp-igg)" stroke-width="2.2"/><circle cx="17.4" cy="6.6" r="1.4" fill="#d62976"/></svg>',
     facebook: '<svg viewBox="0 0 24 24" width="23" height="23" aria-hidden="true"><circle cx="12" cy="12" r="10.5" fill="#1877F2"/><path d="M13.4 20.4v-6.1h2.1l.3-2.5h-2.4v-1.6c0-.7.2-1.2 1.2-1.2h1.3V6.8c-.2 0-1-.1-1.9-.1-1.9 0-3.2 1.2-3.2 3.3v1.8H8.7v2.5h2.1v6.1z" fill="#fff"/></svg>',
+    messenger: '<svg viewBox="0 0 24 24" width="23" height="23" aria-hidden="true"><defs><linearGradient id="cp-msg" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#0099FF"/><stop offset=".6" stop-color="#A033FF"/><stop offset="1" stop-color="#FF5C87"/></linearGradient></defs><path d="M12 2.5C6.6 2.5 2.5 6.4 2.5 11.6c0 2.7 1.1 5.1 2.9 6.7v3.2l3-1.6c1.1.3 2.3.5 3.6.5 5.4 0 9.5-3.9 9.5-9.1S17.4 2.5 12 2.5z" fill="url(#cp-msg)"/><path d="M6.6 14.4l3-4.7 2.3 1.8 3.4-1.9-3 4.7-2.3-1.8z" fill="#fff"/></svg>',
     tiktok: '<svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M14.5 3v11.2a3.3 3.3 0 1 1-3.3-3.3" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/><path d="M14.5 3c.4 2.6 2.2 4.3 4.8 4.5" fill="none" stroke="#25F4EE" stroke-width="2.2" stroke-linecap="round"/></svg>'
   };
 
@@ -185,6 +227,7 @@
       ".cp-fact h3{margin:22px 0 6px;color:var(--cp-accent-ink);font-size:.7rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase}",
       ".cp-fact .cp-fact-head{margin:0 0 12px;color:var(--cp-ink);font:500 1.55rem/1.2 'Playfair Display',serif}",
       ".cp-fact .cp-fact-body{margin:0;color:#5d5e59;font-size:.98rem;line-height:1.7}",
+      ".cp-fact:last-child:nth-child(odd){grid-column:1/-1}.cp-fact .cp-fact-head:last-child{margin-bottom:0}",
 
       /* why work with (01/02/03) */
       ".cp-intro{background:var(--cp-ivory)}",
@@ -270,7 +313,7 @@
       ".cp-socials a svg{transition:transform .35s cubic-bezier(.2,.9,.3,1.4)}",
       ".cp-socials a:hover,.cp-socials a:focus-visible{transform:translateY(-5px);border-color:var(--glow,var(--cp-accent));background:rgba(255,255,255,.13);box-shadow:0 12px 26px rgba(0,0,0,.35),0 0 0 4px color-mix(in srgb,var(--glow,var(--cp-accent)) 22%,transparent)}",
       ".cp-socials a:hover svg{transform:scale(1.15) rotate(-6deg)}",
-      ".cp-socials a.ig{--glow:#d62976}.cp-socials a.fb{--glow:#1877F2}.cp-socials a.tt{--glow:#25F4EE}",
+      ".cp-socials a.ig{--glow:#d62976}.cp-socials a.msg{--glow:#A033FF}.cp-socials a.fb{--glow:#1877F2}.cp-socials a.tt{--glow:#25F4EE}",
       ".cp-socials a[data-tip]:after{content:attr(data-tip);position:absolute;bottom:calc(100% + 10px);left:50%;padding:6px 10px;border-radius:8px;background:#f8f7f2;color:#240f0e;font:800 .68rem 'DM Sans',sans-serif;letter-spacing:.06em;white-space:nowrap;opacity:0;transform:translate(-50%,6px);pointer-events:none;transition:opacity .2s ease,transform .2s ease}",
       ".cp-socials a:hover:after,.cp-socials a:focus-visible:after{opacity:1;transform:translate(-50%,0)}",
       ".cp-socials a.vcard{perspective:500px;padding:0;border-radius:50%;line-height:0;--glow:var(--cp-accent)}",
@@ -330,7 +373,7 @@
     var cards = [["home", "Hometown", k.hometown], ["tree", "Favorite local spot", k.spot], ["key", "What got me into real estate", k.why], ["heart", "Fun fact", k.fun]]
       .filter(function (c) { return c[2]; })
       .map(function (c) {
-        return '<article class="cp-fact"><div class="cp-fact-icon">' + ICON[c[0]] + "</div><h3>" + c[1] + '</h3><p class="cp-fact-head">' + c[2][0] + '</p><p class="cp-fact-body">' + c[2][1] + "</p></article>";
+        return '<article class="cp-fact"><div class="cp-fact-icon">' + ICON[c[0]] + "</div><h3>" + c[1] + '</h3><p class="cp-fact-head">' + c[2][0] + '</p>' + (c[2][1] ? '<p class="cp-fact-body">' + c[2][1] + "</p>" : "") + "</article>";
       }).join("");
     if (!cards) return "";
     return '<section class="cp-section cp-know"><div class="cp-shell"><div class="cp-section-head"><div><span class="cp-kicker">Get to know ' + esc(A.first) + '</span><h2 class="cp-serif">A little more about me.</h2></div><p>' + (k.intro || "") + '</p></div><div class="cp-know-grid">' + cards + "</div></div></section>";
@@ -363,6 +406,7 @@
     var s = A.socials || {}, out = "";
     if (s.instagram) out += '<a class="ig" data-tip="Instagram" href="' + s.instagram + '" target="_blank" rel="noopener noreferrer" aria-label="' + esc(A.first) + ' on Instagram">' + ICON.instagram + "</a>";
     if (s.contactCard) out += '<a class="vcard" data-tip="Save my contact" href="' + s.contactCard + '" target="_blank" rel="noopener noreferrer" aria-label="Save ' + esc(A.first) + '&rsquo;s contact card"><span class="cp-flip"><span class="front"><img src="' + HEADSHOT + '" alt=""></span><span class="back">' + ICON.card + "</span></span></a>";
+    if (s.messenger) out += '<a class="msg" data-tip="Message me" href="' + s.messenger + '" target="_blank" rel="noopener noreferrer" aria-label="Message ' + esc(A.first) + ' on Facebook Messenger">' + ICON.messenger + "</a>";
     if (s.facebook) out += '<a class="fb" data-tip="Facebook" href="' + s.facebook + '" target="_blank" rel="noopener noreferrer" aria-label="' + esc(A.first) + ' on Facebook">' + ICON.facebook + "</a>";
     if (s.tiktok) out += '<a class="tt" data-tip="TikTok" href="' + s.tiktok + '" target="_blank" rel="noopener noreferrer" aria-label="' + esc(A.first) + ' on TikTok">' + ICON.tiktok + "</a>";
     return out ? '<div class="cp-socials">' + out + "</div>" : "";
