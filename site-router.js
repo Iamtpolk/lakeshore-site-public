@@ -36,6 +36,15 @@
       var root=document.querySelector(".md-footer")||document.body;if(!root)return;
       var w=document.createTreeWalker(root,NodeFilter.SHOW_TEXT),n;
       while((n=w.nextNode())){if(/General Mouton/.test(n.nodeValue))n.nodeValue=swap(n.nodeValue);}
+      /* eXp broker office address on the Managing Broker line */
+      var w2=document.createTreeWalker(root,NodeFilter.SHOW_TEXT),m;
+      while((m=w2.nextNode())){
+        if(/la\.broker@exprealty\.net/.test(m.nodeValue)){
+          var line=m.parentElement,box=line&&line.parentElement;
+          if(box&&!box.querySelector(".lst-broker-addr")){var p=line.cloneNode(false);p.className=(p.className?p.className+" ":"")+"lst-broker-addr";p.textContent="Address: 2201 Veterans Blvd #404, Metairie, LA 70002";box.appendChild(p);}
+          break;
+        }
+      }
       document.querySelectorAll('a[href*="General"][href*="Mouton"]').forEach(function(a){a.href="https://www.google.com/maps/search/?api=1&query="+encodeURIComponent("2014 W Pinhook Rd, Lafayette, LA 70508");});
     }
     var t=null;function later(){if(t)return;t=setTimeout(function(){t=null;run();},120);}
