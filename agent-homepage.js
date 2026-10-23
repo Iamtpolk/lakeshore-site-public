@@ -211,7 +211,7 @@
       headshotPosition: "40% 10%",
       accent: { main: "#A5826A", soft: "#D2B49C", ink: "#49352C", ivory: "#F5F0E8", cream: "#ECE3D6" },
       headline: ["Move with", "ease."],
-      heroCopy: "Haylee Meaux helps buyers and sellers across Acadiana, from Lafayette and St. Landry down to the coast in Cameron Parish.",
+      heroCopy: "Haylee Meaux helps buyers and sellers across Acadiana start fresh in a new home or finally sell after trying it on their own, getting to know every client personally along the way.",
       parishes: ["Evangeline", "Vermilion", "Lafayette", "St. Landry", "Jeff Davis", "Cameron"],
       phone: "+13373241789",
       phoneLabel: "(337) 324-1789",
@@ -219,7 +219,26 @@
       socials: {
         instagram: "https://www.instagram.com/haylee.meaux/",
         facebook: "https://www.facebook.com/haylee.meaux"
-      }
+      },
+      know: {
+        intro: "Crowley roots and a love for beautiful homes. Here&rsquo;s a little about the person who&rsquo;ll be guiding your move.",
+        hometown: ["Crowley, Louisiana", ""],
+        spot: ["R&ecirc;ve Coffee in River Ranch", ""],
+        why: ["Helping people start fresh", "Seeing all the beautiful houses and being able to help people start fresh in a new home, or finally sell their home after they tried it themselves for so long."],
+        fun: ["An introvert turned people person", "I&rsquo;m actually more introverted, but real estate has brought out a whole new social side of me that I love!"]
+      },
+      why: {
+        heading: "Personal from the first hello.",
+        intro: "Haylee loves getting to know her clients personally and building a real bond, so your move feels supported from the first conversation to the closing table.",
+        values: [
+          ["Gets to know you", "Every move starts with understanding who you are and what matters to you, not just what you are buying or selling."],
+          ["A fresh start", "Whether it is your first home or your next chapter, Haylee helps you start fresh with confidence."],
+          ["Ready to finally sell", "If you have tried selling on your own for a while, Haylee brings the support to finally get it done."]
+        ]
+      },
+      reviews: [
+        ["She talked me into listing it&hellip;she got it sold and closed quickly. She was outstanding &#128079;", "Lisa Fontenot", "Sold a home in Branch, LA"]
+      ]
     }
   };
 

@@ -1147,14 +1147,12 @@
       ]
     },
     {
-      /* Shown once her title and bio are in (ready: true). */
-      ready: false,
       name: "Haylee Meaux",
       site: "https://haylee.lakeshoreteam.com/",
       role: "Residential Specialist",
       license: "REALTOR - License 995719642",
-      specialty: "",
-      bio: "",
+      specialty: "Personal | Fresh Starts | Acadiana",
+      bio: "Haylee is a Crowley native who loves getting to know her clients personally and building a real bond. Whether it is helping someone start fresh in a new home or finally sell after trying it on their own for so long, she is there every step of the way.",
       image: "haylee-meaux.webp",
       position: "40% 12%",
       connect: "https://m.me/haylee.meaux",
@@ -1377,6 +1375,12 @@
       quote: "We enjoyed working with Alexis through our home selling process. She guided us through every step with professionalism, market knowledge and genuine commitment to our success.",
       name: "Jake Guillory",
       detail: "Worked with Alexis Lacomb",
+      source: "Facebook"
+    },
+    {
+      quote: "She talked me into listing it\u2026 she got it sold and closed quickly. She was outstanding \uD83D\uDC4F",
+      name: "Lisa Fontenot",
+      detail: "Worked with Haylee Meaux",
       source: "Facebook"
     },
     {
