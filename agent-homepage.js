@@ -164,6 +164,8 @@
       title: "Co-Owner & Team Leader",
       region: "Acadiana",
       headshot: "team/kate-mouton.webp",
+      /* Matches her Instagram bio. */
+      socialBios: { instagram: "Real Estate Agent<br>Your go-to-gal for all things Real Estate &#128133;<br>@thekmcollectiveteam &#10024; | @exprealty<br>Let&rsquo;s work together!" },
       headshotPosition: "center 42%",
       accent: { main: "#8F8E55", soft: "#CFCC9C", ink: "#58572E" },
       headline: ["Your best", "move yet."],
@@ -812,7 +814,7 @@
       smodal.innerHTML = '<div class="cp-scard" style="--net-bg:' + n.bg + '"><div class="cp-sband"></div>' +
         '<div class="cp-smain"><div class="cp-savatar"><span class="crop"><img src="' + HEADSHOT + '"' + (A.avatarCrop ? ' style="object-position:' + A.avatarCrop[0] + ' !important;transform:scale(' + A.avatarCrop[1] + ') !important;transform-origin:' + A.avatarCrop[2] + ' !important"' : "") + ' alt="" onerror="this.style.visibility=\'hidden\'"></span><span class="badge">' + ICON[net] + "</span></div>" +
         "<h3>" + esc(A.name) + '</h3><div class="cp-handle">' + esc(handleFor(net, url)) + " &middot; " + n.label + "</div>" +
-        "<p>" + n.copy + esc(A.region || "South Louisiana") + ".</p>" +
+        "<p>" + (A.socialBios && A.socialBios[net] ? A.socialBios[net] : n.copy + esc(A.region || "South Louisiana") + ".") + "</p>" +
         '<div class="cp-sactions"><a class="cp-sfollow" href="' + url + '" target="_blank" rel="noopener noreferrer">' + n.verb + " on " + n.label + ' <span aria-hidden="true">&#8599;</span></a><button type="button" class="cp-slater">Stay on site</button></div></div>' +
         '<div class="cp-sqr"><div class="code"></div><span>Scan to ' + n.verb.toLowerCase() + " from your phone</span></div>" +
         '<button type="button" class="cp-sclose" aria-label="Close">&times;</button></div>';
