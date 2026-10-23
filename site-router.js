@@ -26,6 +26,22 @@
   document.documentElement.classList.add("lst-route-"+(path==="/"?"home":path.slice(1).replace(/[^a-z0-9]+/gi,"-")));
 
 
+  /* Office address: Lofty still holds the old address on the owner record, so swap it on the page
+     (footer text and the structured data Google reads) until that record is updated. */
+  (function(){
+    var OLD_ST=/100 General Mouton Ave(nue)?/g, NEW_ST="2014 W Pinhook Rd";
+    function swap(t){return t.replace(OLD_ST,NEW_ST).replace(/(Lafayette,\s*LA\s*)70501/g,"$170508").replace(/"postalCode":"70501"/g,'"postalCode":"70508"');}
+    function run(){
+      document.querySelectorAll('script[type="application/ld+json"]').forEach(function(sc){if(/General Mouton/.test(sc.textContent))sc.textContent=swap(sc.textContent);});
+      var root=document.querySelector(".md-footer")||document.body;if(!root)return;
+      var w=document.createTreeWalker(root,NodeFilter.SHOW_TEXT),n;
+      while((n=w.nextNode())){if(/General Mouton/.test(n.nodeValue))n.nodeValue=swap(n.nodeValue);}
+      document.querySelectorAll('a[href*="General"][href*="Mouton"]').forEach(function(a){a.href="https://www.google.com/maps/search/?api=1&query="+encodeURIComponent("2014 W Pinhook Rd, Lafayette, LA 70508");});
+    }
+    var t=null;function later(){if(t)return;t=setTimeout(function(){t=null;run();},120);}
+    run();new MutationObserver(later).observe(document.documentElement,{childList:true,subtree:true});
+  })();
+
   /* Private preview: on any agent site, ?preview=new loads the latest shared agent template.
      Everyone who opens the normal address keeps getting exactly what they get today. */
   var AGENT_HOSTS=["madeleinedavis.lakeshoreteam.com","chelseaporter.lakeshoreteam.com","listwithalexis.lakeshoreteam.com","kate.lakeshoreteam.com","haylee.lakeshoreteam.com"];
