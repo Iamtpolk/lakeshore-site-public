@@ -124,7 +124,7 @@
       parishes: ["Evangeline", "Vermilion", "Lafayette", "St. Landry", "Jeff Davis"],
       phone: "+13375221290",
       phoneLabel: "(337) 522-1290",
-      email: "",
+      email: "alexis.lacomb@exprealty.com",
       socials: {
         instagram: "https://www.instagram.com/listwithalexis/",
         facebook: "https://www.facebook.com/alexis.fincher.2025"
