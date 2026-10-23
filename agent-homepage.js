@@ -237,7 +237,7 @@
         ]
       },
       reviews: [
-        ["She talked me into listing it&hellip;she got it sold and closed quickly. She was outstanding &#128079;", "Lisa Fontenot", "Sold a home in Branch, LA"]
+        ["She talked me into listing it&hellip;she got it sold and closed quickly. She was outstanding &#128079;", "Lisa Fontenot Leger", "Sold a home in Branch, LA"]
       ]
     }
   };

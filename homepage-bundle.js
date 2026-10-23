@@ -1379,7 +1379,7 @@
     },
     {
       quote: "She talked me into listing it\u2026 she got it sold and closed quickly. She was outstanding \uD83D\uDC4F",
-      name: "Lisa Fontenot",
+      name: "Lisa Fontenot Leger",
       detail: "Worked with Haylee Meaux",
       source: "Facebook"
     },
