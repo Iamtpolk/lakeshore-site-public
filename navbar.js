@@ -9,9 +9,9 @@
   window.__lstPremiumNav = 1;
 
   var ROUTES = [
+    { label: 'Guaranteed Cash Offer', href: '/cash-offer' },
     { label: 'Buy', href: '/listing' },
     { label: 'Sell', href: '/sell' },
-    { label: 'Cash Offer', href: '/cash-offer' },
     { label: 'Our Team', href: '/myteam' },
     { label: 'Contact', href: '/contact' }
   ];
