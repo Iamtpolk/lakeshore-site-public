@@ -1113,7 +1113,7 @@
     {
       name: "Alexis Lacomb",
       role: "Residential Specialist",
-      license: "",
+      license: "REALTOR - License 995713710",
       specialty: "Down-to-earth | Acadiana",
       bio: "Alexis is a wife, mom, and small-town Louisiana girl from Midland. Before real estate, she managed multimillion-dollar villas in the Caribbean. Her approach is simple: meet people where they are, keep it real, and treat every client like a neighbor.",
       image: "alexis-lacomb.webp",
@@ -1123,8 +1123,37 @@
         ["instagram", "https://www.instagram.com/listwithalexis/"],
         ["facebook", "https://www.facebook.com/alexis.fincher.2025"]
       ]
+    },
+    {
+      /* Shown once her title and bio are in (ready: true). */
+      ready: false,
+      name: "Kate Mouton",
+      role: "",
+      license: "REALTOR - License 995709117",
+      specialty: "",
+      bio: "",
+      image: "kate-mouton.webp",
+      position: "center 30%",
+      connect: "https://kate.lakeshoreteam.com/",
+      socials: []
+    },
+    {
+      /* Shown once her title and bio are in (ready: true). */
+      ready: false,
+      name: "Haylee Meaux",
+      role: "",
+      license: "REALTOR - License 995719642",
+      specialty: "",
+      bio: "",
+      image: "haylee-meaux.webp",
+      position: "40% 12%",
+      connect: "https://haylee.lakeshoreteam.com/",
+      socials: [
+        ["instagram", "https://www.instagram.com/haylee.meaux/"],
+        ["facebook", "https://www.facebook.com/haylee.meaux"]
+      ]
     }
-  ];
+  ].filter(function (m) { return m.ready !== false; });
 
   var icons = {
     instagram: '<svg viewBox="0 0 24 24" aria-hidden="true"><defs><linearGradient id="lst-instagram-gradient" x1="2" y1="22" x2="22" y2="2" gradientUnits="userSpaceOnUse"><stop stop-color="#feda75"/><stop offset=".28" stop-color="#fa7e1e"/><stop offset=".52" stop-color="#d62976"/><stop offset=".76" stop-color="#962fbf"/><stop offset="1" stop-color="#4f5bd5"/></linearGradient></defs><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="url(#lst-instagram-gradient)"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="url(#lst-instagram-gradient)"/><circle cx="17.5" cy="6.5" r="1" fill="#d62976" stroke="none"/></svg>',
