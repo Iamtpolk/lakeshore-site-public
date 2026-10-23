@@ -5,15 +5,19 @@
   window.__lakeshoreContactPageLoaded = true;
   if (!/^\/contact\/?$/.test(window.location.pathname)) return;
   var params = new URLSearchParams(window.location.search);
-  var agentMode = {chelsea:"Chelsea Porter",madeleine:"Madeleine Davis"}[params.get("agent")] || "";
+  var agentMode = {chelsea:"Chelsea Porter",madeleine:"Madeleine Davis",alexis:"Alexis Lacomb",kate:"Kate Mouton",haylee:"Haylee Meaux"}[params.get("agent")] || "";
   var embedMode = params.get("embed") === "consultation";
 
   var ASSET_ROOT = "https://iamtpolk.github.io/lakeshore-site-public/assets/team/";
   var members = [
     { name:"Tyler Polk", role:"Founder of Lakeshore Team, Brokered by eXp Realty", license:"License 995706344", image:"tyler-polk.webp", position:"center bottom", region:"South Louisiana", connect:"https://popl.co/profile/tpolktherealtor", action:"View Tyler's Contact Card", instagram:"https://www.instagram.com/tpolk_therealtor/", facebook:"https://www.facebook.com/tyler.polk.908", phone:"+13372414963" },
-    { name:"Chelsea Porter", role:"Residential Specialist", license:"License 995718627", image:"chelsea-porter.webp", position:"center 38%", region:"Acadiana", connect:"https://m.me/61582528467689", action:"Message Chelsea", instagram:"https://www.instagram.com/cporter_realtor", facebook:"https://www.facebook.com/profile.php?id=61582528467689" },
-    { name:"Madeleine Davis", role:"Residential Specialist / Marketing Genius", license:"License 995706355", image:"madeleine-davis.webp", position:"center 35%", region:"Southwest Louisiana", connect:"https://hihello.com/p/593bf9e9-8a27-4b7d-8e6a-60473c6a7fbf", action:"View Madeleine's Contact Card", instagram:"https://www.instagram.com/movingwmadeleine", facebook:"https://www.facebook.com/share/1DPDneSKJH/?mibextid=wwXIfr" }
-  ];
+    { name:"Chelsea Porter", role:"Residential Specialist", license:"License 995718627", image:"chelsea-porter.webp", position:"center 38%", region:"Southwest Louisiana", connect:"https://m.me/61582528467689", action:"Message Chelsea", instagram:"https://www.instagram.com/cporter_realtor", facebook:"https://www.facebook.com/profile.php?id=61582528467689" },
+    { name:"Madeleine Davis", role:"Residential Specialist / Marketing Genius", license:"License 995706355", image:"madeleine-davis.webp", position:"center 35%", region:"Southwest Louisiana", connect:"https://hihello.com/p/593bf9e9-8a27-4b7d-8e6a-60473c6a7fbf", action:"View Madeleine's Contact Card", instagram:"https://www.instagram.com/movingwmadeleine", facebook:"https://www.facebook.com/Madeleine-Davis,-Realtor-273470091185196" },
+    { name:"Alexis Lacomb", role:"Residential Specialist", license:"License 995713710", image:"alexis-lacomb.webp", position:"48% 24%", region:"Acadiana", connect:"https://m.me/alexis.fincher.2025", action:"Message Alexis", instagram:"https://www.instagram.com/listwithalexis/", facebook:"https://www.facebook.com/alexis.fincher.2025", phone:"+13375221290" },
+    /* Shown once title and region are in (ready:false hides). */
+    { ready:false, name:"Kate Mouton", role:"", license:"License 995709117", image:"kate-mouton.webp", position:"center 30%", region:"", connect:"https://kate.lakeshoreteam.com/", action:"Visit Kate's Page" },
+    { ready:false, name:"Haylee Meaux", role:"", license:"License 995719642", image:"haylee-meaux.webp", position:"40% 12%", region:"", connect:"https://haylee.lakeshoreteam.com/", action:"Visit Haylee's Page", instagram:"https://www.instagram.com/haylee.meaux/", facebook:"https://www.facebook.com/haylee.meaux" }
+  ].filter(function(m){ return m.ready !== false; });
 
   var icons = {
     instagram:'<svg viewBox="0 0 24 24" aria-hidden="true"><defs><linearGradient id="lst-contact-ig" x1="2" y1="22" x2="22" y2="2"><stop stop-color="#feda75"/><stop offset=".28" stop-color="#fa7e1e"/><stop offset=".52" stop-color="#d62976"/><stop offset=".76" stop-color="#962fbf"/><stop offset="1" stop-color="#4f5bd5"/></linearGradient></defs><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="url(#lst-contact-ig)" stroke-width="1.8"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="url(#lst-contact-ig)" stroke-width="1.8"/><circle cx="17.5" cy="6.5" r="1" fill="#d62976"/></svg>',
@@ -24,7 +28,7 @@
   function esc(v){return String(v).replace(/[&<>\"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c];});}
   function iconLink(type,url,label){return '<a class="lst-contact-social lst-contact-social--'+type+'" href="'+esc(url)+'" target="_blank" rel="noopener noreferrer" aria-label="'+esc(label)+'">'+icons[type]+'</a>';}
   function card(m){
-    var socials = iconLink("instagram",m.instagram,m.name+" on Instagram") + iconLink("facebook",m.facebook,m.name+" on Facebook");
+    var socials = (m.instagram ? iconLink("instagram",m.instagram,m.name+" on Instagram") : "") + (m.facebook ? iconLink("facebook",m.facebook,m.name+" on Facebook") : "");
     if(m.phone) socials += '<a class="lst-contact-social lst-contact-social--phone" href="tel:'+m.phone+'" aria-label="Call '+esc(m.name)+'">'+icons.phone+'</a>';
     return '<article class="lst-contact-card"><div class="lst-contact-photo"><img src="'+ASSET_ROOT+m.image+'" alt="'+esc(m.name)+'" loading="lazy" decoding="async" style="object-position:'+m.position+'"></div><div class="lst-contact-card-copy"><p class="lst-contact-region">'+esc(m.region)+'</p><h2>'+esc(m.name)+'</h2><p class="lst-contact-role">'+esc(m.role)+'</p><p class="lst-contact-license">REALTOR &middot; '+esc(m.license)+'</p><div class="lst-contact-card-foot"><div class="lst-contact-socials">'+socials+'</div><a class="lst-contact-connect" href="'+esc(m.connect)+'" target="_blank" rel="noopener noreferrer">'+esc(m.action)+' <span aria-hidden="true">&rarr;</span></a></div></div></article>';
   }
@@ -40,7 +44,7 @@
     .lst-contact-hero h1{max-width:940px;margin:0 auto;color:#fff;font:500 clamp(46px,6vw,82px)/.98 Georgia,serif;letter-spacing:-.04em}
     .lst-contact-hero>p:last-child{max-width:650px;margin:22px auto 0;color:rgba(248,247,242,.74);font:400 16px/1.72 Inter,Arial,sans-serif}
     .lst-contact-directory{position:relative;z-index:2;padding:0 24px clamp(76px,8vw,116px)}
-    .lst-contact-grid{display:grid;max-width:1380px;margin:0 auto;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px}
+    .lst-contact-grid{display:flex;flex-wrap:wrap;justify-content:center;max-width:1180px;margin:0 auto;gap:20px}.lst-contact-grid>.lst-contact-card{flex:0 0 calc((100% - 40px) / 3)}
     .lst-contact-card{display:flex;min-width:0;flex-direction:column;overflow:hidden;border:1px solid rgba(234,217,166,.27);border-radius:24px;background:linear-gradient(155deg,rgba(248,247,242,.13),rgba(248,247,242,.065));box-shadow:inset 0 1px 0 rgba(255,255,255,.16),0 24px 55px rgba(0,0,0,.27);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);transition:transform .25s ease,border-color .25s ease}
     .lst-contact-card:hover{transform:translateY(-6px);border-color:rgba(215,197,130,.62)}
     .lst-contact-photo{aspect-ratio:4/4.6;overflow:hidden;background:#7d6e4e}
@@ -71,11 +75,18 @@
     html.lst-contact-chelsea body:not(.home) .md-form h2::after{content:"Tell Chelsea what you are planning and she will follow up personally with clear next steps."}
     html.lst-contact-madeleine body:not(.home) .md-form::before{content:"Madeleine Davis · Lakeshore Team"}
     html.lst-contact-madeleine body:not(.home) .md-form h2::after{content:"Tell Madeleine what you are planning and she will follow up personally with clear next steps."}
+    html.lst-contact-alexis #lst-contact-page,html.lst-contact-kate #lst-contact-page,html.lst-contact-haylee #lst-contact-page{display:none!important}
+    html.lst-contact-alexis body:not(.home) .md-form::before{content:"Alexis Lacomb · Lakeshore Team"}
+    html.lst-contact-alexis body:not(.home) .md-form h2::after{content:"Tell Alexis what you are planning and she will follow up personally with clear next steps."}
+    html.lst-contact-kate body:not(.home) .md-form::before{content:"Kate Mouton · Lakeshore Team"}
+    html.lst-contact-kate body:not(.home) .md-form h2::after{content:"Tell Kate what you are planning and she will follow up personally with clear next steps."}
+    html.lst-contact-haylee body:not(.home) .md-form::before{content:"Haylee Meaux · Lakeshore Team"}
+    html.lst-contact-haylee body:not(.home) .md-form h2::after{content:"Tell Haylee what you are planning and she will follow up personally with clear next steps."}
     html.lst-contact-embed .md-header,html.lst-contact-embed #lst-premium-nav,html.lst-contact-embed .md-footer,html.lst-contact-embed #chat-app{display:none!important}
     html.lst-contact-embed body:not(.home) .md-form{visibility:visible!important;padding:0!important}
     html.lst-contact-embed body:not(.home) .md-form::before,html.lst-contact-embed body:not(.home) .md-form h2{display:none!important}
-    @media(max-width:1120px){.lst-contact-grid{grid-template-columns:repeat(2,minmax(0,1fr));max-width:820px}.lst-contact-role{min-height:0}}
-    @media(max-width:620px){.lst-contact-hero{padding:68px 18px 46px}.lst-contact-hero h1{font-size:46px}.lst-contact-directory{padding:0 16px 66px}.lst-contact-grid{grid-template-columns:1fr;max-width:430px}.lst-contact-card-copy{padding:21px 18px}body:not(.home) .md-form{padding:64px 16px!important}body:not(.home) .md-form-container{padding:23px 16px!important;border-radius:22px!important}}
+    @media(max-width:1120px){.lst-contact-grid{max-width:820px}.lst-contact-grid>.lst-contact-card{flex-basis:calc((100% - 20px) / 2)}.lst-contact-role{min-height:0}}
+    @media(max-width:620px){.lst-contact-hero{padding:68px 18px 46px}.lst-contact-hero h1{font-size:46px}.lst-contact-directory{padding:0 16px 66px}.lst-contact-grid{max-width:430px}.lst-contact-grid>.lst-contact-card{flex-basis:100%}.lst-contact-card-copy{padding:21px 18px}body:not(.home) .md-form{padding:64px 16px!important}body:not(.home) .md-form-container{padding:23px 16px!important;border-radius:22px!important}}
     @media(prefers-reduced-motion:reduce){#lst-contact-page *,#lst-contact-page *::before,#lst-contact-page *::after{transition:none!important}}
   `;
 
