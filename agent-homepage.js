@@ -117,6 +117,7 @@
       title: "Residential Specialist",
       region: "Acadiana",
       headshot: "team/alexis-lacomb.webp",
+      avatarCrop: ["center 42%", 2.2, "52% 38%"],
       headshotPosition: "48% 28%",
       accent: { main: "#c47a7a", soft: "#e3a9a9", ink: "#9a4f4f" },
       headline: ["Find your", "place."],
@@ -208,6 +209,7 @@
       title: "Residential Specialist",
       region: "Acadiana",
       headshot: "team/haylee-meaux.webp",
+      avatarCrop: ["center 0%", 2.6, "42% 9%"],
       headshotPosition: "40% 10%",
       accent: { main: "#A5826A", soft: "#D2B49C", ink: "#49352C", ivory: "#F5F0E8", cream: "#ECE3D6" },
       headline: ["Move with", "ease."],
@@ -457,7 +459,7 @@
       ".cp-sband{grid-column:1/-1;height:96px;background:var(--net-bg)}",
       ".cp-smain{padding:0 34px 34px}",
       ".cp-savatar{position:relative;width:104px;height:104px;margin-top:-52px;border:5px solid #fffdf9;border-radius:50%;background:var(--cp-accent);box-shadow:0 10px 24px rgba(0,0,0,.18)}",
-      ".cp-savatar{overflow:visible}.cp-savatar .crop{display:block;width:100%;height:100%;overflow:hidden;border-radius:50%}.cp-savatar img{width:100%;height:100%;object-fit:cover;object-position:center 20%;transform:scale(1.9);transform-origin:50% 24%}",
+      ".cp-savatar{overflow:visible}.cp-savatar .crop{display:block;width:100%;height:100%;overflow:hidden;border-radius:50%}.cp-savatar img{width:100%;height:100%;object-fit:cover;object-position:center 42%;transform:scale(1.5);transform-origin:50% 34%}",
       ".cp-savatar .badge{position:absolute;right:-4px;bottom:-2px;display:grid;width:36px;height:36px;place-items:center;border:3px solid #fffdf9;border-radius:50%;background:var(--net-bg);color:#fff}",
       ".cp-savatar .badge svg{width:17px;height:17px}",
       ".cp-scard h3{margin:18px 0 2px;font-family:Georgia,serif;font-size:1.65rem;font-weight:400;letter-spacing:-.02em}",
@@ -808,7 +810,7 @@
       }
       smodal.setAttribute("aria-label", A.name + " on " + n.label);
       smodal.innerHTML = '<div class="cp-scard" style="--net-bg:' + n.bg + '"><div class="cp-sband"></div>' +
-        '<div class="cp-smain"><div class="cp-savatar"><span class="crop"><img src="' + HEADSHOT + '" alt="" onerror="this.style.visibility=\'hidden\'"></span><span class="badge">' + ICON[net] + "</span></div>" +
+        '<div class="cp-smain"><div class="cp-savatar"><span class="crop"><img src="' + HEADSHOT + '"' + (A.avatarCrop ? ' style="object-position:' + A.avatarCrop[0] + ' !important;transform:scale(' + A.avatarCrop[1] + ') !important;transform-origin:' + A.avatarCrop[2] + ' !important"' : "") + ' alt="" onerror="this.style.visibility=\'hidden\'"></span><span class="badge">' + ICON[net] + "</span></div>" +
         "<h3>" + esc(A.name) + '</h3><div class="cp-handle">' + esc(handleFor(net, url)) + " &middot; " + n.label + "</div>" +
         "<p>" + n.copy + esc(A.region || "South Louisiana") + ".</p>" +
         '<div class="cp-sactions"><a class="cp-sfollow" href="' + url + '" target="_blank" rel="noopener noreferrer">' + n.verb + " on " + n.label + ' <span aria-hidden="true">&#8599;</span></a><button type="button" class="cp-slater">Stay on site</button></div></div>' +
