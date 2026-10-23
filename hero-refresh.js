@@ -12,8 +12,8 @@
   var css = [
     "body.home .md-hero .banner-mask{background:linear-gradient(90deg,rgba(11,15,17,.86) 0%,rgba(11,15,17,.66) 32%,rgba(11,15,17,.22) 60%,rgba(11,15,17,.05) 80%),linear-gradient(180deg,rgba(11,15,17,.35) 0%,transparent 22%,transparent 70%,rgba(11,15,17,.55) 100%)!important}",
     "body.home .md-hero .single-picture{background-position:62% 64%!important;transform-origin:62% 64%!important}",
-    "body.home .md-hero .media-content-v2{display:flex!important;align-items:center!important;height:100%!important;padding-inline:clamp(28px,8vw,170px)!important}",
-    "body.home .md-hero .media-info{transform:translateY(-10px)!important;max-width:1280px!important}",
+    "body.home .md-hero .media-content-v2{display:flex!important;flex-direction:column!important;justify-content:center!important;align-items:flex-start!important;height:100%!important;padding-top:60px!important;padding-inline:clamp(28px,8vw,170px)!important}",
+    "body.home .md-hero .media-info{transform:none!important;width:100%!important;max-width:1280px!important;margin-inline:auto!important}",
     "body.home .md-hero .title-text{align-items:flex-start!important;gap:0!important;max-width:640px!important;margin:0!important}",
     "body.home .md-hero .site-title{text-align:left!important}",
     "body.home .md-hero .site-title[aria-level=\"1\"] h1{max-width:none!important;margin:0!important;text-align:left!important;font-family:Georgia,'Times New Roman',serif!important;font-weight:400!important;font-size:clamp(56px,5.4vw,96px)!important;line-height:.98!important;letter-spacing:-.035em!important;text-shadow:0 2px 30px rgba(0,0,0,.35)!important;color:#fff!important}",
@@ -29,9 +29,9 @@
     ".lst-hero-btn.ghost{border:1px solid rgba(255,255,255,.42);color:#fff!important;background:rgba(255,255,255,.06);backdrop-filter:blur(8px)}.lst-hero-btn.ghost:hover{border-color:#fff;background:rgba(255,255,255,.14)}",
     "body.home .md-hero::after{display:none!important}",
     /* search bar floats over the bottom edge of the photo */
-    "body.home .md-listing-search{position:relative!important;z-index:6!important;margin-top:-44px!important;background:transparent!important;box-shadow:none!important;border:0!important}",
-    "body.home .md-listing-search>*{background:transparent!important}",
-    "@media(max-width:900px){body.home .md-hero .banner-mask{background:linear-gradient(180deg,rgba(11,15,17,.45) 0%,rgba(11,15,17,.55) 40%,rgba(11,15,17,.82) 100%)!important}body.home .md-hero .media-content-v2{align-items:flex-end!important;padding-bottom:90px!important}body.home .md-hero .site-title[aria-level=\"1\"] h1{font-size:clamp(46px,11vw,64px)!important}.lst-hero-eyebrow{font-size:10.5px;letter-spacing:.18em;margin-bottom:18px}.lst-hero-actions{margin-top:28px}body.home .md-listing-search{margin-top:0!important}}",
+    "body.home .md-listing-search{position:relative!important;z-index:6!important;margin-top:-56px!important;padding:0 20px 34px!important;background:linear-gradient(180deg,transparent 56px,#f4efe7 56px)!important;box-shadow:none!important;border:0!important}",
+    "body.home .md-listing-search .search-content{width:fit-content!important;max-width:100%!important;margin:0 auto!important;padding:18px 22px!important;border-radius:20px!important;background:#fffdf9!important;box-shadow:0 24px 60px rgba(17,20,22,.22),0 2px 6px rgba(17,20,22,.08)!important;box-sizing:border-box!important}",
+    "@media(max-width:900px){body.home .md-hero .banner-mask{background:linear-gradient(180deg,rgba(11,15,17,.45) 0%,rgba(11,15,17,.55) 40%,rgba(11,15,17,.82) 100%)!important}body.home .md-hero .media-content-v2{align-items:flex-end!important;padding-bottom:90px!important}body.home .md-hero .site-title[aria-level=\"1\"] h1{font-size:clamp(46px,11vw,64px)!important}.lst-hero-eyebrow{font-size:10.5px;letter-spacing:.18em;margin-bottom:18px}.lst-hero-actions{margin-top:28px}body.home .md-listing-search{margin-top:-40px!important;background:linear-gradient(180deg,transparent 40px,#f4efe7 40px)!important}body.home .md-listing-search .search-content{padding:14px!important}}",
     "@media(max-width:520px){.lst-hero-actions{display:grid;grid-template-columns:1fr;width:100%}.lst-hero-btn{justify-content:center}}"
   ].join("\n");
 
