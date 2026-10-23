@@ -196,8 +196,8 @@
       ".cp-hero{position:relative;min-height:820px;padding:150px 0 70px;overflow:hidden;color:#fff;background:radial-gradient(circle at 75% 40%,color-mix(in srgb,var(--cp-accent) 26%,transparent),transparent 30%),linear-gradient(110deg,#160b0a 0%,#241110 52%,#101210 100%)}",
       ".cp-hero-grid{display:grid;grid-template-columns:.9fr 1.1fr;align-items:center;gap:44px;min-height:600px}",
       ".cp-eyebrow{display:flex;align-items:center;gap:12px;margin-bottom:22px;color:var(--cp-accent-soft);font-size:.7rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase}.cp-eyebrow:before{content:'';width:38px;height:1px;flex:0 0 38px;background:var(--cp-accent-soft)}",
-      ".cp-hero h1.cp-serif{max-width:650px;margin:0;color:#fff;font-size:clamp(4rem,8vw,7.6rem);font-weight:500;line-height:.88;letter-spacing:-.055em}",
-      ".cp-hero h1.cp-serif span{display:block;margin-left:1.08em;color:var(--cp-accent-soft);font-style:italic}",
+      ".cp-hero .cp-hero-title{max-width:650px;margin:0;color:#fff;font-size:clamp(4rem,8vw,7.6rem);font-weight:500;line-height:.88;letter-spacing:-.055em}",
+      ".cp-hero .cp-hero-title span{display:block;margin-left:1.08em;color:var(--cp-accent-soft);font-style:italic}",
       ".cp-hero-copy{max-width:530px;margin:30px 0 26px;color:rgba(255,255,255,.72);font-size:1.04rem;line-height:1.75}",
       ".cp-chips-label{display:flex;align-items:center;gap:7px;margin:0 0 10px;color:var(--cp-accent-soft);font-size:.66rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase}",
       ".cp-chips{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 30px}",
@@ -341,7 +341,7 @@
       "@media(min-width:561px) and (max-width:1100px){.cp-hero .cp-actions{flex-wrap:wrap}}",
       "@media(max-width:900px){.cp-hero-grid,.cp-section-head,.cp-contact-card{grid-template-columns:1fr}.cp-portrait-wrap{min-height:620px}.cp-section-head{gap:25px}.cp-values,.cp-review-grid,.cp-know-grid{grid-template-columns:1fr}.cp-value{min-height:auto}.cp-value h3{margin-top:32px}.cp-listing-row{align-items:flex-start;flex-direction:column}.cp-contact-person{min-height:620px}}",
       "@media(max-width:700px){.cp-guide-book{grid-template-columns:1fr;justify-items:center;text-align:center}.cp-book3d{width:160px}}",
-      "@media(max-width:560px){.cp-shell{width:min(100% - 26px,1180px)}.cp-hero{min-height:0;padding:120px 0 60px}.cp-hero h1.cp-serif{font-size:3.65rem}.cp-hero h1.cp-serif span{margin-left:.35em}.cp-hero .cp-actions{display:grid;grid-template-columns:1fr}.cp-hero .cp-actions .cp-button{width:100%}.cp-portrait-wrap{min-height:490px}.cp-portrait{left:0;border-radius:120px 120px 18px 18px}.cp-signature{left:14px;right:14px;bottom:16px;min-width:0;max-width:none}.cp-signature span{letter-spacing:.09em}.cp-section{padding:76px 0}.cp-fact{padding:26px 22px}.cp-review{padding:26px}.cp-contact-person{min-height:470px}.cp-contact-copy{padding:34px 24px}.cp-contact-details{grid-template-columns:1fr}.cp-contact-actions>.cp-button{width:100%}}",
+      "@media(max-width:560px){.cp-shell{width:min(100% - 26px,1180px)}.cp-hero{min-height:0;padding:120px 0 60px}.cp-hero .cp-hero-title{font-size:3.65rem}.cp-hero .cp-hero-title span{margin-left:.35em}.cp-hero .cp-actions{display:grid;grid-template-columns:1fr}.cp-hero .cp-actions .cp-button{width:100%}.cp-portrait-wrap{min-height:490px}.cp-portrait{left:0;border-radius:120px 120px 18px 18px}.cp-signature{left:14px;right:14px;bottom:16px;min-width:0;max-width:none}.cp-signature span{letter-spacing:.09em}.cp-section{padding:76px 0}.cp-fact{padding:26px 22px}.cp-review{padding:26px}.cp-contact-person{min-height:470px}.cp-contact-copy{padding:34px 24px}.cp-contact-details{grid-template-columns:1fr}.cp-contact-actions>.cp-button{width:100%}}",
       "@media(prefers-reduced-motion:reduce){.cp-value,.cp-value:before,.cp-value:after,.cp-fact,.cp-text-link,.cp-socials a,.cp-socials a svg,.cp-flip,.cp-contact-detail,.cp-chip,.cp-book3d img{transition:none!important}.cp-flip .front{animation:none!important}}"
     ].join("\n");
   }
@@ -356,7 +356,7 @@
       : "";
     return '<section class="cp-hero"><div class="cp-shell cp-hero-grid"><div>' +
       '<div class="cp-eyebrow">' + esc(A.title) + " &middot; " + esc(A.region) + "</div>" +
-      '<h1 class="cp-serif">' + A.headline[0] + " <span>" + A.headline[1] + "</span></h1>" +
+      '<h1 class="cp-serif cp-hero-title">' + A.headline[0] + " <span>" + A.headline[1] + "</span></h1>" +
       '<p class="cp-hero-copy">' + A.heroCopy + "</p>" + chips +
       '<div class="cp-actions"><a class="cp-button cp-start-move" href="#' + CONNECT_ID + '">Start your move</a>' +
       '<a class="cp-button cp-secondary" href="/listing">Search homes</a>' +
