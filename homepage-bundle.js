@@ -1227,8 +1227,8 @@
     .lst-team-actions { display:flex;flex-direction:column;align-items:stretch;gap:14px;padding-top:17px;border-top:1px solid rgba(185,144,82,.3); }
     .lst-team-buttons { display:flex;gap:10px; }
     .lst-team-buttons .lst-team-connect { flex:1 1 0; }
-    .lst-team-site { color:#f8f7f2!important;border-color:rgba(205,187,134,.55)!important;background:rgba(255,255,255,.06)!important;box-shadow:none!important; }
-    .lst-team-site:hover { background:rgba(205,187,134,.16)!important; }
+    .lst-team-buttons a.lst-team-connect.lst-team-site { color:#f8f7f2!important;border-color:rgba(205,187,134,.6)!important;background:rgba(255,255,255,.07)!important;box-shadow:none!important; }
+    .lst-team-buttons a.lst-team-connect.lst-team-site:hover { background:rgba(205,187,134,.18)!important; }
     .lst-team-actions > .lst-agent-site { display:none!important; }
     .lst-team-socials { display:flex;flex-wrap:wrap;gap:7px; }
     .lst-team-social { display:inline-flex;width:34px;height:34px;align-items:center;justify-content:center;color:#fff;border:1px solid rgba(248,247,242,.2);border-radius:10px;background:rgba(248,247,242,.11);box-shadow:inset 0 1px 0 rgba(255,255,255,.14);transition:background .2s ease,border-color .2s ease,box-shadow .2s ease,transform .2s ease; }

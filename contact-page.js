@@ -36,7 +36,7 @@
   var css = `
     body:not(.home){background:#f8f7f2!important;color:#202322}
     body:not(.home) .md-header{position:relative;z-index:20}
-    .lst-contact-site{margin-top:-8px;color:#f8f7f2!important;background:rgba(255,255,255,.06)!important;border:1px solid rgba(205,187,134,.5)!important;box-shadow:none!important}
+    .lst-contact-card-foot a.lst-contact-connect.lst-contact-site{margin-top:-8px;color:#f8f7f2!important;background:rgba(255,255,255,.06)!important;border:1px solid rgba(205,187,134,.5)!important;box-shadow:none!important}
     #lst-contact-page{position:relative;overflow:hidden;background:radial-gradient(circle at 82% 12%,rgba(185,144,82,.2),transparent 28%),linear-gradient(145deg,#240f0e 0%,#341614 55%,#171313 100%);color:#f8f7f2}
     #lst-contact-page *{box-sizing:border-box}
     #lst-contact-page::before{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(115deg,rgba(255,255,255,.045),transparent 38%),repeating-radial-gradient(ellipse at 88% 18%,transparent 0 35px,rgba(185,144,82,.055) 36px 37px,transparent 38px 66px)}
