@@ -57,21 +57,35 @@
   var agentPreview=path==="/"&&AGENT_HOSTS.indexOf(host)>-1&&/[?&]preview=new(&|$)/.test(location.search);
 
   var REL="338f0a1a4944c2edc7799f79723d2e583bff4c22/";
+  /* Reveal: the Header Meta Tags style keeps the page hidden until html gets .lst-ready,
+     so visitors never see Lofty's template flash first (it also reveals itself after a few seconds). */
+  var html=document.documentElement,jobs=[],ready=function(){return !!document.getElementById("lst-premium-nav");};
+  function reveal(){html.classList.add("lst-ready");}
   if(agentPreview){
-    Promise.all([load(PIN+REL+"navbar.js"),load(CDN+"footer-v6.js"),load(CDN+"agent-homepage.js?v="+Date.now())]);
+    jobs=[load(PIN+REL+"navbar.js"),load(CDN+"footer-v6.js"),load(CDN+"agent-homepage.js?v="+Date.now())];
+    ready=function(){return html.classList.contains("cp-agent-ready");};
   }else if(path==="/"){
     if(AGENT_HOSTS.indexOf(host)>-1){
-      Promise.all([load(PIN+REL+"navbar.js"),load(CDN+"footer-v6.js"),load(PIN+REL+"agent-homepage.js")]);
+      jobs=[load(PIN+REL+"navbar.js"),load(CDN+"footer-v6.js"),load(PIN+REL+"agent-homepage.js")];
+      ready=function(){return html.classList.contains("cp-agent-ready");};
     }else{
-      load(PIN+REL+"homepage-bundle.js").then(function(){load(PIN+REL+"hero-refresh.js");});
+      jobs=[load(PIN+REL+"homepage-bundle.js").then(function(){return load(PIN+REL+"hero-refresh.js");})];
+      ready=function(){return !!document.querySelector(".lst-hero-actions");};
     }
   }else{
-    Promise.all([load(PIN+REL+"navbar.js"),load(CDN+"footer-v6.js")]);
-    if(path==="/sell")load(pin("seller"));
-    else if(path==="/cash-offer")load(pin("cash"));
-    else if(path==="/contact")load(pin("contact"));
-    else if(path==="/myteam")load(pin("myteam"));
+    jobs=[load(PIN+REL+"navbar.js"),load(CDN+"footer-v6.js")];
+    if(path==="/sell")jobs.push(load(pin("seller")));
+    else if(path==="/cash-offer")jobs.push(load(pin("cash")));
+    else if(path==="/contact")jobs.push(load(pin("contact")));
+    else if(path==="/myteam")jobs.push(load(pin("myteam")));
   }
+  Promise.all(jobs).then(function(){
+    var start=Date.now();
+    (function check(){
+      if(ready()||Date.now()-start>1500){requestAnimationFrame(function(){requestAnimationFrame(reveal);});return;}
+      setTimeout(check,40);
+    })();
+  });
 })();
 
 
