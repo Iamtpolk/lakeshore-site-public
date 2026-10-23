@@ -127,6 +127,7 @@
       email: "alexis.lacomb@exprealty.com",
       socials: {
         instagram: "https://www.instagram.com/listwithalexis/",
+        messenger: "https://m.me/alexis.fincher.2025",
         facebook: "https://www.facebook.com/alexis.fincher.2025"
       },
       reviews: [
