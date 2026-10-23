@@ -407,6 +407,9 @@
       "html.cp-agent-home #chat-app .chat-window-loading-w{background:#f8f7f2!important}html.cp-agent-home #chat-app .chat-window-text{color:#241f1d!important;font-weight:600!important}",
 
       /* responsive */
+      /* Lofty paints sections that sit directly inside its main container white; win that fight */
+      "html.cp-agent-home main section.cp-home.cp-listing-head{background:var(--cp-cream)!important}",
+      "html.cp-agent-home main section.cp-home.cp-contact{background:var(--cp-ink)!important}",
       "@media(min-width:561px){.cp-hero .cp-actions{gap:10px;flex-wrap:nowrap}.cp-hero .cp-actions .cp-button{padding:0 17px;white-space:nowrap}}",
       "@media(min-width:561px) and (max-width:1100px){.cp-hero .cp-actions{flex-wrap:wrap}}",
       "@media(max-width:900px){.cp-hero-grid,.cp-section-head,.cp-contact-card{grid-template-columns:1fr}.cp-portrait-wrap{min-height:620px}.cp-section-head{gap:25px}.cp-values,.cp-review-grid,.cp-know-grid{grid-template-columns:1fr}.cp-value{min-height:auto}.cp-value h3{margin-top:32px}.cp-listing-row{align-items:flex-start;flex-direction:column}.cp-contact-person{min-height:620px}}",
